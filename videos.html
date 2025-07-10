@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🎥 videos for u</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to bottom right, #8e2de2, #4a00e0);
+            color: #fff;
+            min-height: 100vh;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow-x: hidden;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 32px;
+        }
+
+        .video-container {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            width: 100%;
+            max-width: 800px;
+        }
+
+        .video-wrapper {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .video-wrapper h2 {
+            margin-bottom: 10px;
+            font-size: 20px;
+            color: #ffddff;
+        }
+
+        video {
+            width: 100%;
+            border-radius: 10px;
+            outline: none;
+        }
+
+        .back-btn {
+            margin-top: 40px;
+            padding: 12px 24px;
+            background: #ffffff22;
+            border: 2px solid #ffffff55;
+            color: white;
+            font-weight: bold;
+            border-radius: 25px;
+            text-decoration: none;
+            transition: background 0.3s ease;
+        }
+
+        .back-btn:hover {
+            background: #ffffff44;
+        }
+
+        .floating-emoji {
+            position: absolute;
+            font-size: 24px;
+            animation: floatDown 6s linear infinite;
+            opacity: 0.8;
+            z-index: 0;
+        }
+
+        @keyframes floatDown {
+            0% {
+                transform: translateY(-10%);
+                opacity: 0;
+            }
+
+            10% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(110vh);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1> video pik minta maap</h1>
+
+    <div class="video-container">
+        <div class="video-wrapper">
+            <h2>💜 maafin apik pt 1</h2>
+            <video controls>
+                <source src="videos/maap1.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <div class="video-wrapper">
+            <h2>💜 maafin apik pt 2</h2>
+            <video controls>
+                <source src="videos/maap2.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+    <div class="video-wrapper">
+        <h2>💜 maafin apik pt 3</h2>
+        <video controls>
+            <source src="videos/maap3.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    </div>
+
+    <a href="index.html" class="back-btn">← Back to Menu</a>
+
+    <script>
+        // Floating emoji animation
+        const emojis = ["💜", "🎥", "💕"];
+        for (let i = 0; i < 20; i++) {
+            const el = document.createElement('div');
+            el.classList.add('floating-emoji');
+            el.style.left = Math.random() * 100 + "vw";
+            el.style.animationDelay = Math.random() * 10 + "s";
+            el.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+            document.body.appendChild(el);
+        }
+    </script>
+</body>
+
+</html>
