@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>This one is for my Varchhu</title>
+    <script src="https://kit.fontawesome.com/a14ae32021.js" crossorigin="anonymous"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            background: linear-gradient(135deg, #ffe0e6, #fff5f5, #ffeef0);
+            font-family: 'Courier Prime', monospace;
+            overflow-x: hidden;
+            min-height: 100vh;
+            font-size: 16px;
+        }
+
+        #mainDiv {
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            padding: 60px 20px 40px;
+        }
+
+        #content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+            max-width: 1800px;
+            width: 100%;
+        }
+
+        #code {
+            flex: 1 1 500px;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+            font-size: 16px;
+            line-height: 1.7;
+            color: #333;
+            white-space: pre-wrap;
+            max-height: 85vh;
+            overflow-y: auto;
+        }
+
+        .cursor {
+            display: inline-block;
+            background-color: #333;
+            width: 2px;
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+
+            0%,
+            50% {
+                opacity: 1;
+            }
+
+            51%,
+            100% {
+                opacity: 0;
+            }
+        }
+
+        .typewriter-controls {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .typewriter-btn {
+            background: linear-gradient(45deg, #ff1744, #ff4569);
+            color: white;
+            border: none;
+            padding: 16px 32px;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            margin: 5px;
+        }
+
+        #loveHeart {
+            flex: 1 1 650px;
+            min-height: 600px;
+            position: relative;
+        }
+
+        .heart-border {
+            width: 100%;
+            max-width: 750px;
+            aspect-ratio: 1/1;
+            background: #ffccdc;
+            clip-path: path('M 75 30 C 75 10, 25 10, 25 30 C 25 50, 50 70, 75 90 C 100 70, 125 50, 125 30 C 125 10, 75 10, 75 30 Z');
+            margin: 0 auto;
+        }
+
+        #words {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            z-index: 10;
+            width: 100%;
+            max-width: 750px;
+            padding: 30px 20px;
+        }
+
+        #messages {
+            font-size: clamp(24px, 4vw, 42px);
+            color: #ff1744;
+            font-weight: bold;
+            margin-bottom: 20px;
+            word-wrap: break-word;
+        }
+
+        #elapseClock {
+            font-family: 'Orbitron', monospace;
+            font-size: clamp(20px, 3vw, 30px);
+            color: #333;
+            margin-top: 12px;
+        }
+
+        #loveu {
+            font-size: clamp(20px, 2.5vw, 28px);
+            color: #ff1744;
+            margin-top: 30px;
+        }
+
+        #loveu .signature {
+            margin-top: 10px;
+            font-size: clamp(18px, 2vw, 24px);
+            font-style: italic;
+            color: #666;
+        }
+
+        .heart-particle {
+            position: fixed;
+            font-size: 24px;
+            pointer-events: none;
+            animation: floatHeart 3s ease-out forwards;
+            z-index: 9999;
+        }
+
+        @keyframes floatHeart {
+            0% {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+
+            100% {
+                opacity: 0;
+                transform: translateY(-200px) scale(1.5);
+            }
+        }
+
+        #hugImage {
+            width: 100%;
+            max-width: 350px;
+            margin: 20px auto;
+            display: none;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 10000;
+            background: white;
+            padding: 10px;
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translate(-50%, -50%) scale(0.8);
+            }
+
+            to {
+                opacity: 1;
+                transform: translate(-50%, -50%) scale(1);
+            }
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            background: #ff1744;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        @media (max-width: 480px) {
+
+            html,
+            body {
+                font-size: 14px;
+            }
+
+            #content {
+                gap: 25px;
+            }
+
+            #code {
+                padding: 25px;
+                font-size: 14px;
+                max-height: unset;
+            }
+
+            #words {
+                padding: 20px 10px;
+            }
+
+            .typewriter-btn {
+                padding: 14px 24px;
+                font-size: 14px;
+            }
+
+            #hugImage {
+                max-width: 300px;
+            }
+        }
+
+        .back-to-menu {
+            display: inline-block;
+            margin: 40px auto 20px;
+            padding: 12px 24px;
+            background: #ff1744;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 25px;
+            font-size: 16px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+            transition: background 0.3s ease;
+            text-align: center;
+        }
+
+        .back-to-menu:hover {
+            background: #e9133b;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="mainDiv">
+        <div id="content">
+            <div>
+                <div class="typewriter-controls">
+                    <button class="typewriter-btn" id="startBtn">▶️ Start Love Story</button>
+                    <button class="typewriter-btn" id="resetBtn">🔄 Reset</button>
+                </div>
+                <div id="code"></div>
+            </div>
+
+            <div id="loveHeart">
+                <div class="heart-border"></div>
+                <div id="words">
+                    <div id="messages">
+                        TOGETHER FOREVER ❤️
+                        <div id="elapseClock"></div>
+                    </div>
+                    <div id="loveu">
+                        I LOVE YOU SO MUCH<br />
+                        <div class="signature">- RAFIK</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const fullCode = `/**
+ * THE CODE OF LOVE
+ */
+
+Hey Shii!
+Do you remember the first time we met at TSM Cibubur?
+I fell for you the very moment I saw you;
+// Your smile, your vibe — everything just hit me.
+It was like time stopped for a second;
+And suddenly, my world was filled with just you;
+From a spark of attraction to real love;
+We've come a long way together;
+There have been arguments, disagreements;
+// And I know there might be more in the future.
+But no matter what, our bond always comes back stronger;
+
+All I want to say is:
+Shii, I will love you forever;
+
+If you want to give me a hug now,
+just touch the heart below 💜\n`;
+
+        const codeContainer = document.getElementById("code");
+        const startBtn = document.getElementById("startBtn");
+        const resetBtn = document.getElementById("resetBtn");
+
+        let typewriterInterval;
+        let currentIndex = 0;
+        let isTyping = false;
+
+        function typeWriter() {
+            if (isTyping) return;
+            isTyping = true;
+            currentIndex = 0;
+            codeContainer.innerHTML = '';
+            startBtn.disabled = true;
+            startBtn.textContent = "⏳ Typing...";
+
+            const cursor = document.createElement('span');
+            cursor.className = 'cursor';
+            cursor.innerHTML = '|';
+
+            typewriterInterval = setInterval(() => {
+                if (currentIndex < fullCode.length) {
+                    if (codeContainer.lastChild?.className === 'cursor') {
+                        codeContainer.removeChild(codeContainer.lastChild);
+                    }
+                    const span = document.createElement('span');
+                    span.textContent = fullCode[currentIndex];
+                    codeContainer.appendChild(span);
+                    codeContainer.appendChild(cursor);
+                    currentIndex++;
+                    codeContainer.scrollTop = codeContainer.scrollHeight;
+                } else {
+                    clearInterval(typewriterInterval);
+                    setTimeout(() => {
+                        if (codeContainer.lastChild?.className === 'cursor') {
+                            codeContainer.removeChild(codeContainer.lastChild);
+                        }
+                        const heartIcon = document.createElement('i');
+                        heartIcon.className = 'fas fa-heart';
+                        heartIcon.id = 'icon';
+                        heartIcon.style.cursor = 'pointer';
+                        heartIcon.style.fontSize = '28px';
+                        heartIcon.style.color = '#ff1744';
+                        heartIcon.style.display = 'block';
+                        heartIcon.style.margin = '20px auto';
+                        heartIcon.addEventListener('click', () => {
+                            createFloatingHearts();
+                            showImage();
+                        });
+                        codeContainer.appendChild(heartIcon);
+                    }, 1000);
+                    isTyping = false;
+                    startBtn.disabled = false;
+                    startBtn.textContent = "▶️ Start Love Story";
+                }
+            }, 50);
+        }
+
+        function resetTypewriter() {
+            if (typewriterInterval) clearInterval(typewriterInterval);
+            codeContainer.innerHTML = '';
+            const img = document.getElementById('hugImage');
+            if (img) img.remove();
+            currentIndex = 0;
+            isTyping = false;
+            startBtn.disabled = false;
+            startBtn.textContent = "▶️ Start Love Story";
+        }
+
+        function createFloatingHearts() {
+            for (let i = 0; i < 10; i++) {
+                const heart = document.createElement('div');
+                heart.innerHTML = '💜';
+                heart.className = 'heart-particle';
+                heart.style.left = Math.random() * window.innerWidth + 'px';
+                heart.style.top = Math.random() * window.innerHeight + 'px';
+                heart.style.animationDelay = Math.random() * 2 + 's';
+                document.body.appendChild(heart);
+                setTimeout(() => heart.remove(), 3000);
+            }
+        }
+
+        function showImage() {
+            // Cek apakah gambar sudah ada
+            const existingImg = document.getElementById('hugImage');
+            if (existingImg) return;
+
+            const imgContainer = document.createElement('div');
+            imgContainer.id = 'hugImage';
+
+            const closeBtn = document.createElement('button');
+            closeBtn.className = 'close-btn';
+            closeBtn.innerHTML = '×';
+            closeBtn.addEventListener('click', () => {
+                imgContainer.remove();
+            });
+
+            const img = document.createElement('img');
+            // Ganti dengan URL gambar yang valid atau gunakan placeholder
+            img.src = 'huf.JPG';
+            img.alt = 'Hug Image';
+            img.style.width = '100%';
+            img.style.borderRadius = '10px';
+
+            // Handle jika gambar tidak ditemukan
+            img.onerror = function () {
+                this.src = 'https://via.placeholder.com/300x300/ff1744/ffffff?text=LOVE+💜';
+            };
+
+            imgContainer.appendChild(closeBtn);
+            imgContainer.appendChild(img);
+            document.body.appendChild(imgContainer);
+
+            // Tampilkan gambar
+            imgContainer.style.display = 'block';
+        }
+
+        startBtn.addEventListener('click', typeWriter);
+        resetBtn.addEventListener('click', resetTypewriter);
+
+        function timeElapse(date) {
+            const now = new Date();
+            const elapsed = now - date;
+            const days = Math.floor(elapsed / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((elapsed % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((elapsed % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((elapsed % (1000 * 60)) / 1000);
+            document.getElementById('elapseClock').innerHTML =
+                `<strong>${days}</strong> days <strong>${hours}</strong> hours <strong>${minutes}</strong> minutes <strong>${seconds}</strong> seconds 💜`;
+        }
+
+        const together = new Date(2024, 9, 11, 16, 30, 0); // Oct 11, 2024
+        setInterval(() => timeElapse(together), 1000);
+        timeElapse(together);
+    </script>
+    <a href="index.html" class="back-to-menu">← Back to Menu</a>
+
+</body>
+
+</html>

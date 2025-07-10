@@ -1,223 +1,116 @@
 <!DOCTYPE html>
-<html lang="en" class="sr">
+<html lang="en">
 
 <head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="shortcut icon" href="assets/logozal.png" />
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>💜 for my shii yeyy</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-  <!-- Todo: put here your site title -->
-  <title>portfolio</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-  <link rel="stylesheet" href="styles.css" />
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to bottom right, #a18cd1, #fbc2eb);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            position: relative;
+            color: #fff;
+        }
 
-  <!-- Todo: remove the below script once you finish your portfolio -->
-  <script async defer src="https://buttons.github.io/buttons.js"></script>
+        .menu-container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 25px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            z-index: 2;
+        }
+
+        h1 {
+            font-size: 32px;
+            margin-bottom: 30px;
+            color: #fff;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn {
+            display: block;
+            width: 250px;
+            margin: 15px auto;
+            padding: 15px 25px;
+            font-size: 18px;
+            font-weight: bold;
+            border: none;
+            border-radius: 30px;
+            background: linear-gradient(135deg, #c471ed, #f64f59);
+            color: white;
+            text-decoration: none;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Floating hearts animation */
+        .heart {
+            position: absolute;
+            font-size: 24px;
+            animation: fall 6s linear infinite;
+            opacity: 0.8;
+            z-index: 1;
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translateY(-10%) rotate(0deg);
+                opacity: 0;
+            }
+
+            10% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(110vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+    </style>
 </head>
 
 <body>
-  <div id="top"></div>
-
-  <!-- **** home Section **** -->
-  <section class="home" id="home" data-sr="enter top over 1s">
-    <div class="home-content">
-      <div class="text">
-        <div class="text-one">Hello,</div>
-        <div class="text-two">My Name Muhammad Rafik Muzakir Alfaruq Silvian</div>
-        <div class="text-three">I'm a Software developer</div>
-      </div>
-      <div class="button">
-        <button id="aboutBtn">know more</button>
-      </div>
+    <div class="menu-container">
+        <h1>💜 untuk my fav girl shiii 💜</h1>
+        <a href="index3.html" class="btn">💌 note for shii</a>
+        <a href="index2.html" class="btn">📸 Photos kitaa</a>
+        <a href="index2.html" class="btn">🎬 my apologiess</a>
     </div>
-  </section>
 
-
-  <!-- **** About Section **** -->
-  <section id="about" data-sr="enter top over 1s">
-    <div class="container">
-      <h2 class="section-title load-hidden">About me</h2>
-      <div class="row about-wrapper">
-        <div class="col-md-6 col-sm-12">
-          <div class="about-wrapper__image load-hidden">
-            <img alt="Profile Image" class="img-fluid rounded shadow-lg" height="auto" width="300px"
-              src="assets/profile.JPG" alt="Profile Image" />
-          </div>
-        </div>
-        <div class="col-md-6 col-sm-12">
-          <div class="about-wrapper__info load-hidden">
-            <p class="about-wrapper__info-text">
-              Hello, my name is Muhammad Rafik Muzakir Alfaruq Silvian. Currently, I am pursuing my education in the field of Computer Science, specializing in Software Engineering, and I am now in my fourth semester. I am deeply passionate about technology because I believe it has the power to transform the world for the better.
-            </p>
-            <p class="about-wrapper__info-text">
-              Ever since I was young, I have been fascinated by computers and software. This fascination led me to choose Computer Science as my major in college. Throughout my academic journey, I have actively kept up with the latest technological developments and enjoyed participating in software development projects.
-            </p>
-            <p class="about-wrapper__info-text">
-              I believe that the combination of my interest in technology and my penchant for creative pursuits like reading comics shapes my perspective in facing challenges and pursuing dreams. I hope to continue developing myself in the field of technology and contributing to its advancement.
-            </p>
-            <span class="d-flex mt-3">
-              <a rel="noreferrer" target="_blank" class="cta-btn cta-btn--resume" href="assets/resume1.pdf">
-                View Resume
-              </a>
-            </span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- /END About Section -->
-
-  <!-- **** Projects Section **** -->
-  <section id="projects" data-sr="enter top over 1s">
-    <div class="container">
-      <div class="project-wrapper">
-        <h2 class="section-title dark-blue-text">Projects</h2>
-
-        <!-- Notice: each .row is a project -->
-        <div class="row">
-          <div class="col-lg-4 col-sm-12">
-            <div class="project-wrapper__text load-hidden">
-              <h3 class="project-wrapper__text-title">TICTACTOE</h3>
-              <div>
-                <p class="mb-4">
-                 Project using netbeans.
-                 Tic-tac-toe is a two-player game played on a 3x3 grid. The players take turns marking a square with either an "X" or an "O" until one player gets three in a row, either horizontally, vertically, or diagonally. The game is considered a draw if all nine squares are filled and no player has three in a row
-                </p>
-              </div>
-              <a rel="noreferrer" target="_blank" class="cta-btn text-color-main" href="https://github.com/zalamanga/tictactoe.git">
-                Source Code
-              </a>
-            </div>
-          </div>
-          <div class="col-lg-8 col-sm-12">
-            <div class="project-wrapper__image load-hidden">
-              <a rel="noreferrer" href="#!" target="_blank">
-                <div data-tilt data-tilt-max="4" data-tilt-glare="true" data-tilt-max-glare="0.5"
-                  class="thumbnail rounded js-tilt">
-                  <img alt="Project Image" class="img-fluid" src="assets/project1.png" />
-                </div>
-              </a>
-            </div>
-          </div>
-        </div>
-        <!-- /END Project -->
-
-        <!-- Notice: each .row is a project -->
-        <div class="row">
-          <div class="col-lg-4 col-sm-12">
-            <div class="project-wrapper__text load-hidden">
-              <h3 class="project-wrapper__text-title">shoe website</h3>
-              <div>
-                <p class="mb-4">
-              A shoe store website with HTML5 frontend: Modern design, easy navigation, high-quality product displays, and interactive features for seamless shopping experience.
-                </p>
-              </div>
-              <a rel="noreferrer" target="_blank" class="cta-btn text-color-main" href="#!">
-                Source Code
-              </a>
-            </div>
-          </div>
-          <div class="col-lg-8 col-sm-12">
-            <div class="project-wrapper__image load-hidden">
-              <a rel="noreferrer" href="#!" target="_blank">
-                <div data-tilt data-tilt-max="4" data-tilt-glare="true" data-tilt-max-glare="0.5"
-                  class="thumbnail rounded js-tilt">
-                  <img alt="Project Image" class="img-fluid" src="assets/project2.png" />
-                </div>
-              </a>
-            </div>
-          </div>
-        </div>
-        <!-- /END Project -->
-        <!-- Notice: each .row is a project -->
-        <div class="row">
-          <div class="col-lg-4 col-sm-12">
-            <div class="project-wrapper__text load-hidden">
-              <h3 class="project-wrapper__text-title">Books website</h3>
-              <div>
-                <p class="mb-4">
-                 A book website built using JavaServer Faces (JSF) allows users to search, explore, and read about various books. It features an admin page for content management, including adding, editing, and deleting books and categories.
-                </p>
-              </div>
-              <a rel="noreferrer" target="_blank" class="cta-btn text-color-main" href="#!">
-                Source Code
-              </a>
-            </div>
-          </div>
-          <div class="col-lg-8 col-sm-12">
-            <div class="project-wrapper__image load-hidden">
-              <a rel="noreferrer" href="#!" target="_blank">
-                <div data-tilt data-tilt-max="4" data-tilt-glare="true" data-tilt-max-glare="0.5"
-                  class="thumbnail rounded js-tilt">
-                  <img alt="Project Image" class="img-fluid" src="assets/project3.png" />
-                </div>
-              </a>
-            </div>
-          </div>
-        </div>
-        <!-- /END Project -->
-        <div class="row justify-content-center"> <!-- Menambahkan justify-content-center untuk membuat row menjadi center -->
-          <div class="col-lg-12">
-            <div class="project-wrapper__text load-hidden text-center" > <!-- Menambahkan text-center untuk membuat isi teks center -->
-              <a rel="noreferrer" target="_blank" class="cta-btn text-color-main" href="https://drive.google.com/drive/u/0/folders/1M-1QevXKHhj4LQXOifvhKm1Xc4CNiSI_" style="font-size: 24px;">
-                See All Projects
-              </a>
-            </div>
-          </div>
-        </div>
-        
-      </div>
-    </div>
-  </section>
-  <!-- /END Projects Section -->
-
-
-  <!-- **** Contact Section **** -->
-  <section id="contact"data-sr="enter top over 1s">
-    <div class="container">
-      <h2 class="section-title">Contact</h2>
-      <div class="contact-wrapper load-hidden">
-        <a rel="noreferrer" target="_blank" class="cta-btn cta-btn--resume" href="mailto:rafikmas78@gmail.com">Call to
-          Action</a>
-      </div>
-    </div>
-  </section>
-  <!-- /END Contact Section -->
-
-  
-
-  <!-- **** Footer Section **** -->
-  <footer class="footer navbar-static-bottom">
-    <div class="container">
-      <a rel="noreferrer" href="#top" class="back-to-top">
-        <i class="fa fa-angle-up fa-2x" aria-hidden="true"></i>
-      </a>
-      <div class="social-links">
-        <a rel="noreferrer" href="https://www.linkedin.com/in/muhammadrafik" target="_blank">
-          <i class="fa fa-linkedin fa-inverse"></i>
-        </a>
-        <a rel="noreferrer" href="https://github.com/zalamanga" target="_blank">
-          <i class="fa fa-github fa-inverse"></i>
-        </a>
-      </div>
-
-      <hr />
-
-      <!-- Notice: if you want to give me some credit, it will be huge for me! if not, put your data on it -->
-      <p class="footer__text">
-        © 2024 - developed by
-        <a rel="noreferrer" href="https://github.com/zalamanga" target="_blank">Muhammad Rafik</a>
-      </p>
-      <!-- /END Footer Section -->
-
-      <script src="script.js"></script>
-      <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
-  <script>
-    ScrollReveal().reveal('.load-hidden', { delay: 300 });
-  </script>
+    <!-- Heart emojis falling -->
+    <script>
+        const heartEmojis = ["💜", "💖", "💘", "💕", "💗"];
+        for (let i = 0; i < 25; i++) {
+            const heart = document.createElement('div');
+            heart.classList.add('heart');
+            heart.style.left = Math.random() * 100 + "vw";
+            heart.style.animationDelay = Math.random() * 10 + "s";
+            heart.innerText = heartEmojis[Math.floor(Math.random() * heartEmojis.length)];
+            document.body.appendChild(heart);
+        }
+    </script>
 </body>
 
 </html>

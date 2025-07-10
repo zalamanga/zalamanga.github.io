@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Photo Stack</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            min-height: 100vh;
+            overflow: hidden;
+            cursor: grab;
+            user-select: none;
+        }
+
+        .container {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .photo-stack {
+            position: relative;
+            width: 300px;
+            height: 400px;
+        }
+
+        .photo-card {
+            position: absolute;
+            width: 300px;
+            height: 400px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            cursor: grab;
+            transition: all 0.1s ease-out;
+            overflow: hidden;
+            transform-origin: center center;
+            will-change: transform;
+        }
+
+        .photo-card:active {
+            cursor: grabbing;
+        }
+
+        .photo-card.dragging {
+            z-index: 1000;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+            transition: none;
+        }
+
+        .photo-card.falling {
+            transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .photo-content {
+            width: 100%;
+            height: 75%;
+            overflow: hidden;
+        }
+
+        .photo-text {
+            padding: 15px;
+            height: 25%;
+            display: flex;
+            align-items: center;
+            background: white;
+            border-top: 1px solid #dee2e6;
+        }
+
+        .photo-text h3 {
+            font-size: 16px;
+            color: #495057;
+            font-weight: 600;
+            font-style: italic;
+            line-height: 1.2;
+        }
+
+        .instructions {
+            position: absolute;
+            top: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            text-align: center;
+            z-index: 10;
+        }
+
+        .reset-button {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            padding: 12px 25px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            backdrop-filter: blur(10px);
+        }
+        .back-to-menu {
+    position: absolute;
+    bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    backdrop-filter: blur(10px);
+    transition: background 0.3s ease;
+}
+
+.back-to-menu:hover {
+    background: rgba(255, 255, 255, 0.35);
+}
+
+    </style>
+</head>
+
+<body>
+    <div class="instructions">
+        <h1>foto foto fav aku bey</h1>
+        <p>di drag gitu kayak unoo kayak dibuang gitu wkwk, masih banyak fotonya kok nanti aku masukin semua yah</p>
+    </div>
+
+    <div class="container">
+        <div class="photo-stack" id="photoStack"></div>
+    </div>
+
+    <button class="reset-button" onclick="resetPhotos()">ngereset potonya</button>
+    <a href="index.html" class="back-to-menu">← Back to Menu</a>
+
+
+    <script>
+        const photoData = [
+            { src: "images/birhday.jpg", caption: "YOUR BIRTH DAYY BEYY" },
+            { src: "images/burgerking.jpg", caption: "date di burgerking sayang" },
+            { src: "images/cafetsm.jpg", caption: "ini kita ke cafe dideket tsm" },
+            { src: "images/cantikbngt.jpg", caption: "kamuu cantikk banget beyy" },
+            { src: "images/fav.jpg", caption: "ini foto favoritt ii" },
+            { src: "images/fck.jpg", caption: "kamuu ngajarin aku ngefck huhu" },
+            { src: "images/felfest.jpg", caption: "kita ke cafe deket felsfestt ingett?" },
+            { src: "images/felfest2.jpg", caption: "ini jugaaa seruu sama shii" },
+            { src: "images/gacian.jpg", caption: "ada hal kocak pas ituu" },
+            { src: "images/hokbenmargo.jpg", caption: "ini aku jemput kamu pas i abis kelas dimargo" },
+            { src: "images/isick.jpg", caption: "ini pas i sakit bela belain ketemu kamu wokawokaw" },
+            { src: "images/jemputshii.jpg", caption: "ini i jemputt shii abis sekull" },
+            { src: "images/jmptshi.jpg", caption: "ini juga jemput shii" },
+            { src: "images/livingfirst.jpg", caption: "ini kamuu cantikk pake baju item di living" },
+            { src: "images/mcdkotwis.jpg", caption: "ini kamu aku kasih tanda" },
+            { src: "images/my fav2.jpg", caption: "ini foto favorit i jugaaa" },
+            { src: "images/myjackeet.jpg", caption: "kamuu pake jakett apik" },
+            { src: "images/nightdate.jpg", caption: "ceritanya abbis dugemm wkwkwk" },
+            { src: "images/pudndung.jpg", caption: "lagi pundung kita bedua:(" },
+            { src: "images/purple.jpg", caption: "ini pas aku pake baju warna unguu my fav baju" },
+            { src: "images/rabbit.jpg", caption: "ini kamu foto ama gecu yahh" },
+            { src: "images/sambak.jpg", caption: "di sambak, ada foto i , ur fav pict tapi rn gk yah?" },
+            { src: "images/sleep.jpg", caption: "shiii bobookkkk" },
+            { src: "images/slepp.jpg", caption: "shiiii booooobookk part 2" },
+            { src: "images/suapinshi.jpg", caption: "ini i nyuapin shiii" },
+            { src: "images/ungu.jpg", caption: "as alwaysss unguu" },
+            { src: "images/visa.jpg", caption: "u nemenin i buatt pasportt huhu" },
+            
+
+
+        ];
+
+        const photoStack = document.getElementById('photoStack');
+        photoData.forEach((photo, index) => {
+            const card = document.createElement('div');
+            card.classList.add('photo-card');
+            card.setAttribute('data-id', index + 1);
+
+            const content = document.createElement('div');
+            content.classList.add('photo-content');
+            const img = document.createElement('img');
+            img.src = photo.src;
+            img.alt = photo.caption;
+            img.style.width = '100%';
+            img.style.height = '100%';
+            img.style.objectFit = 'cover';
+            img.style.borderRadius = '10px 10px 0 0';
+            content.appendChild(img);
+
+            const text = document.createElement('div');
+            text.classList.add('photo-text');
+            const h3 = document.createElement('h3');
+            h3.textContent = photo.caption;
+            text.appendChild(h3);
+
+            card.appendChild(content);
+            card.appendChild(text);
+            photoStack.appendChild(card);
+        });
+
+        let isDragging = false, currentPhoto = null, startX = 0, startY = 0, offsetX = 0, offsetY = 0, velocityX = 0, velocityY = 0, lastTime = 0, lastX = 0, lastY = 0;
+
+        function setupDragging() {
+            const photos = document.querySelectorAll('.photo-card');
+            photos.forEach((photo, index) => {
+                photo.style.zIndex = photos.length - index;
+                photo.style.transform = `translate(${index * 2}px, ${index * 3}px) rotate(${(index - 2) * 2}deg)`;
+                photo.addEventListener('mousedown', startDrag);
+                photo.addEventListener('touchstart', startDrag, { passive: false });
+            });
+        }
+
+        function startDrag(e) {
+            e.preventDefault();
+            isDragging = true;
+            currentPhoto = e.target.closest('.photo-card');
+            const rect = currentPhoto.getBoundingClientRect();
+            const clientX = e.clientX || e.touches[0].clientX;
+            const clientY = e.clientY || e.touches[0].clientY;
+            offsetX = clientX - (rect.left + rect.width / 2);
+            offsetY = clientY - (rect.top + rect.height / 2);
+            startX = clientX; startY = clientY;
+            lastX = clientX; lastY = clientY; lastTime = Date.now();
+            currentPhoto.classList.add('dragging');
+            currentPhoto.style.zIndex = 1000;
+        }
+
+        function drag(e) {
+            if (!isDragging || !currentPhoto) return;
+            e.preventDefault();
+            const clientX = e.clientX || e.touches[0].clientX;
+            const clientY = e.clientY || e.touches[0].clientY;
+            const now = Date.now();
+            const deltaTime = now - lastTime;
+            if (deltaTime > 0) {
+                velocityX = (clientX - lastX) / deltaTime;
+                velocityY = (clientY - lastY) / deltaTime;
+            }
+            const deltaX = clientX - startX;
+            const deltaY = clientY - startY;
+            const baseTransform = currentPhoto.style.transform.replace(/translate\([^)]*\)/g, '');
+            currentPhoto.style.transform = `translate(${deltaX}px, ${deltaY}px) ${baseTransform}`;
+            lastX = clientX; lastY = clientY; lastTime = now;
+        }
+
+        function endDrag() {
+            if (!isDragging || !currentPhoto) return;
+            isDragging = false;
+            currentPhoto.classList.remove('dragging');
+            currentPhoto.classList.add('falling');
+            const throwForce = 10;
+            const finalVelocityX = velocityX * throwForce;
+            const finalVelocityY = velocityY * throwForce;
+            const currentTransform = currentPhoto.style.transform || '';
+            const match = currentTransform.match(/translate\(([^,]+),\s*([^)]+)\)/);
+            const currentX = match ? parseFloat(match[1]) : 0;
+            const currentY = match ? parseFloat(match[2]) : 0;
+            const finalX = currentX + finalVelocityX;
+            const finalY = currentY + finalVelocityY + 100;
+            const finalRotation = (Math.random() - 0.5) * 180;
+            const baseTransform = currentTransform.replace(/translate\([^)]*\)/g, '');
+            currentPhoto.style.transform = `translate(${finalX}px, ${finalY}px) rotate(${finalRotation}deg) ${baseTransform}`;
+            setTimeout(() => currentPhoto.classList.remove('falling'), 1000);
+            currentPhoto = null;
+        }
+
+        function resetPhotos() {
+            const photos = document.querySelectorAll('.photo-card');
+            photos.forEach((photo, index) => {
+                photo.classList.remove('dragging', 'falling');
+                photo.style.transition = 'transform 0.8s ease';
+                photo.style.zIndex = photos.length - index;
+                photo.style.transform = `translate(${index * 2}px, ${index * 3}px) rotate(${(index - 2) * 2}deg)`;
+                setTimeout(() => photo.style.transition = 'all 0.1s ease-out', 1000);
+            });
+        }
+
+        document.addEventListener('mousemove', drag);
+        document.addEventListener('mouseup', endDrag);
+        document.addEventListener('touchmove', drag, { passive: false });
+        document.addEventListener('touchend', endDrag);
+
+        setupDragging();
+    </script>
+</body>
+
+</html>
