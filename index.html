@@ -1,116 +1,958 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" data-theme="light">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>💜 for my shii yeyy</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Muhammad Rafik — Software Engineer & Fullstack Developer. Building web and mobile applications with Laravel, Vue.js, React, and Flutter." />
+<title>Muhammad Rafik — Software Engineer & Fullstack Developer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #fafaf7;
+    --bg-soft: #f4f1ec;
+    --surface: #ffffff;
+    --surface-2: #f7f5f1;
+    --border: #e8e3db;
+    --text: #2b2a27;
+    --text-muted: #6b6a66;
+    --accent: #7a8c6a;
+    --accent-soft: #e8efdf;
+    --accent-ink: #4a5a3d;
+    --shadow: 0 6px 24px rgba(60, 55, 45, 0.06);
+    --shadow-hover: 0 10px 32px rgba(60, 55, 45, 0.10);
+    --radius: 14px;
+    --radius-sm: 10px;
+    --trans: 0.25s ease;
+  }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  [data-theme="dark"] {
+    --bg: #14171c;
+    --bg-soft: #1a1e24;
+    --surface: #1d2128;
+    --surface-2: #242931;
+    --border: #2c323b;
+    --text: #e8e9eb;
+    --text-muted: #9aa0a8;
+    --accent: #a3b890;
+    --accent-soft: #2a3329;
+    --accent-ink: #c8d9b6;
+    --shadow: 0 6px 24px rgba(0, 0, 0, 0.3);
+    --shadow-hover: 0 10px 32px rgba(0, 0, 0, 0.45);
+  }
 
-        body {
-            font-family: 'Poppins', sans-serif;
-            background: linear-gradient(to bottom right, #a18cd1, #fbc2eb);
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            overflow: hidden;
-            position: relative;
-            color: #fff;
-        }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
 
-        .menu-container {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 40px;
-            border-radius: 25px;
-            text-align: center;
-            backdrop-filter: blur(10px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-            z-index: 2;
-        }
+  html { scroll-behavior: smooth; }
 
-        h1 {
-            font-size: 32px;
-            margin-bottom: 30px;
-            color: #fff;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-        }
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    transition: background var(--trans), color var(--trans);
+    -webkit-font-smoothing: antialiased;
+  }
 
-        .btn {
-            display: block;
-            width: 250px;
-            margin: 15px auto;
-            padding: 15px 25px;
-            font-size: 18px;
-            font-weight: bold;
-            border: none;
-            border-radius: 30px;
-            background: linear-gradient(135deg, #c471ed, #f64f59);
-            color: white;
-            text-decoration: none;
-            cursor: pointer;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
 
-        .btn:hover {
-            transform: scale(1.05);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-        }
+  /* Navbar */
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: color-mix(in srgb, var(--bg) 85%, transparent);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+  }
 
-        /* Floating hearts animation */
-        .heart {
-            position: absolute;
-            font-size: 24px;
-            animation: fall 6s linear infinite;
-            opacity: 0.8;
-            z-index: 1;
-        }
+  .nav-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
 
-        @keyframes fall {
-            0% {
-                transform: translateY(-10%) rotate(0deg);
-                opacity: 0;
-            }
+  .logo {
+    font-weight: 800;
+    font-size: 1.1rem;
+    letter-spacing: -0.02em;
+    color: var(--text);
+    text-decoration: none;
+  }
+  .logo span { color: var(--accent); }
 
-            10% {
-                opacity: 1;
-            }
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    align-items: center;
+  }
 
-            100% {
-                transform: translateY(110vh) rotate(360deg);
-                opacity: 0;
-            }
-        }
-    </style>
+  .nav-links a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.92rem;
+    font-weight: 500;
+    transition: color var(--trans);
+  }
+  .nav-links a:hover { color: var(--accent); }
+
+  .theme-toggle {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text);
+    transition: all var(--trans);
+  }
+  .theme-toggle:hover {
+    background: var(--accent-soft);
+    color: var(--accent-ink);
+    transform: rotate(15deg);
+  }
+
+  .burger {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--text);
+    padding: 0.5rem;
+  }
+
+  /* Hero */
+  .hero {
+    padding: 5rem 0 4rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: "";
+    position: absolute;
+    top: -100px;
+    right: -100px;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, var(--accent-soft) 0%, transparent 70%);
+    border-radius: 50%;
+    opacity: 0.5;
+    pointer-events: none;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-tag {
+    display: inline-block;
+    padding: 0.4rem 0.9rem;
+    background: var(--accent-soft);
+    color: var(--accent-ink);
+    border-radius: 999px;
+    font-size: 0.82rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+  }
+  .hero-tag::before {
+    content: "●";
+    color: var(--accent);
+    margin-right: 0.4rem;
+    animation: pulse 2s infinite;
+  }
+  @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
+
+  h1 {
+    font-size: clamp(2.2rem, 5vw, 3.6rem);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+    margin-bottom: 1.2rem;
+  }
+  h1 .accent { color: var(--accent); }
+
+  .hero p {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    max-width: 620px;
+    margin-bottom: 2rem;
+  }
+
+  .hero-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+  }
+  .hero-meta span { display: inline-flex; align-items: center; gap: 0.4rem; }
+  .hero-meta svg { color: var(--accent); }
+
+  .cta-row {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    border-radius: var(--radius-sm);
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: all var(--trans);
+  }
+  .btn-primary {
+    background: var(--accent);
+    color: #fff;
+  }
+  [data-theme="dark"] .btn-primary { color: #14171c; }
+  .btn-primary:hover { transform: translateY(-2px); box-shadow: var(--shadow-hover); }
+
+  .btn-ghost {
+    background: var(--surface);
+    color: var(--text);
+    border-color: var(--border);
+  }
+  .btn-ghost:hover { border-color: var(--accent); color: var(--accent); }
+
+  /* Sections */
+  section {
+    padding: 4rem 0;
+  }
+
+  .section-head {
+    margin-bottom: 2.5rem;
+  }
+  .section-kicker {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.85rem;
+    color: var(--accent);
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.02em;
+  }
+  h2 {
+    font-size: clamp(1.7rem, 3.5vw, 2.2rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  /* About */
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 3rem;
+    align-items: start;
+  }
+  .about-text p + p { margin-top: 1rem; color: var(--text-muted); }
+  .about-text p:first-child { color: var(--text); font-size: 1.05rem; }
+
+  .role-cards {
+    display: grid;
+    gap: 1rem;
+  }
+  .role-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.3rem;
+    transition: all var(--trans);
+  }
+  .role-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-hover);
+    border-color: var(--accent);
+  }
+  .role-card h3 {
+    font-size: 1.05rem;
+    margin-bottom: 0.4rem;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+  }
+  .role-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    background: var(--accent-soft);
+    color: var(--accent-ink);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .role-card p {
+    color: var(--text-muted);
+    font-size: 0.92rem;
+  }
+
+  /* Skills */
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 1.2rem;
+  }
+  .skill-group {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.3rem;
+  }
+  .skill-group h4 {
+    font-size: 0.95rem;
+    margin-bottom: 0.9rem;
+    color: var(--accent-ink);
+  }
+  [data-theme="dark"] .skill-group h4 { color: var(--accent); }
+
+  .chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+  .chip {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.78rem;
+    padding: 0.3rem 0.7rem;
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    color: var(--text);
+  }
+
+  /* Experience Timeline */
+  .timeline {
+    position: relative;
+    padding-left: 1.8rem;
+    border-left: 2px solid var(--border);
+  }
+  .timeline-item {
+    position: relative;
+    padding-bottom: 2.2rem;
+  }
+  .timeline-item:last-child { padding-bottom: 0; }
+  .timeline-item::before {
+    content: "";
+    position: absolute;
+    left: -2.22rem;
+    top: 0.45rem;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--accent);
+    border: 2px solid var(--bg);
+    box-shadow: 0 0 0 3px var(--accent-soft);
+  }
+  .timeline-date {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.82rem;
+    color: var(--accent);
+    font-weight: 500;
+  }
+  .timeline-item h3 {
+    font-size: 1.08rem;
+    margin: 0.3rem 0 0.15rem;
+  }
+  .timeline-company {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 0.6rem;
+  }
+  .timeline-item ul {
+    list-style: none;
+    padding: 0;
+    margin: 0.5rem 0 0.8rem;
+  }
+  .timeline-item li {
+    color: var(--text-muted);
+    font-size: 0.92rem;
+    position: relative;
+    padding-left: 1.1rem;
+    margin-bottom: 0.35rem;
+  }
+  .timeline-item li::before {
+    content: "▸";
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+  }
+  .timeline-item .chips { margin-top: 0.6rem; }
+
+  /* Education */
+  .edu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.2rem;
+  }
+  .edu-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.3rem;
+  }
+  .edu-card .timeline-date { display: block; margin-bottom: 0.3rem; }
+  .edu-card h3 { font-size: 1.05rem; margin-bottom: 0.3rem; }
+  .edu-card p { color: var(--text-muted); font-size: 0.92rem; }
+
+  /* Certs */
+  .certs {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 0.7rem;
+  }
+  .cert {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 0.85rem 1rem;
+    display: flex;
+    gap: 0.7rem;
+    align-items: flex-start;
+    transition: all var(--trans);
+  }
+  .cert:hover { border-color: var(--accent); transform: translateY(-2px); }
+  .cert-icon {
+    flex-shrink: 0;
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
+    background: var(--accent-soft);
+    color: var(--accent-ink);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .cert-body { flex-grow: 1; }
+  .cert-body h4 { font-size: 0.9rem; font-weight: 600; margin-bottom: 0.15rem; }
+  .cert-body span { font-family: 'JetBrains Mono', monospace; font-size: 0.76rem; color: var(--text-muted); }
+
+  /* Contact */
+  .contact {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 2.5rem;
+    text-align: center;
+  }
+  .contact h2 { margin-bottom: 0.8rem; }
+  .contact p {
+    color: var(--text-muted);
+    margin-bottom: 1.8rem;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .social-row {
+    display: flex;
+    justify-content: center;
+    gap: 0.8rem;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
+  }
+  .social-row a {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-muted);
+    transition: all var(--trans);
+  }
+  .social-row a:hover {
+    background: var(--accent-soft);
+    color: var(--accent-ink);
+    border-color: var(--accent);
+    transform: translateY(-2px);
+  }
+
+  /* Footer */
+  footer {
+    padding: 2rem 0;
+    text-align: center;
+    border-top: 1px solid var(--border);
+    color: var(--text-muted);
+    font-size: 0.88rem;
+    margin-top: 3rem;
+  }
+
+  /* Responsive */
+  @media (max-width: 760px) {
+    .nav-links {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: var(--surface);
+      flex-direction: column;
+      padding: 1.2rem 1.5rem;
+      gap: 1rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-links.open { display: flex; }
+    .nav-links a { font-size: 1rem; }
+    .burger { display: inline-flex; }
+    .about-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .hero { padding: 3rem 0 2.5rem; }
+    section { padding: 2.5rem 0; }
+    .contact { padding: 1.8rem; }
+  }
+
+  /* Reveal on scroll */
+  .reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>
 </head>
-
 <body>
-    <div class="menu-container">
-        <h1>💜 untuk my fav girl shiii 💜</h1>
-        <a href="index3.html" class="btn">💌 note for shii</a>
-        <a href="index2.html" class="btn">📸 Photos kitaa</a>
-        <a href="videos.html" class="btn">🎬 my apologiess</a>
+
+<nav>
+  <div class="nav-wrap">
+    <a href="#" class="logo">rafik<span>.</span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <svg id="iconSun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+          <svg id="iconMoon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+      </li>
+    </ul>
+    <button class="burger" id="burger" aria-label="Menu">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="container hero-content">
+    <span class="hero-tag">Open to new opportunities</span>
+    <h1>Hi, I'm <span class="accent">Muhammad Rafik</span>.<br/>Software Engineer & Fullstack Developer.</h1>
+    <p>Fresh graduate in Information and Communication Technology with 2+ years of hands-on experience building web and mobile applications using Laravel, Vue.js, React, and Flutter.</p>
+    <div class="hero-meta">
+      <span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        Subang Jaya, Malaysia
+      </span>
+      <span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        Rafikmas78@gmail.com
+      </span>
+      <span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        +60 16-622 4309
+      </span>
     </div>
+    <div class="cta-row">
+      <a href="#experience" class="btn btn-primary">See my experience
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      </a>
+      <a href="#contact" class="btn btn-ghost">Get in touch</a>
+    </div>
+  </div>
+</header>
 
-    <!-- Heart emojis falling -->
-    <script>
-        const heartEmojis = ["💜", "💖", "💘", "💕", "💗"];
-        for (let i = 0; i < 25; i++) {
-            const heart = document.createElement('div');
-            heart.classList.add('heart');
-            heart.style.left = Math.random() * 100 + "vw";
-            heart.style.animationDelay = Math.random() * 10 + "s";
-            heart.innerText = heartEmojis[Math.floor(Math.random() * heartEmojis.length)];
-            document.body.appendChild(heart);
-        }
-    </script>
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="section-kicker">// 01 about me</div>
+      <h2>Building digital products that matter.</h2>
+    </div>
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <p>I'm a final-year Information and Communication Technology student with a proven track record delivering end-to-end projects across multiple industries in Indonesia and Malaysia.</p>
+        <p>My experience spans full-time and freelance roles — from architecting production web apps at Guepedia.com using React and Vue.js, to building cross-platform mobile apps with Flutter, to migrating legacy WordPress sites into custom native PHP codebases.</p>
+        <p>I care about writing clean, scalable code and creating user-centered digital solutions. Outside of work, gaming keeps my analytical thinking and adaptability sharp.</p>
+      </div>
+      <div class="role-cards reveal">
+        <div class="role-card">
+          <h3><span class="role-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          </span>Fullstack Developer</h3>
+          <p>Laravel, PHP, Vue.js, React, Node.js, MySQL — end-to-end from database to UI.</p>
+        </div>
+        <div class="role-card">
+          <h3><span class="role-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+          </span>Software Engineer</h3>
+          <p>Clean architecture, database optimization, and building maintainable systems at scale.</p>
+        </div>
+        <div class="role-card">
+          <h3><span class="role-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+          </span>Mobile Developer</h3>
+          <p>Cross-platform mobile apps built with Flutter — consistent UX across Android and iOS.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="section-kicker">// 02 skills & tools</div>
+      <h2>Technologies I work with</h2>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-group reveal">
+        <h4>Frontend</h4>
+        <div class="chips">
+          <span class="chip">Vue.js</span><span class="chip">React</span><span class="chip">JavaScript</span><span class="chip">HTML/CSS</span><span class="chip">Tailwind</span><span class="chip">Bootstrap</span>
+        </div>
+      </div>
+      <div class="skill-group reveal">
+        <h4>Backend</h4>
+        <div class="chips">
+          <span class="chip">Laravel</span><span class="chip">PHP</span><span class="chip">Node.js</span><span class="chip">MySQL</span><span class="chip">SQL Server</span><span class="chip">Firebase</span>
+        </div>
+      </div>
+      <div class="skill-group reveal">
+        <h4>Mobile</h4>
+        <div class="chips">
+          <span class="chip">Flutter</span><span class="chip">Android Studio</span><span class="chip">Java</span>
+        </div>
+      </div>
+      <div class="skill-group reveal">
+        <h4>DevOps & Tools</h4>
+        <div class="chips">
+          <span class="chip">Git</span><span class="chip">GitHub</span><span class="chip">Docker</span><span class="chip">Jenkins</span><span class="chip">aapanel</span><span class="chip">Postman</span>
+        </div>
+      </div>
+      <div class="skill-group reveal">
+        <h4>Design</h4>
+        <div class="chips">
+          <span class="chip">Figma</span><span class="chip">Canva</span><span class="chip">Photoshop</span>
+        </div>
+      </div>
+      <div class="skill-group reveal">
+        <h4>Languages</h4>
+        <div class="chips">
+          <span class="chip">Indonesian (Native)</span><span class="chip">Malay (Native)</span><span class="chip">English (Fluent)</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="section-kicker">// 03 experience</div>
+      <h2>Where I've worked</h2>
+    </div>
+    <div class="timeline">
+
+      <div class="timeline-item reveal">
+        <div class="timeline-date">Jan 2026 — Apr 2026</div>
+        <h3>IT Intern · Fullstack Developer</h3>
+        <div class="timeline-company">Xspec Technology — Selangor, Malaysia</div>
+        <ul>
+          <li>Migrated company website from WordPress to a fully custom native PHP codebase, eliminating plugin dependencies and improving page load performance</li>
+          <li>Assisted in setting up and configuring EyeDetect software, including network and system connectivity setup</li>
+          <li>Diagnosed and resolved hardware issues including laptop repairs and peripheral troubleshooting</li>
+          <li>Produced and edited video content for company presentations and internal communications</li>
+        </ul>
+        <div class="chips">
+          <span class="chip">PHP</span><span class="chip">WordPress Migration</span><span class="chip">Networking</span>
+        </div>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="timeline-date">Apr 2025 — Nov 2025</div>
+        <h3>Fullstack Developer · Full-Time</h3>
+        <div class="timeline-company">Guepedia.com — Depok, Indonesia</div>
+        <ul>
+          <li>Architected and developed full-featured web applications using React and Vue.js, managing the complete development lifecycle from planning to deployment</li>
+          <li>Built and launched a cross-platform mobile application using Flutter, ensuring consistent UX across Android and iOS</li>
+          <li>Maintained and optimized multiple production websites — performing bug fixes, performance tuning, and feature updates</li>
+          <li>Collaborated with the product team to translate business requirements into scalable technical solutions</li>
+        </ul>
+        <div class="chips">
+          <span class="chip">React</span><span class="chip">Vue.js</span><span class="chip">Flutter</span><span class="chip">Node.js</span>
+        </div>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="timeline-date">Dec 2024 — Jan 2025</div>
+        <h3>Website Developer · Freelance</h3>
+        <div class="timeline-company">PT Jalan Sukses Amanah — Remote</div>
+        <ul>
+          <li>Designed and developed a fully custom CMS from scratch using native PHP and MySQL, tailored to the client's specific business workflow</li>
+          <li>Built responsive and dynamic frontend interfaces using native CSS, ensuring cross-browser compatibility</li>
+          <li>Managed the full project lifecycle independently — from requirement gathering to testing and deployment</li>
+        </ul>
+        <div class="chips">
+          <span class="chip">PHP</span><span class="chip">MySQL</span><span class="chip">Custom CMS</span>
+        </div>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="timeline-date">Sep 2024 — Dec 2024</div>
+        <h3>Website Developer · Freelance</h3>
+        <div class="timeline-company">Lumbung Stroberi — Remote</div>
+        <ul>
+          <li>Developed a product listing and e-commerce website using PHP and Bootstrap</li>
+          <li>Optimized database queries and backend logic, resulting in significant improvements to website loading speed</li>
+          <li>Designed and implemented responsive frontend layouts improving usability across mobile and desktop</li>
+        </ul>
+        <div class="chips">
+          <span class="chip">PHP</span><span class="chip">Bootstrap</span><span class="chip">E-commerce</span>
+        </div>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="timeline-date">Apr 2024 — Aug 2024</div>
+        <h3>Fullstack Developer Intern</h3>
+        <div class="timeline-company">PT Tigac Global Ventura — Jakarta, Indonesia</div>
+        <ul>
+          <li>Developed and integrated frontend and backend features using Laravel, PHP, aapanel, and Git within a professional agile team</li>
+          <li>Ensured seamless integration between client-facing interfaces and server-side logic</li>
+          <li>Participated in code reviews and sprint planning, providing constructive feedback</li>
+        </ul>
+        <div class="chips">
+          <span class="chip">Laravel</span><span class="chip">PHP</span><span class="chip">aapanel</span><span class="chip">Git</span>
+        </div>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="timeline-date">Mar 2024</div>
+        <h3>Frontend Developer Intern</h3>
+        <div class="timeline-company">Core Initiative × Rakamin Academy — Remote, Indonesia</div>
+        <ul>
+          <li>Developed and styled responsive website frontend using Vue.js under a structured professional mentorship program</li>
+          <li>Applied industry-standard frontend best practices — component-based architecture, state management, and responsive design</li>
+        </ul>
+        <div class="chips">
+          <span class="chip">Vue.js</span><span class="chip">Component Architecture</span>
+        </div>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="timeline-date">Jul 2023</div>
+        <h3>Teaching Assistant</h3>
+        <div class="timeline-company">Universitas Indonesia — Depok, Indonesia</div>
+        <ul>
+          <li>Assisted in designing and structuring training materials for the Advance Office Training program targeting HR professionals</li>
+          <li>Delivered technical support to participants and collaborated with lecturers to maintain high-quality execution</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="section-kicker">// 04 education</div>
+      <h2>Academic background</h2>
+    </div>
+    <div class="edu-grid">
+      <div class="edu-card reveal">
+        <span class="timeline-date">May 2022 — Oct 2026</span>
+        <h3>Bachelor of Information and Communication Technology (BICT)</h3>
+        <p>Asia e University — Subang Jaya, Selangor, Malaysia</p>
+      </div>
+      <div class="edu-card reveal">
+        <span class="timeline-date">May 2022 — Oct 2024</span>
+        <h3>Software Engineering — TI (Professional Program)</h3>
+        <p>CCIT FT Universitas Indonesia — Depok, Indonesia</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section id="certifications">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="section-kicker">// 05 certifications & training</div>
+      <h2>Learning never stops</h2>
+    </div>
+    <div class="certs">
+      <div class="cert reveal">
+        <span class="cert-icon">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+        </span>
+        <div class="cert-body"><h4>NIIT Certificate — IT Skills Program</h4><span>2024</span></div>
+      </div>
+      <div class="cert reveal">
+        <span class="cert-icon">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+        </span>
+        <div class="cert-body"><h4>MUET (Malaysian University English Test)</h4><span>2024</span></div>
+      </div>
+      <div class="cert reveal">
+        <span class="cert-icon">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+        </span>
+        <div class="cert-body"><h4>Dicoding AWS Back-end Academy</h4><span>Mar 2024</span></div>
+      </div>
+      <div class="cert reveal">
+        <span class="cert-icon">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+        </span>
+        <div class="cert-body"><h4>Dicoding Front-end DBS Foundation Coding Camp</h4><span>Feb 2024</span></div>
+      </div>
+      <div class="cert reveal">
+        <span class="cert-icon">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+        </span>
+        <div class="cert-body"><h4>Codepolitan 1 Year Coding Scholarship</h4><span>Mar 2024</span></div>
+      </div>
+      <div class="cert reveal">
+        <span class="cert-icon">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+        </span>
+        <div class="cert-body"><h4>KomByte Database Competition — Participant</h4><span>Feb 2024</span></div>
+      </div>
+      <div class="cert reveal">
+        <span class="cert-icon">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+        </span>
+        <div class="cert-body"><h4>CCIT FTUI Workshop — How to be QA in a Start-Up</h4><span>Dec 2023</span></div>
+      </div>
+      <div class="cert reveal">
+        <span class="cert-icon">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+        </span>
+        <div class="cert-body"><h4>CCIT FTUI Seminar — Data Analytic Programming</h4><span>Dec 2023</span></div>
+      </div>
+      <div class="cert reveal">
+        <span class="cert-icon">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+        </span>
+        <div class="cert-body"><h4>CCIT FTUI Seminar — Machine Learning & API Implementation</h4><span>May 2023</span></div>
+      </div>
+      <div class="cert reveal">
+        <span class="cert-icon">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+        </span>
+        <div class="cert-body"><h4>HTML5 Course — Udemy</h4><span>May 2023</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container reveal">
+    <div class="contact">
+      <div class="section-kicker">// 06 contact</div>
+      <h2>Let's build something together.</h2>
+      <p>Open to Software Engineer & Fullstack Developer roles in Malaysia, Indonesia, and remote. I'll reply within a day or two.</p>
+      <a href="mailto:Rafikmas78@gmail.com" class="btn btn-primary">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        Rafikmas78@gmail.com
+      </a>
+      <div class="social-row">
+        <a href="https://github.com/zalamanga" target="_blank" rel="noopener" aria-label="GitHub">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.37-3.87-1.37-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.68 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.78 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.41-2.69 5.38-5.25 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"/></svg>
+        </a>
+        <a href="https://linkedin.com/in/muhammadrafik" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.95v5.66H9.37V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45C23.2 24 24 23.23 24 22.28V1.72C24 .77 23.2 0 22.22 0z"/></svg>
+        </a>
+        <a href="mailto:Rafikmas78@gmail.com" aria-label="Email">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </a>
+        <a href="https://wa.me/60166224309" target="_blank" rel="noopener" aria-label="WhatsApp">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 6.3A7.84 7.84 0 0 0 12.05 4a7.93 7.93 0 0 0-6.87 11.9L4 20l4.2-1.1a7.93 7.93 0 0 0 3.85 1h.01A7.94 7.94 0 0 0 20 11.95a7.88 7.88 0 0 0-2.4-5.65zM12.06 18.56h-.01a6.6 6.6 0 0 1-3.36-.92l-.24-.14-2.49.65.66-2.43-.16-.25a6.58 6.58 0 0 1-1.01-3.5 6.6 6.6 0 0 1 11.27-4.67 6.55 6.55 0 0 1 1.94 4.68c-.01 3.64-2.97 6.58-6.6 6.58zm3.62-4.93c-.2-.1-1.17-.58-1.35-.64s-.31-.1-.44.1-.51.64-.62.77-.23.15-.43.05a5.43 5.43 0 0 1-1.59-.98 6 6 0 0 1-1.1-1.37c-.12-.2-.01-.3.09-.4.09-.09.2-.23.3-.35.1-.11.13-.2.2-.33.07-.13.03-.25-.02-.35s-.44-1.07-.61-1.46c-.16-.38-.32-.33-.44-.34l-.38-.01a.73.73 0 0 0-.53.25 2.23 2.23 0 0 0-.69 1.66c0 .98.71 1.93.81 2.06.1.13 1.4 2.13 3.38 2.99.47.2.84.32 1.13.42.47.15.9.13 1.24.08.38-.06 1.17-.48 1.33-.94s.17-.86.12-.94-.19-.15-.38-.25z"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>© <span id="year"></span> Muhammad Rafik Muzakir Alfaruq Silvian · Crafted with care & caffeine.</p>
+  </div>
+</footer>
+
+<script>
+  // Theme toggle with persistence
+  const root = document.documentElement;
+  const toggle = document.getElementById('themeToggle');
+  const iconSun = document.getElementById('iconSun');
+  const iconMoon = document.getElementById('iconMoon');
+
+  const saved = localStorage.getItem('theme');
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const initial = saved || (prefersDark ? 'dark' : 'light');
+  setTheme(initial);
+
+  function setTheme(t) {
+    root.setAttribute('data-theme', t);
+    localStorage.setItem('theme', t);
+    iconSun.style.display = t === 'light' ? 'block' : 'none';
+    iconMoon.style.display = t === 'dark' ? 'block' : 'none';
+  }
+  toggle.addEventListener('click', () => {
+    setTheme(root.getAttribute('data-theme') === 'light' ? 'dark' : 'light');
+  });
+
+  // Mobile nav
+  const burger = document.getElementById('burger');
+  const navLinks = document.getElementById('navLinks');
+  burger.addEventListener('click', () => navLinks.classList.toggle('open'));
+  navLinks.querySelectorAll('a').forEach(a =>
+    a.addEventListener('click', () => navLinks.classList.remove('open'))
+  );
+
+  // Reveal on scroll
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  // Year
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
 </body>
-
 </html>
