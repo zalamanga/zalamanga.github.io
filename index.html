@@ -334,12 +334,29 @@
   .chip {
     font-family: 'JetBrains Mono', monospace;
     font-size: 0.78rem;
-    padding: 0.3rem 0.7rem;
+    padding: 0.3rem 0.7rem 0.3rem 0.5rem;
     background: var(--surface-2);
     border: 1px solid var(--border);
     border-radius: 999px;
     color: var(--text);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    transition: all var(--trans);
   }
+  .chip.plain { padding: 0.3rem 0.7rem; }
+  .chip:hover {
+    border-color: var(--accent);
+    transform: translateY(-1px);
+  }
+  .chip img {
+    width: 14px;
+    height: 14px;
+    display: block;
+    flex-shrink: 0;
+  }
+  [data-theme="dark"] .chip img.invert-dark { filter: invert(1) brightness(1.2); }
+  [data-theme="light"] .chip img.invert-light { filter: invert(1) brightness(0.2); }
 
   /* Experience Timeline */
   .timeline {
@@ -635,37 +652,37 @@
       <div class="skill-group reveal">
         <h4>Frontend</h4>
         <div class="chips">
-          <span class="chip">Vue.js</span><span class="chip">React</span><span class="chip">JavaScript</span><span class="chip">HTML/CSS</span><span class="chip">Tailwind</span><span class="chip">Bootstrap</span>
+          <span class="chip"><img src="https://cdn.simpleicons.org/vuedotjs" alt=""/>Vue.js</span><span class="chip"><img src="https://cdn.simpleicons.org/react" alt=""/>React</span><span class="chip"><img src="https://cdn.simpleicons.org/javascript" alt=""/>JavaScript</span><span class="chip"><img src="https://cdn.simpleicons.org/html5" alt=""/>HTML/CSS</span><span class="chip"><img src="https://cdn.simpleicons.org/tailwindcss" alt=""/>Tailwind</span><span class="chip"><img src="https://cdn.simpleicons.org/bootstrap" alt=""/>Bootstrap</span>
         </div>
       </div>
       <div class="skill-group reveal">
         <h4>Backend</h4>
         <div class="chips">
-          <span class="chip">Laravel</span><span class="chip">PHP</span><span class="chip">Node.js</span><span class="chip">MySQL</span><span class="chip">SQL Server</span><span class="chip">Firebase</span>
+          <span class="chip"><img src="https://cdn.simpleicons.org/laravel" alt=""/>Laravel</span><span class="chip"><img src="https://cdn.simpleicons.org/php" alt=""/>PHP</span><span class="chip"><img src="https://cdn.simpleicons.org/nodedotjs" alt=""/>Node.js</span><span class="chip"><img src="https://cdn.simpleicons.org/mysql" alt=""/>MySQL</span><span class="chip"><img src="https://cdn.simpleicons.org/microsoftsqlserver" alt=""/>SQL Server</span><span class="chip"><img src="https://cdn.simpleicons.org/firebase" alt=""/>Firebase</span>
         </div>
       </div>
       <div class="skill-group reveal">
         <h4>Mobile</h4>
         <div class="chips">
-          <span class="chip">Flutter</span><span class="chip">Android Studio</span><span class="chip">Java</span>
+          <span class="chip"><img src="https://cdn.simpleicons.org/flutter" alt=""/>Flutter</span><span class="chip"><img src="https://cdn.simpleicons.org/androidstudio" alt=""/>Android Studio</span><span class="chip"><img src="https://cdn.simpleicons.org/openjdk" alt=""/>Java</span>
         </div>
       </div>
       <div class="skill-group reveal">
         <h4>DevOps & Tools</h4>
         <div class="chips">
-          <span class="chip">Git</span><span class="chip">GitHub</span><span class="chip">Docker</span><span class="chip">Jenkins</span><span class="chip">aapanel</span><span class="chip">Postman</span>
+          <span class="chip"><img src="https://cdn.simpleicons.org/git" alt=""/>Git</span><span class="chip"><img src="https://cdn.simpleicons.org/github" alt="" class="invert-dark"/>GitHub</span><span class="chip"><img src="https://cdn.simpleicons.org/docker" alt=""/>Docker</span><span class="chip"><img src="https://cdn.simpleicons.org/jenkins" alt=""/>Jenkins</span><span class="chip plain">aapanel</span><span class="chip"><img src="https://cdn.simpleicons.org/postman" alt=""/>Postman</span>
         </div>
       </div>
       <div class="skill-group reveal">
         <h4>Design</h4>
         <div class="chips">
-          <span class="chip">Figma</span><span class="chip">Canva</span><span class="chip">Photoshop</span>
+          <span class="chip"><img src="https://cdn.simpleicons.org/figma" alt=""/>Figma</span><span class="chip"><img src="https://cdn.simpleicons.org/canva" alt=""/>Canva</span><span class="chip"><img src="https://cdn.simpleicons.org/adobephotoshop" alt=""/>Photoshop</span>
         </div>
       </div>
       <div class="skill-group reveal">
         <h4>Languages</h4>
         <div class="chips">
-          <span class="chip">Indonesian (Native)</span><span class="chip">Malay (Native)</span><span class="chip">English (Fluent)</span>
+          <span class="chip plain">🇮🇩 Indonesian (Native)</span><span class="chip plain">🇲🇾 Malay (Native)</span><span class="chip plain">🇬🇧 English (Fluent)</span>
         </div>
       </div>
     </div>
@@ -692,7 +709,7 @@
           <li>Produced and edited video content for company presentations and internal communications</li>
         </ul>
         <div class="chips">
-          <span class="chip">PHP</span><span class="chip">WordPress Migration</span><span class="chip">Networking</span>
+          <span class="chip"><img src="https://cdn.simpleicons.org/php" alt=""/>PHP</span><span class="chip"><img src="https://cdn.simpleicons.org/wordpress" alt="" class="invert-dark"/>WordPress Migration</span><span class="chip plain">Networking</span>
         </div>
       </div>
 
@@ -707,7 +724,7 @@
           <li>Collaborated with the product team to translate business requirements into scalable technical solutions</li>
         </ul>
         <div class="chips">
-          <span class="chip">React</span><span class="chip">Vue.js</span><span class="chip">Flutter</span><span class="chip">Node.js</span>
+          <span class="chip"><img src="https://cdn.simpleicons.org/react" alt=""/>React</span><span class="chip"><img src="https://cdn.simpleicons.org/vuedotjs" alt=""/>Vue.js</span><span class="chip"><img src="https://cdn.simpleicons.org/flutter" alt=""/>Flutter</span><span class="chip"><img src="https://cdn.simpleicons.org/nodedotjs" alt=""/>Node.js</span>
         </div>
       </div>
 
@@ -721,7 +738,7 @@
           <li>Managed the full project lifecycle independently — from requirement gathering to testing and deployment</li>
         </ul>
         <div class="chips">
-          <span class="chip">PHP</span><span class="chip">MySQL</span><span class="chip">Custom CMS</span>
+          <span class="chip"><img src="https://cdn.simpleicons.org/php" alt=""/>PHP</span><span class="chip"><img src="https://cdn.simpleicons.org/mysql" alt=""/>MySQL</span><span class="chip plain">Custom CMS</span>
         </div>
       </div>
 
@@ -735,7 +752,7 @@
           <li>Designed and implemented responsive frontend layouts improving usability across mobile and desktop</li>
         </ul>
         <div class="chips">
-          <span class="chip">PHP</span><span class="chip">Bootstrap</span><span class="chip">E-commerce</span>
+          <span class="chip"><img src="https://cdn.simpleicons.org/php" alt=""/>PHP</span><span class="chip"><img src="https://cdn.simpleicons.org/bootstrap" alt=""/>Bootstrap</span><span class="chip plain">E-commerce</span>
         </div>
       </div>
 
@@ -749,7 +766,7 @@
           <li>Participated in code reviews and sprint planning, providing constructive feedback</li>
         </ul>
         <div class="chips">
-          <span class="chip">Laravel</span><span class="chip">PHP</span><span class="chip">aapanel</span><span class="chip">Git</span>
+          <span class="chip"><img src="https://cdn.simpleicons.org/laravel" alt=""/>Laravel</span><span class="chip"><img src="https://cdn.simpleicons.org/php" alt=""/>PHP</span><span class="chip plain">aapanel</span><span class="chip"><img src="https://cdn.simpleicons.org/git" alt=""/>Git</span>
         </div>
       </div>
 
@@ -762,7 +779,7 @@
           <li>Applied industry-standard frontend best practices — component-based architecture, state management, and responsive design</li>
         </ul>
         <div class="chips">
-          <span class="chip">Vue.js</span><span class="chip">Component Architecture</span>
+          <span class="chip"><img src="https://cdn.simpleicons.org/vuedotjs" alt=""/>Vue.js</span><span class="chip plain">Component Architecture</span>
         </div>
       </div>
 
