@@ -121,10 +121,10 @@ function initPortfolio() {
         category: 'mobile',
         year: '2025',
         image: 'assets/images/portfolio/qrcbn.png',
-        imageAlt: 'QRCBN website screenshot',
-        summary: 'Landing and mobile-market experience for publishers to sell digital books and help readers discover titles through QR-linked access.',
+        imageAlt: 'QRCBN Market mobile app preview',
+        summary: 'Mobile-market app for publishers to sell digital books and help readers discover titles through QR-linked access.',
         stack: ['Flutter', 'Landing Page', 'UX Flow'],
-        links: [{ label: 'Visit Site', href: 'https://qrcbn.com' }, { label: 'App Story', href: '#experience' }],
+        links: [{ label: 'Google Play', href: 'https://play.google.com/store/apps/details?id=com.MediaGroup.QrcbnMarket&hl=en' }, { label: 'App Story', href: '#experience' }],
       },
       {
         title: 'Marketplace Mobile Concept',
