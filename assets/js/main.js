@@ -94,28 +94,53 @@ function initPortfolio() {
     // ============ Static showcase data ============
     const portfolioCases = [
       {
+        id: 'xspec-website',
         title: 'Xspec Technology Website',
         type: 'Website',
         category: 'code',
         year: '2026',
         image: 'assets/images/portfolio/xspectechnology.png',
         imageAlt: 'Xspec Technology website screenshot',
-        summary: 'Migrated the public company website from WordPress to custom native PHP with responsive industry, product, and contact pages.',
-        stack: ['PHP', 'WordPress Migration', 'Responsive UI'],
-        links: [{ label: 'Visit Site', href: 'https://xspectechnology.com' }, { label: 'Role', href: '#experience' }],
+        summary: 'Company website for industrial technology, training, and support services across Southeast Asia.',
+        stack: ['PHP', 'CMS Migration', 'Responsive Web'],
+        links: [{ label: 'Visit Site', href: 'https://xspectechnology.com' }],
+        detail: {
+          role: 'IT Intern - Fullstack Developer',
+          scope: 'WordPress-to-native PHP website migration',
+          overview: 'Xspec Technology is a Malaysian industrial technology company covering inspection equipment, security technology, healthcare systems, laboratory solutions, and training services.',
+          highlights: [
+            'Migrated the public website away from WordPress into a custom native PHP codebase.',
+            'Structured industry, brand, product, news, and contact pages for clearer browsing.',
+            'Reduced plugin dependency while keeping the site responsive and easier to maintain.',
+          ],
+          outcome: 'A faster, more controlled company profile and product-discovery site for public visitors, clients, and internal marketing updates.',
+        },
       },
       {
+        id: 'guepedia-platform',
         title: 'Guepedia Publishing Platform',
         type: 'Web Platform',
         category: 'code',
         year: '2025',
         image: 'assets/images/portfolio/guepedia.png',
         imageAlt: 'Guepedia website screenshot',
-        summary: 'Production publishing and book-commerce platform work across marketplace UI, dashboard flows, feature delivery, and performance maintenance.',
+        summary: 'Publishing and book-commerce platform for authors to publish books and readers to discover titles.',
         stack: ['React', 'Vue', 'Node.js'],
-        links: [{ label: 'Visit Site', href: 'https://guepedia.com' }, { label: 'Details', href: '#experience' }],
+        links: [{ label: 'Visit Site', href: 'https://guepedia.com' }],
+        detail: {
+          role: 'Fullstack Developer',
+          scope: 'Production website, marketplace UI, and internal publishing workflows',
+          overview: 'Guepedia is a publishing platform that helps authors send manuscripts, manage publishing packages, promote books, and sell printed or digital titles to readers.',
+          highlights: [
+            'Built and maintained React/Vue interfaces for public pages, book discovery, and dashboard workflows.',
+            'Delivered feature updates, bug fixes, and performance maintenance across production systems.',
+            'Supported author and publisher flows from manuscript submission through storefront presentation.',
+          ],
+          outcome: 'A more usable publishing platform experience for authors, readers, and the internal team managing book operations.',
+        },
       },
       {
+        id: 'qrcbn-website',
         title: 'QRCBN Website',
         type: 'Website',
         category: 'code',
@@ -124,9 +149,21 @@ function initPortfolio() {
         imageAlt: 'QRCBN website screenshot',
         summary: 'Landing website introducing the QRCBN Market App and QR-linked digital book discovery experience.',
         stack: ['Landing Page', 'Product UI', 'Responsive Web'],
-        links: [{ label: 'Visit Site', href: 'https://qrcbn.com' }, { label: 'Details', href: '#experience' }],
+        links: [{ label: 'Visit Site', href: 'https://qrcbn.com' }],
+        detail: {
+          role: 'Web Developer',
+          scope: 'Product landing page and reader entry point',
+          overview: 'QRCBN.com introduces the QRCBN Market App, explains the app value proposition, and gives readers a QR/ID-based path into digital-book access.',
+          highlights: [
+            'Presented app positioning, benefits, flow, and contact sections in a focused landing experience.',
+            'Used a mobile-app-first visual direction so the website supports the Android product.',
+            'Kept the page direct and scannable for publishers, readers, and visitors coming from promotions.',
+          ],
+          outcome: 'A clear product website that supports the separate QRCBN mobile app instead of mixing the two portfolio entries together.',
+        },
       },
       {
+        id: 'qrcbn-mobile-app',
         title: 'QRCBN Market Mobile App',
         type: 'Mobile App',
         category: 'mobile',
@@ -135,50 +172,161 @@ function initPortfolio() {
         imageAlt: 'QRCBN Market Google Play listing screenshot',
         summary: 'Published Android app for browsing, buying, reading, and saving digital books from multiple publishers.',
         stack: ['Flutter', 'Android', 'Google Play'],
-        links: [{ label: 'Google Play', href: 'https://play.google.com/store/apps/details?id=com.MediaGroup.QrcbnMarket&hl=en' }, { label: 'App Story', href: '#experience' }],
+        links: [{ label: 'Google Play', href: 'https://play.google.com/store/apps/details?id=com.MediaGroup.QrcbnMarket&hl=en' }],
+        detail: {
+          role: 'Mobile App Developer',
+          scope: 'Published Android app experience',
+          overview: 'QRCBN Market is the mobile app side of the QRCBN ecosystem, focused on helping users discover, buy, read, and save digital books from participating publishers.',
+          highlights: [
+            'Built mobile-first reading and discovery flows for digital-book users.',
+            'Prepared the project for a public Google Play listing with store screenshots and app metadata.',
+            'Supported publisher-to-reader access through QRCBN IDs and QR-linked book discovery.',
+          ],
+          outcome: 'A real shipped mobile product with a public Google Play presence, separated from the QRCBN website card.',
+        },
       },
       {
-        title: 'Admin Dashboard UI Kit',
+        id: 'tigac-web-design',
+        title: 'TIGAC Web Design',
         type: 'UI/UX',
         category: 'uiux',
-        year: '2026',
-        summary: 'Dashboard screens for scanning stats, managing content, and presenting operational data clearly.',
-        stack: ['Figma', 'Components', 'Prototype'],
-        links: [{ label: 'Figma', href: '#contact' }],
-      },
-      {
-        title: 'Portfolio Case Template',
-        type: 'UI/UX',
-        category: 'uiux',
-        year: '2026',
-        summary: 'Reusable case study layout for problem, role, process, result, tech stack, and final visuals.',
-        stack: ['UX Writing', 'Layout', 'Design System'],
-        links: [{ label: 'Use Template', href: '#contact' }],
+        year: '2024',
+        image: 'assets/images/portfolio/tigac-web-design.png',
+        imageAlt: 'TIGAC Figma web design PDF preview',
+        summary: 'Figma web-design concept for a product-focused TIGAC website, exported as downloadable PDF screens.',
+        stack: ['Figma', 'Web Design', 'PDF Export'],
+        links: [{ label: 'Design PDF', href: 'tigacid/Landing Page.pdf', download: true }],
+        detail: {
+          role: 'UI/UX Designer',
+          scope: 'Figma website concept and multi-page design export',
+          overview: 'A web-design concept for TIGAC with page flows covering landing, product discovery, product detail, programs, partnership, FAQ, and contact screens.',
+          highlights: [
+            'Designed a polished landing page direction with product navigation and clear visual hierarchy.',
+            'Prepared multiple page exports from Figma so the website concept can be reviewed screen by screen.',
+            'Balanced brand presence, product storytelling, and conversion points such as shop/contact actions.',
+          ],
+          outcome: 'A professional UI/UX portfolio piece backed by downloadable PDF design files instead of a generic placeholder card.',
+          assets: [
+            { label: 'Landing Page PDF', href: 'tigacid/Landing Page.pdf', download: true },
+            { label: 'Product Home PDF', href: 'tigacid/Product Home.pdf', download: true },
+            { label: 'Product Detail PDF', href: 'tigacid/Product Detail.pdf', download: true },
+            { label: 'About PDF', href: 'tigacid/About TIGAC.pdf', download: true },
+            { label: 'FAQ PDF', href: 'tigacid/FAQ.pdf', download: true },
+            { label: 'Contact PDF', href: 'tigacid/Contact Us.pdf', download: true },
+          ],
+        },
       },
     ];
   
     const showcaseGrid = document.getElementById('showcaseGrid');
-  const thumbMarkup = (category, image, imageAlt = '') => {
-    if (image) return `<img class="case-image" src="${image}" alt="${imageAlt}">`;
-    if (category === 'mobile') return '<div class="phone-preview"></div>';
-    if (category === 'uiux') return '<div class="wire-card"></div>';
-    return '<div class="mock-browser-top"><span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span></div><div class="mock-screen"><span class="mock-line short"></span><span class="mock-line mid"></span><div class="mock-grid"><span class="mock-tile"></span><span class="mock-tile"></span></div></div>';
+    const escapeHtml = (value = '') => String(value).replace(/[&<>"']/g, (char) => ({
+      '&': '&amp;',
+      '<': '&lt;',
+      '>': '&gt;',
+      '"': '&quot;',
+      "'": '&#39;',
+    }[char]));
+    const isExternalLink = (href = '') => /^https?:\/\//.test(href);
+    const isDownloadLink = (link) => link.download || /\.pdf($|[?#])/i.test(link.href || '');
+    const linkAttributes = (link) => {
+      const attrs = [`href="${escapeHtml(link.href)}"`];
+      if (isExternalLink(link.href)) attrs.push('target="_blank"', 'rel="noopener"');
+      if (isDownloadLink(link)) attrs.push('download');
+      return attrs.join(' ');
     };
+    const thumbMarkup = (category, image, imageAlt = '') => {
+      if (image) return `<img class="case-image" src="${escapeHtml(image)}" alt="${escapeHtml(imageAlt)}">`;
+      if (category === 'mobile') return '<div class="phone-preview"></div>';
+      if (category === 'uiux') return '<div class="wire-card"></div>';
+      return '<div class="mock-browser-top"><span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span></div><div class="mock-screen"><span class="mock-line short"></span><span class="mock-line mid"></span><div class="mock-grid"><span class="mock-tile"></span><span class="mock-tile"></span></div></div>';
+    };
+    const renderCaseLinks = (links = []) => links.map(link => `<a class="case-link" ${linkAttributes(link)}>${escapeHtml(link.label)}</a>`).join('');
+    const caseModal = document.createElement('div');
+    caseModal.className = 'case-modal';
+    caseModal.setAttribute('aria-hidden', 'true');
+    document.body.appendChild(caseModal);
+
+    const closeCaseDetail = () => {
+      caseModal.classList.remove('open');
+      caseModal.setAttribute('aria-hidden', 'true');
+      caseModal.innerHTML = '';
+      document.body.classList.remove('modal-open');
+    };
+
+    const openCaseDetail = (caseId) => {
+      const item = portfolioCases.find(project => project.id === caseId);
+      if (!item || !item.detail) return;
+
+      const detail = item.detail;
+      const highlights = (detail.highlights || []).map(point => `<li>${escapeHtml(point)}</li>`).join('');
+      const assets = (detail.assets || []).map(asset => `<a class="case-link" ${linkAttributes(asset)}>${escapeHtml(asset.label)}</a>`).join('');
+      const detailLinks = renderCaseLinks(item.links);
+      const imageMarkup = item.image
+        ? `<img class="case-modal-image" src="${escapeHtml(item.image)}" alt="${escapeHtml(item.imageAlt || item.title)}">`
+        : `<div class="case-modal-image case-modal-fallback ${escapeHtml(item.category)}">${thumbMarkup(item.category, item.image, item.imageAlt)}</div>`;
+
+      caseModal.innerHTML = `
+        <div class="case-modal-backdrop" data-case-close></div>
+        <section class="case-modal-panel" role="dialog" aria-modal="true" aria-labelledby="case-modal-title">
+          <button class="case-modal-close" type="button" data-case-close aria-label="Close project detail">&times;</button>
+          <div class="case-modal-visual">${imageMarkup}</div>
+          <div class="case-modal-content">
+            <div class="case-meta"><span>${escapeHtml(item.type)}</span><span>${escapeHtml(item.year)}</span></div>
+            <h3 id="case-modal-title">${escapeHtml(item.title)}</h3>
+            <p class="case-modal-summary">${escapeHtml(item.summary)}</p>
+            <div class="case-detail-grid">
+              <div>
+                <span>Role</span>
+                <strong>${escapeHtml(detail.role)}</strong>
+              </div>
+              <div>
+                <span>Scope</span>
+                <strong>${escapeHtml(detail.scope)}</strong>
+              </div>
+            </div>
+            <p>${escapeHtml(detail.overview)}</p>
+            <ul class="case-detail-list">${highlights}</ul>
+            <p class="case-modal-outcome">${escapeHtml(detail.outcome)}</p>
+            <div class="chips">${item.stack.map(label => `<span class="chip plain">${escapeHtml(label)}</span>`).join('')}</div>
+            <div class="case-links">${detailLinks}${assets}</div>
+          </div>
+        </section>
+      `;
+      caseModal.classList.add('open');
+      caseModal.setAttribute('aria-hidden', 'false');
+      document.body.classList.add('modal-open');
+      caseModal.querySelector('.case-modal-close')?.focus();
+    };
+
     const renderShowcase = (filter = 'all') => {
       const cases = filter === 'all' ? portfolioCases : portfolioCases.filter(item => item.category === filter);
       showcaseGrid.innerHTML = cases.map(item => `
       <article class="case-card reveal" data-category="${item.category}" data-tilt>
         <div class="case-thumb ${item.category}">${thumbMarkup(item.category, item.image, item.imageAlt)}</div>
-          <div class="case-meta"><span>${item.type}</span><span>${item.year}</span></div>
-          <h3>${item.title}</h3>
-          <p>${item.summary}</p>
-          <div class="chips">${item.stack.map(label => `<span class="chip plain">${label}</span>`).join('')}</div>
-          <div class="case-links">${item.links.map(link => `<a class="case-link" href="${link.href}" ${link.href.startsWith('http') ? 'target="_blank" rel="noopener"' : ''}>${link.label}</a>`).join('')}</div>
+          <div class="case-meta"><span>${escapeHtml(item.type)}</span><span>${escapeHtml(item.year)}</span></div>
+          <h3>${escapeHtml(item.title)}</h3>
+          <p>${escapeHtml(item.summary)}</p>
+          <div class="chips">${item.stack.map(label => `<span class="chip plain">${escapeHtml(label)}</span>`).join('')}</div>
+          <div class="case-links">${renderCaseLinks(item.links)}<button class="case-link case-detail-button" type="button" data-case-detail="${escapeHtml(item.id)}">Details</button></div>
         </article>
       `).join('');
     };
     renderShowcase();
     attachHoverTargets();
+
+    showcaseGrid.addEventListener('click', (event) => {
+      const detailButton = event.target.closest('[data-case-detail]');
+      if (!detailButton) return;
+      openCaseDetail(detailButton.dataset.caseDetail);
+    });
+
+    caseModal.addEventListener('click', (event) => {
+      if (event.target.closest('[data-case-close]')) closeCaseDetail();
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && caseModal.classList.contains('open')) closeCaseDetail();
+    });
   
     document.querySelectorAll('.showcase-tab').forEach(tab => {
       tab.addEventListener('click', () => {

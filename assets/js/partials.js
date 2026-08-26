@@ -1,9 +1,11 @@
 async function loadPartials() {
   const includes = [...document.querySelectorAll('[data-include]')];
+  const version = '20260826-portfolio';
 
   for (const slot of includes) {
     const url = slot.dataset.include;
-    const response = await fetch(url);
+    const separator = url.includes('?') ? '&' : '?';
+    const response = await fetch(`${url}${separator}v=${version}`);
 
     if (!response.ok) {
       throw new Error(`Failed to load ${url}`);
