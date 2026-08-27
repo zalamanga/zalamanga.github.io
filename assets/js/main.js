@@ -246,9 +246,9 @@ function initPortfolio() {
           { label: 'Program Page', src: 'assets/images/portfolio/tigac-program.png', alt: 'TIGAC program page web design screenshot' },
           { label: 'Contact Page', src: 'assets/images/portfolio/tigac-contact.png', alt: 'TIGAC contact page web design screenshot' },
         ],
-        summary: 'Figma web-design concept for a product-focused TIGAC website, exported as downloadable PDF screens.',
-        stack: ['Figma', 'Web Design', 'PDF Export'],
-        links: [{ label: 'Design PDF', href: 'tigacid/Landing Page.pdf', download: true }],
+        summary: 'Figma web-design concept for a product-focused TIGAC website with multi-screen gallery preview.',
+        stack: ['Figma', 'Web Design', 'UI/UX Flow'],
+        links: [{ label: 'Figma Design', href: 'https://www.figma.com/design/lo4rFA1GzdS4YRXYNugkkw/Untitled?node-id=0-1&t=sa1b68AP6Ahp48BU-1' }],
         detail: {
           role: 'UI/UX Designer',
           scope: 'Figma website concept and multi-page design export',
@@ -258,7 +258,7 @@ function initPortfolio() {
             'Prepared multiple page exports from Figma so the website concept can be reviewed screen by screen.',
             'Balanced brand presence, product storytelling, and conversion points such as shop/contact actions.',
           ],
-          outcome: 'A professional UI/UX portfolio piece backed by downloadable PDF design files instead of a generic placeholder card.',
+          outcome: 'A professional UI/UX portfolio piece backed by the source Figma design link and gallery screenshots.',
           assets: [
             { label: 'Landing Page PDF', href: 'tigacid/Landing Page.pdf', download: true },
             { label: 'Product Home PDF', href: 'tigacid/Product Home.pdf', download: true },
