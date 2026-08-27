@@ -214,8 +214,15 @@ function initPortfolio() {
         type: 'UI/UX',
         category: 'uiux',
         year: '2024',
-        image: 'assets/images/portfolio/tigac-web-design.png',
-        imageAlt: 'TIGAC Figma web design PDF preview',
+        image: 'assets/images/portfolio/tigac-landing-page.png',
+        imageAlt: 'TIGAC landing page web design screenshot',
+        gallery: [
+          { label: 'Landing Page', src: 'assets/images/portfolio/tigac-landing-page.png', alt: 'TIGAC landing page web design screenshot' },
+          { label: 'Product Home', src: 'assets/images/portfolio/tigac-product-home.png', alt: 'TIGAC product home web design screenshot' },
+          { label: 'Product Detail', src: 'assets/images/portfolio/tigac-product-detail.png', alt: 'TIGAC product detail web design screenshot' },
+          { label: 'Program Page', src: 'assets/images/portfolio/tigac-program.png', alt: 'TIGAC program page web design screenshot' },
+          { label: 'Contact Page', src: 'assets/images/portfolio/tigac-contact.png', alt: 'TIGAC contact page web design screenshot' },
+        ],
         summary: 'Figma web-design concept for a product-focused TIGAC website, exported as downloadable PDF screens.',
         stack: ['Figma', 'Web Design', 'PDF Export'],
         links: [{ label: 'Design PDF', href: 'tigacid/Landing Page.pdf', download: true }],
@@ -233,8 +240,7 @@ function initPortfolio() {
             { label: 'Landing Page PDF', href: 'tigacid/Landing Page.pdf', download: true },
             { label: 'Product Home PDF', href: 'tigacid/Product Home.pdf', download: true },
             { label: 'Product Detail PDF', href: 'tigacid/Product Detail.pdf', download: true },
-            { label: 'About PDF', href: 'tigacid/About TIGAC.pdf', download: true },
-            { label: 'FAQ PDF', href: 'tigacid/FAQ.pdf', download: true },
+            { label: 'Program PDF', href: 'tigacid/Program.pdf', download: true },
             { label: 'Contact PDF', href: 'tigacid/Contact Us.pdf', download: true },
           ],
         },
@@ -268,12 +274,65 @@ function initPortfolio() {
     caseModal.className = 'case-modal';
     caseModal.setAttribute('aria-hidden', 'true');
     document.body.appendChild(caseModal);
+    let activeGallery = [];
+    let activeGalleryIndex = 0;
+
+    const caseGallery = (item) => {
+      const gallery = Array.isArray(item.gallery) && item.gallery.length
+        ? item.gallery
+        : (item.image ? [{ label: 'Screenshot', src: item.image, alt: item.imageAlt || item.title }] : []);
+
+      return gallery.filter(entry => entry?.src).slice(0, 5);
+    };
+
+    const renderCaseGallery = (item, gallery) => {
+      if (!gallery.length) {
+        return `<div class="case-modal-image case-modal-fallback ${escapeHtml(item.category)}">${thumbMarkup(item.category, item.image, item.imageAlt)}</div>`;
+      }
+
+      const first = gallery[0];
+      const controls = gallery.length > 1 ? `
+        <div class="case-gallery-controls" aria-label="Project screenshots">
+          <button class="case-gallery-nav" type="button" data-gallery-prev aria-label="Previous screenshot">&#8249;</button>
+          <span class="case-gallery-counter" data-gallery-counter>1 / ${gallery.length}</span>
+          <button class="case-gallery-nav" type="button" data-gallery-next aria-label="Next screenshot">&#8250;</button>
+        </div>
+      ` : '';
+
+      return `
+        <figure class="case-gallery" data-case-gallery>
+          <div class="case-gallery-frame">
+            <img class="case-modal-image" data-gallery-image src="${escapeHtml(first.src)}" alt="${escapeHtml(first.alt || first.label || item.title)}">
+          </div>
+          <figcaption class="case-gallery-caption" data-gallery-caption>${escapeHtml(first.label || item.title)}</figcaption>
+          ${controls}
+        </figure>
+      `;
+    };
+
+    const updateCaseGallery = (index) => {
+      if (!activeGallery.length) return;
+      activeGalleryIndex = (index + activeGallery.length) % activeGallery.length;
+      const current = activeGallery[activeGalleryIndex];
+      const image = caseModal.querySelector('[data-gallery-image]');
+      const counter = caseModal.querySelector('[data-gallery-counter]');
+      const caption = caseModal.querySelector('[data-gallery-caption]');
+
+      if (image) {
+        image.src = current.src;
+        image.alt = current.alt || current.label || 'Project screenshot';
+      }
+      if (counter) counter.textContent = `${activeGalleryIndex + 1} / ${activeGallery.length}`;
+      if (caption) caption.textContent = current.label || '';
+    };
 
     const closeCaseDetail = () => {
       caseModal.classList.remove('open');
       caseModal.setAttribute('aria-hidden', 'true');
       caseModal.innerHTML = '';
       document.body.classList.remove('modal-open');
+      activeGallery = [];
+      activeGalleryIndex = 0;
     };
 
     const openCaseDetail = (caseId) => {
@@ -284,9 +343,8 @@ function initPortfolio() {
       const highlights = (detail.highlights || []).map(point => `<li>${escapeHtml(point)}</li>`).join('');
       const assets = (detail.assets || []).map(asset => `<a class="case-link" ${linkAttributes(asset)}>${escapeHtml(asset.label)}</a>`).join('');
       const detailLinks = renderCaseLinks(item.links);
-      const imageMarkup = item.image
-        ? `<img class="case-modal-image" src="${escapeHtml(item.image)}" alt="${escapeHtml(item.imageAlt || item.title)}">`
-        : `<div class="case-modal-image case-modal-fallback ${escapeHtml(item.category)}">${thumbMarkup(item.category, item.image, item.imageAlt)}</div>`;
+      const gallery = caseGallery(item);
+      const imageMarkup = renderCaseGallery(item, gallery);
 
       caseModal.innerHTML = `
         <div class="case-modal-backdrop" data-case-close></div>
@@ -315,6 +373,8 @@ function initPortfolio() {
           </div>
         </section>
       `;
+      activeGallery = gallery;
+      activeGalleryIndex = 0;
       caseModal.classList.add('open');
       caseModal.setAttribute('aria-hidden', 'false');
       document.body.classList.add('modal-open');
@@ -344,11 +404,32 @@ function initPortfolio() {
     });
 
     caseModal.addEventListener('click', (event) => {
+      if (event.target.closest('[data-gallery-prev]')) {
+        updateCaseGallery(activeGalleryIndex - 1);
+        return;
+      }
+      if (event.target.closest('[data-gallery-next]')) {
+        updateCaseGallery(activeGalleryIndex + 1);
+        return;
+      }
       if (event.target.closest('[data-case-close]')) closeCaseDetail();
     });
 
     document.addEventListener('keydown', (event) => {
-      if (event.key === 'Escape' && caseModal.classList.contains('open')) closeCaseDetail();
+      if (!caseModal.classList.contains('open')) return;
+      if (event.key === 'Escape') {
+        closeCaseDetail();
+        return;
+      }
+      if (activeGallery.length <= 1) return;
+      if (event.key === 'ArrowLeft') {
+        event.preventDefault();
+        updateCaseGallery(activeGalleryIndex - 1);
+      }
+      if (event.key === 'ArrowRight') {
+        event.preventDefault();
+        updateCaseGallery(activeGalleryIndex + 1);
+      }
     });
   
     document.querySelectorAll('.showcase-tab').forEach(tab => {
