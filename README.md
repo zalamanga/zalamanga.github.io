@@ -133,6 +133,7 @@ Label kecil di card. Bisa diisi:
 - `Code`
 - `Mobile App`
 - `UI/UX`
+- `Data Analytics`
 
 ```js
 category: 'code'
@@ -143,6 +144,7 @@ Dipakai untuk filter tombol showcase. Pilihan yang tersedia:
 - `code`
 - `mobile`
 - `uiux`
+- `data`
 
 ```js
 year: '2026'
@@ -341,13 +343,15 @@ Contoh:
 
 1. Masukkan gambar ke `assets/images/portfolio/`.
 2. Tambahkan object baru di `portfolioCases`.
-3. Pastikan `category` salah satu dari `code`, `mobile`, atau `uiux`.
+3. Pastikan `category` salah satu dari `code`, `mobile`, `uiux`, atau `data`.
 4. Pastikan path gambar benar.
 5. Pastikan link tombol benar.
 6. Preview pakai Live Server.
 7. Push ke GitHub.
 
 ## Catatan Penting
+
+- [KYB Onboarding Analytics](projects/kyb-onboarding-analytics/) adalah demo analitik dengan 840 catatan sintetis. Generator data, SQL, dan dokumentasinya tersedia pada folder proyek tersebut.
 
 - Website ini tidak memakai database.
 - Semua portfolio disimpan di `assets/js/main.js`.

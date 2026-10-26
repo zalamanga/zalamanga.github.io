@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Interactive KYB onboarding operations dashboard with funnel, SLA, anomaly, and root-cause analysis.">
+  <title>KYB Onboarding Operations Dashboard</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#overview" aria-label="VerifyIQ dashboard home">
+        <span class="brand-mark" aria-hidden="true">V</span>
+        <span><strong>VerifyIQ</strong><small>KYB Operations</small></span>
+      </a>
+
+      <nav class="sidebar-nav" aria-label="Dashboard sections">
+        <a class="active" href="#overview"><span>01</span>Overview</a>
+        <a href="#funnel"><span>02</span>Funnel analysis</a>
+        <a href="#operations"><span>03</span>Operations</a>
+        <a href="#exceptions"><span>04</span>Exceptions</a>
+        <a href="#records"><span>05</span>Applications</a>
+      </nav>
+
+      <div class="sidebar-note">
+        <span class="eyebrow">PORTFOLIO CASE STUDY</span>
+        <p>840 synthetic records. No personal or confidential data.</p>
+        <a href="sql/analysis_queries.sql">View SQL queries <span aria-hidden="true">↗</span></a>
+      </div>
+
+      <div class="analyst-card">
+        <div class="avatar">MR</div>
+        <div><strong>Muhammad Rafik</strong><small>Operations Analytics</small></div>
+      </div>
+    </aside>
+
+    <div class="main-column">
+      <header class="topbar">
+        <button class="menu-button" id="menuButton" type="button" aria-label="Open dashboard navigation" aria-controls="sidebar" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <div>
+          <p class="topbar-kicker">KNOW YOUR BUSINESS · OPERATIONS INTELLIGENCE</p>
+          <h1>Onboarding Command Center</h1>
+        </div>
+        <div class="freshness">
+          <span class="live-dot" aria-hidden="true"></span>
+          <span><small>Data refreshed</small><strong id="refreshTime">28 Sep 2026 · 17:00 WIB</strong></span>
+        </div>
+      </header>
+
+      <main>
+        <section class="filters" aria-label="Dashboard filters">
+          <div class="filter-heading">
+            <span class="filter-icon" aria-hidden="true">⌁</span>
+            <span><strong>Filter analysis</strong><small>All visuals update together</small></span>
+          </div>
+          <label>
+            <span>Period</span>
+            <select id="periodFilter">
+              <option value="7">Last 7 days</option>
+              <option value="30">Last 30 days</option>
+              <option value="90" selected>Last 90 days</option>
+              <option value="all">All available data</option>
+            </select>
+          </label>
+          <label>
+            <span>Channel</span>
+            <select id="channelFilter"><option value="all">All channels</option></select>
+          </label>
+          <label>
+            <span>Risk level</span>
+            <select id="riskFilter"><option value="all">All risk levels</option></select>
+          </label>
+          <label>
+            <span>Industry</span>
+            <select id="industryFilter"><option value="all">All industries</option></select>
+          </label>
+          <button class="button ghost" id="resetFilters" type="button">Reset</button>
+          <button class="button primary" id="downloadCsv" type="button">Export CSV</button>
+        </section>
+
+        <section id="overview" class="section-block" aria-labelledby="overviewTitle">
+          <div class="section-heading">
+            <div><span class="eyebrow">EXECUTIVE OVERVIEW</span><h2 id="overviewTitle">Today’s onboarding health</h2></div>
+            <p id="scopeLabel">Showing the last 90 days</p>
+          </div>
+
+          <div class="kpi-grid">
+            <article class="kpi-card accent-blue">
+              <div class="kpi-label"><span>Total applications</span><span class="metric-icon">↗</span></div>
+              <strong id="kpiApplications">—</strong>
+              <p id="kpiApplicationsNote">Registered in selected period</p>
+            </article>
+            <article class="kpi-card accent-cyan">
+              <div class="kpi-label"><span>Submission rate</span><span class="metric-icon">✓</span></div>
+              <strong id="kpiSubmission">—</strong>
+              <p id="kpiSubmissionNote">Reached submitted stage</p>
+            </article>
+            <article class="kpi-card accent-green">
+              <div class="kpi-label"><span>Activation rate</span><span class="metric-icon">◎</span></div>
+              <strong id="kpiActivation">—</strong>
+              <p id="kpiActivationNote">Activated / registered</p>
+            </article>
+            <article class="kpi-card accent-violet">
+              <div class="kpi-label"><span>Avg. turnaround</span><span class="metric-icon">◷</span></div>
+              <strong id="kpiTurnaround">—</strong>
+              <p id="kpiTurnaroundNote">Resolved applications</p>
+            </article>
+            <article class="kpi-card accent-amber">
+              <div class="kpi-label"><span>SLA compliance</span><span class="metric-icon">◇</span></div>
+              <strong id="kpiSla">—</strong>
+              <p id="kpiSlaNote">Within 48h / 72h target</p>
+            </article>
+            <article class="kpi-card accent-red">
+              <div class="kpi-label"><span>Failed transactions</span><span class="metric-icon">!</span></div>
+              <strong id="kpiFailures">—</strong>
+              <p id="kpiFailuresNote">Activation attempts requiring action</p>
+            </article>
+          </div>
+
+          <div class="insight-strip" id="insightStrip" aria-label="Automated business insights"></div>
+        </section>
+
+        <section id="funnel" class="section-block" aria-labelledby="funnelTitle">
+          <div class="section-heading">
+            <div><span class="eyebrow">CONVERSION & VOLUME</span><h2 id="funnelTitle">Where applicants move—or stop</h2></div>
+            <p>Stage conversion and weekly intake</p>
+          </div>
+          <div class="analytics-grid">
+            <article class="panel funnel-panel">
+              <div class="panel-heading">
+                <div><h3>Onboarding funnel</h3><p>Conversion from registered applications</p></div>
+                <span class="panel-chip">6 stages</span>
+              </div>
+              <div class="funnel-chart" id="funnelChart"></div>
+            </article>
+
+            <article class="panel trend-panel">
+              <div class="panel-heading">
+                <div><h3>Weekly volume trend</h3><p>Applications registered vs. activated</p></div>
+                <div class="chart-legend"><span><i class="legend-blue"></i>Registered</span><span><i class="legend-green"></i>Activated</span></div>
+              </div>
+              <div class="trend-chart" id="trendChart" role="img" aria-label="Weekly applications and activations trend"></div>
+            </article>
+          </div>
+        </section>
+
+        <section id="operations" class="section-block" aria-labelledby="operationsTitle">
+          <div class="section-heading">
+            <div><span class="eyebrow">OPERATIONS CONTROL</span><h2 id="operationsTitle">Backlog, SLA, and channel performance</h2></div>
+            <p>Prioritize work with the highest business impact</p>
+          </div>
+
+          <div class="operations-grid">
+            <article class="panel">
+              <div class="panel-heading">
+                <div><h3>Stage bottlenecks</h3><p>Open cases and ageing by current stage</p></div>
+                <span class="panel-chip warning">SLA watch</span>
+              </div>
+              <div class="bottleneck-list" id="bottleneckList"></div>
+            </article>
+
+            <article class="panel">
+              <div class="panel-heading">
+                <div><h3>Channel performance</h3><p>Conversion quality by acquisition source</p></div>
+                <span class="panel-chip">Comparative</span>
+              </div>
+              <div class="table-wrap compact-table">
+                <table>
+                  <thead><tr><th>Channel</th><th>Volume</th><th>Activation</th><th>SLA</th><th>Avg. TAT</th></tr></thead>
+                  <tbody id="channelTableBody"></tbody>
+                </table>
+              </div>
+            </article>
+          </div>
+
+          <div class="root-cause-grid">
+            <article class="panel">
+              <div class="panel-heading">
+                <div><h3>Top root causes</h3><p>Why non-activated applications need attention</p></div>
+              </div>
+              <div class="root-cause-list" id="rootCauseList"></div>
+            </article>
+            <article class="panel quality-panel">
+              <div class="panel-heading">
+                <div><h3>Data quality monitor</h3><p>Reliability checks before stakeholder reporting</p></div>
+                <span class="quality-state"><i></i>Monitored</span>
+              </div>
+              <div class="quality-grid" id="qualityGrid"></div>
+            </article>
+          </div>
+        </section>
+
+        <section id="exceptions" class="section-block" aria-labelledby="exceptionsTitle">
+          <div class="section-heading">
+            <div><span class="eyebrow">EXCEPTION MANAGEMENT</span><h2 id="exceptionsTitle">Cases requiring investigation</h2></div>
+            <p>Prioritized by operational severity</p>
+          </div>
+          <article class="panel exception-panel">
+            <div class="exception-summary">
+              <div><span>High-priority queue</span><strong id="exceptionCount">—</strong></div>
+              <p id="exceptionSummary">Cases are flagged using SLA, API latency, transaction, duplicate, and data-quality rules.</p>
+            </div>
+            <div class="exception-list" id="exceptionList"></div>
+          </article>
+        </section>
+
+        <section id="records" class="section-block" aria-labelledby="recordsTitle">
+          <div class="section-heading records-heading">
+            <div><span class="eyebrow">APPLICATION-LEVEL DETAIL</span><h2 id="recordsTitle">Onboarding records</h2></div>
+            <label class="search-field">
+              <span class="sr-only">Search applications</span>
+              <input id="recordSearch" type="search" placeholder="Search ID or company…">
+            </label>
+          </div>
+          <article class="panel records-panel">
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr><th>Application</th><th>Registered</th><th>Channel</th><th>Risk</th><th>Current stage</th><th>Stage age</th><th>Signal</th></tr>
+                </thead>
+                <tbody id="recordsTableBody"></tbody>
+              </table>
+            </div>
+            <div class="table-footer"><span id="recordsCount">—</span><span>Showing up to 15 records · export for full detail</span></div>
+          </article>
+        </section>
+      </main>
+
+      <footer>
+        <p>KYB Onboarding Operations Dashboard · Independent portfolio case study</p>
+        <div><a href="README.md">Methodology</a><a href="data/kyb_applications.csv" download>Dataset</a><a href="sql/analysis_queries.sql">SQL</a><a href="bi/powerbi_measures.dax">Power BI DAX</a></div>
+      </footer>
+    </div>
+  </div>
+
+  <div class="mobile-backdrop" id="mobileBackdrop" hidden></div>
+  <script src="data/generate-data.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>

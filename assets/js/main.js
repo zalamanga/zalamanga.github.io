@@ -94,6 +94,36 @@ function initPortfolio() {
     // ============ Static showcase data ============
     const portfolioCases = [
       {
+        id: 'kyb-onboarding-analytics',
+        title: 'KYB Onboarding Operations Dashboard',
+        type: 'Data Analytics',
+        category: 'data',
+        year: '2026',
+        image: 'assets/images/portfolio/kyb-onboarding-dashboard.png',
+        imageAlt: 'KYB onboarding operations analytics dashboard showing KPI cards, funnel conversion, and weekly trends',
+        summary: 'Interactive operations dashboard for monitoring KYB funnel conversion, SLA, bottlenecks, anomalies, and data quality.',
+        stack: ['SQL', 'Data Analysis', 'Dashboarding'],
+        links: [{ label: 'Open Dashboard', href: 'projects/kyb-onboarding-analytics/' }],
+        detail: {
+          role: 'Data & Operations Analyst',
+          scope: 'End-to-end KYB onboarding monitoring case study',
+          overview: 'A portfolio case study built around 840 synthetic business-onboarding records to demonstrate the SQL, KPI monitoring, dashboard maintenance, anomaly investigation, and stakeholder insight responsibilities of a KYB operations role.',
+          highlights: [
+            'Defined application, submission, activation, turnaround-time, SLA-compliance, and failed-transaction KPIs with shared dashboard filters.',
+            'Built funnel, weekly trend, channel, backlog, root-cause, exception-queue, and data-quality views for operational investigation.',
+            'Prepared a PostgreSQL schema, reusable analysis queries, and a BI-ready CSV for Power BI, Tableau, Looker Studio, Metabase, or Excel.',
+          ],
+          outcome: 'A decision-ready analytics project that turns onboarding events into prioritized operational actions while keeping the data model reproducible and privacy-safe.',
+          assets: [
+            { label: 'SQL Analysis', href: 'projects/kyb-onboarding-analytics/sql/analysis_queries.sql' },
+            { label: 'Power BI DAX', href: 'projects/kyb-onboarding-analytics/bi/powerbi_measures.dax' },
+            { label: 'Synthetic Dataset', href: 'projects/kyb-onboarding-analytics/data/kyb_applications.csv', download: true },
+            { label: 'Methodology', href: 'projects/kyb-onboarding-analytics/README.md' },
+            { label: 'Business Insights', href: 'projects/kyb-onboarding-analytics/docs/INSIGHTS_AND_RECOMMENDATIONS.md' },
+          ],
+        },
+      },
+      {
         id: 'xspec-website',
         title: 'Xspec Technology Website',
         type: 'Website',

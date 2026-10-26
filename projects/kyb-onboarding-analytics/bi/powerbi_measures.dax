@@ -1,0 +1,90 @@
+-- Suggested Power BI table name: KYB Applications
+
+Total Applications =
+COUNTROWS('KYB Applications')
+
+Submitted Applications =
+CALCULATE(
+    [Total Applications],
+    'KYB Applications'[stage_index] >= 1
+)
+
+Submission Rate % =
+DIVIDE([Submitted Applications], [Total Applications], 0)
+
+Activated Applications =
+CALCULATE(
+    [Total Applications],
+    'KYB Applications'[current_stage] = "Activated"
+)
+
+Activation Rate % =
+DIVIDE([Activated Applications], [Total Applications], 0)
+
+Resolved Applications =
+CALCULATE(
+    [Total Applications],
+    NOT ISBLANK('KYB Applications'[turnaround_hours])
+)
+
+Average Turnaround Hours =
+CALCULATE(
+    AVERAGE('KYB Applications'[turnaround_hours]),
+    NOT ISBLANK('KYB Applications'[turnaround_hours])
+)
+
+SLA-Compliant Resolved Applications =
+CALCULATE(
+    [Total Applications],
+    NOT ISBLANK('KYB Applications'[turnaround_hours]),
+    'KYB Applications'[sla_met] = 1
+)
+
+SLA Compliance % =
+DIVIDE(
+    [SLA-Compliant Resolved Applications],
+    [Resolved Applications],
+    0
+)
+
+Open Backlog =
+CALCULATE(
+    [Total Applications],
+    NOT ( 'KYB Applications'[current_stage] IN { "Activated", "Rejected" } )
+)
+
+SLA-Breached Backlog =
+CALCULATE(
+    [Total Applications],
+    NOT ( 'KYB Applications'[current_stage] IN { "Activated", "Rejected" } ),
+    'KYB Applications'[sla_met] = 0
+)
+
+Failed Transactions =
+CALCULATE(
+    [Total Applications],
+    'KYB Applications'[failed_transaction] = 1
+)
+
+Possible Duplicates =
+CALCULATE(
+    [Total Applications],
+    'KYB Applications'[duplicate_flag] = 1
+)
+
+API Response P95 (ms) =
+PERCENTILEX.INC(
+    'KYB Applications',
+    'KYB Applications'[api_response_ms],
+    0.95
+)
+
+Document Completeness % =
+DIVIDE(
+    CALCULATE(
+        [Total Applications],
+        'KYB Applications'[document_completeness_pct] >= 80
+    ),
+    [Total Applications],
+    0
+)
