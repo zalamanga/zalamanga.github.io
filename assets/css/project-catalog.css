@@ -1,0 +1,307 @@
+.project-catalog {
+  --catalog-text: #f5f5f7;
+  --catalog-muted: #b5b5c3;
+  --catalog-base: #0f0f15;
+  --catalog-surface: #15151e;
+  --catalog-edge: #77778b;
+  --catalog-focus: #d5a6ff;
+  margin-top: clamp(3rem, 7vw, 6rem);
+  padding-top: clamp(2rem, 5vw, 3.5rem);
+  border-top: 1px solid var(--border);
+  color: var(--catalog-text);
+  scroll-margin-top: 7rem;
+}
+
+.project-catalog-heading {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1.75rem;
+}
+
+.project-catalog-heading h3 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(1.65rem, 3vw, 2.25rem);
+  line-height: 1.2;
+  margin-bottom: 0.75rem;
+}
+
+.project-catalog-heading p {
+  max-width: 66ch;
+  color: var(--catalog-muted);
+}
+
+.project-catalog-controls {
+  display: grid;
+  gap: 0.9rem;
+  align-items: end;
+}
+
+.project-catalog-controls label {
+  display: block;
+  margin-bottom: 0.45rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.project-catalog-controls input,
+.project-catalog-controls select {
+  width: 100%;
+  min-width: 0;
+  min-height: 48px;
+  border: 1px solid var(--catalog-edge);
+  border-radius: 6px;
+  padding: 0.7rem 0.8rem;
+  background: var(--catalog-base);
+  color: var(--catalog-text);
+  font: inherit;
+  font-size: 1rem;
+  color-scheme: dark;
+}
+
+.project-catalog-controls input::placeholder {
+  color: var(--catalog-muted);
+  opacity: 1;
+}
+
+.project-catalog button,
+.project-catalog-github,
+.project-entry-link {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.4rem;
+  min-height: 44px;
+  padding: 0.65rem 0.9rem;
+  border: 1px solid var(--catalog-edge);
+  border-radius: 6px;
+  background: transparent;
+  color: var(--catalog-text);
+  font: inherit;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  text-align: center;
+}
+
+.project-catalog [hidden] {
+  display: none !important;
+}
+
+.project-catalog button:disabled,
+.project-catalog-controls :disabled {
+  cursor: wait;
+}
+
+.project-catalog button:hover:not(:disabled),
+.project-catalog-github:hover,
+.project-entry-link:hover {
+  background: var(--catalog-surface);
+  border-color: var(--catalog-focus);
+}
+
+.project-catalog :is(a, button, input, select):focus-visible {
+  outline: 3px solid var(--catalog-focus);
+  outline-offset: 4px;
+}
+
+.project-catalog-count {
+  margin-top: 1.25rem;
+  color: var(--catalog-text);
+  font-weight: 600;
+}
+
+.project-catalog-guidance {
+  margin-top: 0.4rem;
+  margin-bottom: 1.5rem;
+  max-width: 90ch;
+  color: var(--catalog-muted);
+  font-size: 0.85rem;
+}
+
+.project-catalog-state {
+  padding: 1.5rem 0;
+  color: var(--catalog-muted);
+}
+
+.project-catalog-list {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1.25rem;
+}
+
+.project-entry {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  align-items: start;
+  gap: 1.1rem;
+  min-width: 0;
+  padding: 1.1rem 0;
+  border-top: 1px solid var(--border);
+}
+
+.project-entry-media {
+  min-width: 0;
+  width: 100%;
+  background: var(--catalog-base);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+}
+
+.project-entry-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 10;
+  object-fit: contain;
+}
+
+.project-entry-image-fallback {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 10rem;
+  padding: 1.25rem;
+  color: var(--catalog-muted);
+  text-align: center;
+  font-size: 0.85rem;
+}
+
+.project-entry-body {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.project-entry-meta {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 0.75rem;
+  row-gap: 0.2rem;
+  margin-bottom: 0.55rem;
+  color: var(--catalog-muted);
+  font-size: 0.75rem;
+}
+
+.project-entry-category {
+  color: var(--catalog-focus);
+}
+
+.project-entry-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.15rem;
+  line-height: 1.3;
+}
+
+.project-entry-title-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: var(--catalog-text);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.22em;
+}
+
+.project-entry-title-link:hover {
+  color: var(--catalog-focus);
+}
+
+.project-entry-repo,
+.project-entry-screenshot-label {
+  color: var(--catalog-muted);
+  font-size: 0.75rem;
+}
+
+.project-entry-screenshot-label {
+  padding: 0.6rem 0.75rem;
+  border-top: 1px solid var(--border);
+}
+
+.project-entry-description {
+  margin-top: 0.65rem;
+  color: var(--catalog-muted);
+  font-size: 0.9rem;
+}
+
+.project-entry-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.75rem;
+  margin-top: 0.75rem;
+  padding: 0;
+  list-style: none;
+  color: var(--catalog-text);
+  font-size: 0.75rem;
+}
+
+.project-entry-note {
+  margin-top: 0.65rem;
+  color: var(--catalog-muted);
+  font-size: 0.8rem;
+}
+
+.project-entry-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 0.85rem;
+}
+
+.project-catalog-pagination {
+  display: flex;
+  justify-content: center;
+  padding-top: 1.75rem;
+}
+
+@media (min-width: 600px) {
+  .project-catalog-controls {
+    grid-template-columns: minmax(0, 1fr) minmax(13rem, 0.75fr);
+  }
+
+  .project-catalog-reset {
+    justify-self: start;
+  }
+
+  .project-entry {
+    grid-template-columns: minmax(10rem, 0.65fr) minmax(0, 1fr);
+  }
+}
+
+@media (min-width: 1000px) {
+  .project-catalog-heading {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .project-catalog-github {
+    flex-shrink: 0;
+  }
+
+  .project-catalog-controls {
+    grid-template-columns: minmax(0, 1fr) minmax(15rem, 0.5fr) auto;
+  }
+
+  .project-catalog-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 2rem;
+    row-gap: 1.5rem;
+  }
+
+  .project-entry {
+    grid-template-columns: minmax(8rem, 0.7fr) minmax(0, 1fr);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .project-catalog *,
+  .project-catalog *::before,
+  .project-catalog *::after {
+    scroll-behavior: auto;
+    transition: none;
+  }
+}

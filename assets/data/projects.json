@@ -1,0 +1,1873 @@
+{
+  "updatedAt": "2026-10-27T20:40:01+07:00",
+  "projects": [
+    {
+      "repo": "fti-authentication-assessment",
+      "title": "FTI Access",
+      "description": "A Go and React authentication app with registration, role-based administration, and a two-session limit per account.",
+      "category": "backend",
+      "kind": "Assessment demo",
+      "stack": [
+        "Go",
+        "React",
+        "TypeScript",
+        "PostgreSQL",
+        "Docker",
+        "Nginx"
+      ],
+      "url": "https://github.com/zalamanga/fti-authentication-assessment",
+      "sourceRef": "918470e43eb75dc75c65f126f4024e0503c6365f",
+      "screenshots": [
+        {
+          "src": "assets/images/project-catalog/fti-authentication-assessment-preview.png",
+          "alt": "FTI Access: application screenshot",
+          "label": "Application screenshot",
+          "width": 1280,
+          "height": 900
+        }
+      ]
+    },
+    {
+      "repo": "inventory-management-demo",
+      "title": "Persediaan Inventory",
+      "description": "A React and Express inventory app with staff read access, admin CRUD, and versioned changes with retry receipts.",
+      "category": "web",
+      "kind": "Application demo",
+      "stack": [
+        "React",
+        "Express",
+        "Node.js",
+        "PostgreSQL"
+      ],
+      "url": "https://github.com/zalamanga/inventory-management-demo",
+      "sourceRef": "0b20dccbc07f787699dc49b48cf189ed71c99628",
+      "screenshots": [
+        {
+          "src": "assets/images/project-catalog/inventory-management-demo-preview.png",
+          "alt": "Persediaan Inventory: application screenshot",
+          "label": "Application screenshot",
+          "width": 1280,
+          "height": 1100
+        }
+      ],
+      "note": "Local demo; screenshots use synthetic accounts and items."
+    },
+    {
+      "repo": "zaimedia",
+      "title": "Zaimedia",
+      "description": "A Laravel API and Vue digital bookstore with catalog, cart, PDF library, articles, and customer, writer, and admin dashboards.",
+      "category": "web",
+      "kind": "Application demo",
+      "stack": [
+        "PHP",
+        "Laravel",
+        "Vue 3",
+        "Vite",
+        "Tailwind CSS",
+        "MySQL"
+      ],
+      "url": "https://github.com/zalamanga/zaimedia",
+      "sourceRef": "764c06fc563c5db9a154d588bfb4424f3253a0c6",
+      "screenshots": [
+        {
+          "src": "assets/images/project-catalog/zaimedia-preview.png",
+          "alt": "Zaimedia: application screenshot",
+          "label": "Application screenshot",
+          "width": 1280,
+          "height": 1161
+        }
+      ],
+      "note": "Checkout normally creates pending orders; an optional demo mode simulates paid orders without transferring money."
+    },
+    {
+      "repo": "dmn-coffee",
+      "title": "DMN Coffee",
+      "description": "Browse a database-backed menu by table number and keep a cart and ratings locally in the browser.",
+      "category": "java",
+      "kind": "Application demo",
+      "stack": [
+        "Java",
+        "Servlets",
+        "JSP",
+        "JDBC",
+        "MySQL"
+      ],
+      "url": "https://github.com/zalamanga/dmn-coffee",
+      "sourceRef": "fd6308926f1fc1b101b99f797825a88b5eb3342c",
+      "screenshots": [
+        {
+          "src": "assets/images/project-catalog/dmn-coffee-preview.png",
+          "alt": "DMN Coffee: application screenshot",
+          "label": "Application screenshot",
+          "width": 1440,
+          "height": 900
+        }
+      ],
+      "note": "Cart and ratings use localStorage; no order submission, payment, user accounts, or server-side rating storage."
+    },
+    {
+      "repo": "shoe-store-crud-",
+      "title": "Shoe Store CRUD",
+      "description": "A Swing desktop app for managing shoe products, customers, employees, and suppliers in SQL Server.",
+      "category": "java",
+      "kind": "Application demo",
+      "stack": [
+        "Java",
+        "Swing",
+        "JDBC",
+        "SQL Server"
+      ],
+      "url": "https://github.com/zalamanga/shoe-store-crud-",
+      "sourceRef": "5096a257bcf849501f99290d93f42bb2c4d0d452",
+      "screenshots": [
+        {
+          "src": "assets/images/project-catalog/shoe-store-crud--preview.png",
+          "alt": "Shoe Store CRUD: application screenshot",
+          "label": "Application screenshot",
+          "width": 784,
+          "height": 700
+        }
+      ],
+      "note": "Master-data app with a single application-login model; no per-user authorization roles."
+    },
+    {
+      "repo": "tictactoe",
+      "title": "Tic Tac Toe Java",
+      "description": "A local two-player Swing game with win highlighting, draw detection, locked completed boards, and session scores.",
+      "category": "java",
+      "kind": "Game demo",
+      "stack": [
+        "Java",
+        "Swing",
+        "Maven"
+      ],
+      "url": "https://github.com/zalamanga/tictactoe",
+      "sourceRef": "2130972d3e063fe453a85fa690b00fcaeabddd66",
+      "screenshots": [
+        {
+          "src": "assets/images/project-catalog/tictactoe-preview.png",
+          "alt": "Tic Tac Toe Java: application screenshot",
+          "label": "Application screenshot",
+          "width": 1100,
+          "height": 647
+        }
+      ],
+      "note": "Two human players on one computer; no AI opponent or online mode."
+    },
+    {
+      "repo": "pakeaja-cv-builder",
+      "title": "PakeAja CV Builder",
+      "description": "Build a CV in a local browser editor with four presets, page preview, JSON and DOCX export, and browser printing.",
+      "category": "tools",
+      "kind": "Application demo",
+      "stack": [
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "DOCX"
+      ],
+      "url": "https://github.com/zalamanga/pakeaja-cv-builder",
+      "sourceRef": "07b58853f35aa08d712bdc381b5331d5bf66e4d2",
+      "screenshots": [
+        {
+          "src": "assets/images/project-catalog/pakeaja-cv-builder-preview.png",
+          "alt": "PakeAja CV Builder: application screenshot",
+          "label": "Application screenshot",
+          "width": 1520,
+          "height": 1330
+        }
+      ],
+      "note": "No accounts, cloud sync, or application-submission service; CV contents stay in the browser."
+    },
+    {
+      "repo": "pakeaja-image",
+      "title": "PakeAja Image",
+      "description": "Compress, convert, resize, and remove image backgrounds locally, using flat-color removal, MODNet matting, and manual brushes.",
+      "category": "tools",
+      "kind": "Application demo",
+      "stack": [
+        "JavaScript",
+        "Web Workers",
+        "WebAssembly",
+        "MODNet"
+      ],
+      "url": "https://github.com/zalamanga/pakeaja-image",
+      "sourceRef": "a160ed59404e4f75431f02a9ba6d5065700012f5",
+      "screenshots": [
+        {
+          "src": "assets/images/project-catalog/pakeaja-image-preview.png",
+          "alt": "PakeAja Image: application screenshot",
+          "label": "Application screenshot",
+          "width": 1232,
+          "height": 961
+        }
+      ],
+      "note": "One-image browser editor; no photo upload endpoint or external inference service."
+    },
+    {
+      "repo": "factorization-math",
+      "title": "Factorization Math",
+      "description": "A Java console menu for prime factorization, greatest common divisors, and least common multiples.",
+      "category": "java",
+      "kind": "Learning project",
+      "stack": [
+        "Java"
+      ],
+      "url": "https://github.com/zalamanga/factorization-math",
+      "sourceRef": "5a780e3c38b6669096b5ad13f2a97d90fa60804f",
+      "screenshots": [
+        {
+          "src": "assets/images/project-catalog/factorization-math-preview.png",
+          "alt": "Factorization Math: terminal / http output (rendered)",
+          "label": "Terminal / HTTP output (rendered)",
+          "width": 1056,
+          "height": 528
+        }
+      ],
+      "note": "Standard-library exercise with no database or runtime dependencies."
+    },
+    {
+      "repo": "football-standings-java",
+      "title": "Football Standings Java",
+      "description": "Record teams and match scores, correct results, and calculate a football table from SQL Server match records.",
+      "category": "java",
+      "kind": "Learning project",
+      "stack": [
+        "Java",
+        "JDBC",
+        "SQL Server",
+        "Maven"
+      ],
+      "url": "https://github.com/zalamanga/football-standings-java",
+      "sourceRef": "8527f0e81ae67e44c1ec5b2c3919bbc71ac66cca",
+      "screenshots": [
+        {
+          "src": "assets/images/project-catalog/football-standings-java-preview.png",
+          "alt": "Football Standings Java: terminal / http output (rendered)",
+          "label": "Terminal / HTTP output (rendered)",
+          "width": 960,
+          "height": 528
+        }
+      ],
+      "note": "Uses synthetic teams and matches; not a live league or sports-data service."
+    },
+    {
+      "repo": "android-student-database",
+      "title": "Android Student Database",
+      "description": "Create local demo accounts and add, edit, or delete student records stored in SQLite on one device.",
+      "category": "mobile",
+      "kind": "Learning project",
+      "stack": [
+        "Java",
+        "Android",
+        "SQLite",
+        "Gradle"
+      ],
+      "url": "https://github.com/zalamanga/android-student-database",
+      "sourceRef": "85168d7fb06899763790afa84b83dc3722a4fb74",
+      "screenshots": [],
+      "note": "All demo accounts share the same local student records; there is no server or sync. A device or emulator screenshot is not available yet."
+    },
+    {
+      "repo": "android-video-library",
+      "title": "Android Video Library",
+      "description": "Two Android apps share a Firebase video library: an admin uploads and manages videos, while clients browse and play them.",
+      "category": "mobile",
+      "kind": "Application demo",
+      "stack": [
+        "Java",
+        "Android",
+        "Firebase Authentication",
+        "Firebase Realtime Database",
+        "Firebase Storage"
+      ],
+      "url": "https://github.com/zalamanga/android-video-library",
+      "sourceRef": "4a0e90c8e4466ff1597a9205c541e0efdf5fb8f4",
+      "screenshots": [],
+      "note": "Admin/client modules require a privately configured Firebase project and authorization rules. Real cloud and device behavior have not been verified. A device or emulator screenshot is not available yet."
+    },
+    {
+      "repo": "apotek-kita-java",
+      "title": "ApotekKita Java",
+      "description": "A Swing account-management app with administrator CRUD and search, plus a cashier profile view backed by MySQL.",
+      "category": "java",
+      "kind": "Application demo",
+      "stack": [
+        "Java",
+        "Swing",
+        "JDBC",
+        "MySQL",
+        "Maven"
+      ],
+      "url": "https://github.com/zalamanga/apotek-kita-java",
+      "sourceRef": "13c11742345240b6576ebe65bbd7889e50c38fee",
+      "screenshots": [
+        {
+          "src": "assets/images/project-catalog/apotek-kita-java-preview.png",
+          "alt": "ApotekKita Java: application screenshot",
+          "label": "Application screenshot",
+          "width": 1180,
+          "height": 737
+        }
+      ],
+      "note": "Despite the pharmacy name, it manages user accounts, not medicines, purchases, or sales."
+    },
+    {
+      "repo": "bookshelf-api",
+      "title": "Bookshelf API",
+      "description": "A Hapi REST API for creating books, tracking reading progress, and combining title, finished, and reading filters.",
+      "category": "backend",
+      "kind": "Learning project",
+      "stack": [
+        "Node.js",
+        "JavaScript",
+        "Hapi"
+      ],
+      "url": "https://github.com/zalamanga/bookshelf-api",
+      "sourceRef": "855a6bc2f7bf9ac560d4fd2edff8849dc769d435",
+      "screenshots": [
+        {
+          "src": "assets/images/project-catalog/bookshelf-api-preview.png",
+          "alt": "Bookshelf API: terminal / http output (rendered)",
+          "label": "Terminal / HTTP output (rendered)",
+          "width": 1160,
+          "height": 1445
+        }
+      ],
+      "note": "In-memory storage is limited to 5,000 books and resets when the server restarts; no accounts or database."
+    },
+    {
+      "repo": "bookshelf-dom",
+      "title": "Buka Buku Reading Shelf",
+      "description": "Track books, edit reading details, search authors or titles, and move entries between shelves using browser storage.",
+      "category": "web",
+      "kind": "Application demo",
+      "stack": [
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "localStorage"
+      ],
+      "url": "https://github.com/zalamanga/bookshelf-dom",
+      "sourceRef": "b0313489db83a140bb139f3cfc4e9b3af780877f",
+      "screenshots": [
+        {
+          "src": "assets/images/project-catalog/bookshelf-dom-preview.png",
+          "alt": "Buka Buku Reading Shelf: application screenshot",
+          "label": "Application screenshot",
+          "width": 1440,
+          "height": 1115
+        }
+      ],
+      "note": "Data belongs to the current browser; no account, backend, or cross-device sync."
+    },
+    {
+      "repo": "book-store",
+      "title": "Buka Buku Static Catalog",
+      "description": "A static nine-book catalog showing covers, authors, release dates, and synopses without a backend.",
+      "category": "web",
+      "kind": "Learning project",
+      "stack": [
+        "HTML",
+        "CSS"
+      ],
+      "url": "https://github.com/zalamanga/book-store",
+      "sourceRef": "921330889f3fe695985e42604c16595c53ae18f1",
+      "screenshots": [
+        {
+          "src": "assets/images/project-catalog/book-store-preview.png",
+          "alt": "Buka Buku Static Catalog: static frontend captured in a local browser",
+          "label": "Static frontend screenshot (local preview)",
+          "width": 1440,
+          "height": 1000
+        }
+      ],
+      "note": "No JavaScript, search, accounts, cart, or payments."
+    },
+    {
+      "repo": "buka-buku-java",
+      "title": "BukaBuku Java",
+      "description": "A JSF book catalog where visitors browse titles and signed-in demo users manage shared book metadata.",
+      "category": "java",
+      "kind": "Application demo",
+      "stack": [
+        "Java",
+        "JSF",
+        "Hibernate",
+        "MySQL",
+        "Docker"
+      ],
+      "url": "https://github.com/zalamanga/buka-buku-java",
+      "sourceRef": "1e2a7ded47978a9762c5871f9e96fec3e2c8713f",
+      "screenshots": [
+        {
+          "src": "assets/images/project-catalog/buka-buku-java-preview.png",
+          "alt": "BukaBuku Java: application screenshot",
+          "label": "Application screenshot",
+          "width": 1440,
+          "height": 1800
+        }
+      ],
+      "note": "All demo accounts can manage the shared catalog; no sales, lending, or book downloads."
+    },
+    {
+      "repo": "cafe-dino-java",
+      "title": "Cafe Dino Java",
+      "description": "Register a demo account, then search, add, edit, and remove cafe products with prices and stock values.",
+      "category": "java",
+      "kind": "Application demo",
+      "stack": [
+        "Java",
+        "JSF",
+        "Hibernate",
+        "MySQL",
+        "Docker"
+      ],
+      "url": "https://github.com/zalamanga/cafe-dino-java",
+      "sourceRef": "6e2b6bd50418431ac7a5b582c1a395d0797bcb03",
+      "screenshots": [
+        {
+          "src": "assets/images/project-catalog/cafe-dino-java-preview.png",
+          "alt": "Cafe Dino Java: application screenshot",
+          "label": "Application screenshot",
+          "width": 1280,
+          "height": 1116
+        }
+      ],
+      "note": "Shared product-management permissions; no orders, payments, sales reports, or stock transactions."
+    },
+    {
+      "repo": "coffee-shop-landing",
+      "title": "Coffee Shop Landing",
+      "description": "A coffee-shop landing page with a shop story, product cards, sample reviews, and collapsible navigation.",
+      "category": "web",
+      "kind": "Learning project",
+      "stack": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
+      "url": "https://github.com/zalamanga/coffee-shop-landing",
+      "sourceRef": "8a14dbadbdf06292f93d7840ff5914268a02188a",
+      "screenshots": [
+        {
+          "src": "assets/images/project-catalog/coffee-shop-landing-preview.png",
+          "alt": "Coffee Shop Landing: static frontend captured in a local browser",
+          "label": "Static frontend screenshot (local preview)",
+          "width": 1440,
+          "height": 1000
+        }
+      ],
+      "note": "The search box only opens and closes; there is no filtering or checkout. Asset provenance is not fully established."
+    },
+    {
+      "repo": "course-metadata-scraper",
+      "title": "Course Metadata Scraper",
+      "description": "Read course URLs from XLSX, collect visible duration and store-price text, and write row-level results and checkpoints.",
+      "category": "tools",
+      "kind": "CLI tool",
+      "stack": [
+        "Python",
+        "Requests",
+        "BeautifulSoup",
+        "openpyxl"
+      ],
+      "url": "https://github.com/zalamanga/course-metadata-scraper",
+      "sourceRef": "1ff015200b968a3f191f04a133b71793b1fc08a0",
+      "screenshots": [
+        {
+          "src": "assets/images/project-catalog/course-metadata-scraper-preview.png",
+          "alt": "Course Metadata Scraper: terminal / http output (rendered)",
+          "label": "Terminal / HTTP output (rendered)",
+          "width": 1360,
+          "height": 550
+        }
+      ],
+      "note": "Displayed prices are observed text, not verified quotes. README previews use synthetic offline fixtures."
+    },
+    {
+      "repo": "recipe-finder",
+      "title": "FoodRecipe",
+      "description": "Find recipes by ingredient or category through TheMealDB, then read ingredients, measurements, and cooking instructions.",
+      "category": "web",
+      "kind": "Application demo",
+      "stack": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "TheMealDB"
+      ],
+      "url": "https://github.com/zalamanga/recipe-finder",
+      "sourceRef": "937e738bdc10c695db8e803a74f246f9eb6d220b",
+      "screenshots": [
+        {
+          "src": "assets/images/project-catalog/recipe-finder-preview.png",
+          "alt": "FoodRecipe: application screenshot",
+          "label": "Application screenshot",
+          "width": 1440,
+          "height": 2377
+        }
+      ],
+      "note": "Requires the external recipe API; result counts and content can change."
+    },
+    {
+      "repo": "grant-university-java",
+      "title": "Grant University Java",
+      "description": "A sample campus portal with four programs, account registration, sign-in, and database-backed personal profile editing.",
+      "category": "java",
+      "kind": "Application demo",
+      "stack": [
+        "Java",
+        "Servlets",
+        "JSP",
+        "JDBC",
+        "MySQL"
+      ],
+      "url": "https://github.com/zalamanga/grant-university-java",
+      "sourceRef": "0b51ea7335ca039f96e682008f70d7e2ae6c4ee0",
+      "screenshots": [
+        {
+          "src": "assets/images/project-catalog/grant-university-java-preview.png",
+          "alt": "Grant University Java: application screenshot",
+          "label": "Application screenshot",
+          "width": 1440,
+          "height": 1000
+        }
+      ],
+      "note": "Training portal, not an operating university or admissions service."
+    },
+    {
+      "repo": "greight-coffee-demo",
+      "title": "Greight Coffee",
+      "description": "Browse 12 coffee-shop menu items and calculate a local order estimate with quantity and sample account-form validation.",
+      "category": "web",
+      "kind": "Learning project",
+      "stack": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
+      "url": "https://github.com/zalamanga/greight-coffee-demo",
+      "sourceRef": "5dc06f52979d468af344e320ca9ea7b2f13e61c0",
+      "screenshots": [
+        {
+          "src": "assets/images/project-catalog/greight-coffee-demo-preview.png",
+          "alt": "Greight Coffee: application screenshot",
+          "label": "Application screenshot",
+          "width": 1440,
+          "height": 1724
+        }
+      ],
+      "note": "Frontend only; account forms are demonstrations and estimates do not submit orders."
+    },
+    {
+      "repo": "grouffee-coffee-java",
+      "title": "Grouffee Coffee Java",
+      "description": "A table-based coffee ordering demo with member session carts, stored demo orders, and admin menu and account management.",
+      "category": "java",
+      "kind": "Application demo",
+      "stack": [
+        "Java",
+        "Servlets",
+        "JSP",
+        "JDBC",
+        "MySQL",
+        "Docker"
+      ],
+      "url": "https://github.com/zalamanga/grouffee-coffee-java",
+      "sourceRef": "8f30ef570ffbd4e9cbd87f6478b243cd39b1ba32",
+      "screenshots": [
+        {
+          "src": "assets/images/project-catalog/grouffee-coffee-java-preview.png",
+          "alt": "Grouffee Coffee Java: application screenshot",
+          "label": "Application screenshot",
+          "width": 1440,
+          "height": 1418
+        }
+      ],
+      "note": "Orders are local demonstrations; no real payments or cashier submission."
+    },
+    {
+      "repo": "drug-store-app",
+      "title": "HaloTek Drug Store",
+      "description": "A Swing pharmacy demo with role-based master data, purchases, sales, monthly reports, and PDF report export.",
+      "category": "java",
+      "kind": "Application demo",
+      "stack": [
+        "Java",
+        "Swing",
+        "JDBC",
+        "SQL Server",
+        "JasperReports"
+      ],
+      "url": "https://github.com/zalamanga/drug-store-app",
+      "sourceRef": "4be321e9def17c750f5a3ee6675ca13a504817ca",
+      "screenshots": [
+        {
+          "src": "assets/images/project-catalog/drug-store-app-preview.png",
+          "alt": "HaloTek Drug Store: application screenshot",
+          "label": "Application screenshot",
+          "width": 1180,
+          "height": 737
+        }
+      ],
+      "note": "Continues legacy HaloTek source; original contributor credit is retained. Screenshots use synthetic data."
+    },
+    {
+      "repo": "hangman-java",
+      "title": "Hangman Java",
+      "description": "A terminal word-guessing game using six country names, with a menu and replay flow.",
+      "category": "java",
+      "kind": "Learning project",
+      "stack": [
+        "Java",
+        "Maven"
+      ],
+      "url": "https://github.com/zalamanga/hangman-java",
+      "sourceRef": "04b66666f7e3df71f999e13bbbe9104ff917196b",
+      "screenshots": [
+        {
+          "src": "assets/images/project-catalog/hangman-java-preview.png",
+          "alt": "Hangman Java: terminal / http output (rendered)",
+          "label": "Terminal / HTTP output (rendered)",
+          "width": 960,
+          "height": 880
+        }
+      ],
+      "note": "Local console exercise with no online play or database."
+    },
+    {
+      "repo": "hololearn",
+      "title": "Hololearn",
+      "description": "A learning catalog with public ebook summaries, member profiles and course links, and admin book, course, and feedback management.",
+      "category": "java",
+      "kind": "Application demo",
+      "stack": [
+        "Java",
+        "Servlets",
+        "JSP",
+        "JDBC",
+        "MySQL",
+        "Docker"
+      ],
+      "url": "https://github.com/zalamanga/hololearn",
+      "sourceRef": "07a19b8b763e0c70e1b278a53a98d783f981b453",
+      "screenshots": [
+        {
+          "src": "assets/images/project-catalog/hololearn-preview.png",
+          "alt": "Hololearn: application screenshot",
+          "label": "Application screenshot",
+          "width": 1440,
+          "height": 1000
+        }
+      ],
+      "note": "Continues the local ServletLogin project; demo content and account flows are not a hosted learning service."
+    },
+    {
+      "repo": "hospitech-brochure",
+      "title": "Hospitech Brochure",
+      "description": "A PHP healthcare-product brochure with four brand sections and a local enquiry preview that exports a text draft.",
+      "category": "web",
+      "kind": "Portfolio demo",
+      "stack": [
+        "PHP",
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
+      "url": "https://github.com/zalamanga/hospitech-brochure",
+      "sourceRef": "3f7b178aec9a19221abc4814bc645d47417e2cf9",
+      "screenshots": [
+        {
+          "src": "assets/images/project-catalog/hospitech-brochure-preview.png",
+          "alt": "Hospitech Brochure: application screenshot",
+          "label": "Application screenshot",
+          "width": 1440,
+          "height": 1000
+        }
+      ],
+      "note": "Conceptual care-room imagery and unverified reference product text; no patient monitoring or message delivery."
+    },
+    {
+      "repo": "image-batch-to-pdf",
+      "title": "Image Batch to PDF",
+      "description": "Combine JPG and PNG images into a PDF in natural filename order, with a listing mode and explicit overwrite option.",
+      "category": "tools",
+      "kind": "CLI tool",
+      "stack": [
+        "Python"
+      ],
+      "url": "https://github.com/zalamanga/image-batch-to-pdf",
+      "sourceRef": "aa76971497585f2f31c40c9051c82dc6984a8914",
+      "screenshots": [
+        {
+          "src": "assets/images/project-catalog/image-batch-to-pdf-preview.png",
+          "alt": "Image Batch to PDF: generated pdf preview",
+          "label": "Generated PDF preview",
+          "width": 864,
+          "height": 576
+        }
+      ],
+      "note": "Local CLI, no GUI; README previews come from PDFs produced with synthetic image fixtures."
+    },
+    {
+      "repo": "indonesia-tourism-guide",
+      "title": "Indonesia Tourism Guide",
+      "description": "A static Indonesian tourism site with destination information, maps, video links, and a creator profile.",
+      "category": "web",
+      "kind": "Learning project",
+      "stack": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
+      "url": "https://github.com/zalamanga/indonesia-tourism-guide",
+      "sourceRef": "801c13b0ebdebb5ddbb716c78bda92acb6ca1c13",
+      "screenshots": [
+        {
+          "src": "assets/images/project-catalog/indonesia-tourism-guide-preview.png",
+          "alt": "Indonesia Tourism Guide: static frontend captured in a local browser",
+          "label": "Static frontend screenshot (local preview)",
+          "width": 1440,
+          "height": 1000
+        }
+      ],
+      "note": "Static learning project without booking, accounts, or a database."
+    },
+    {
+      "repo": "jalansukses",
+      "title": "Jalansukses Static Site",
+      "description": "A multi-page company-profile website with service, article, profile, and contact pages built from local static source.",
+      "category": "web",
+      "kind": "Static website",
+      "stack": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Docker",
+        "Nginx"
+      ],
+      "url": "https://github.com/zalamanga/jalansukses",
+      "sourceRef": "ea84b6936a26c4903a013e5a1fb9de5558d9a084",
+      "screenshots": [
+        {
+          "src": "assets/images/project-catalog/jalansukses-preview.png",
+          "alt": "Jalansukses Static Site: static frontend captured in a local browser",
+          "label": "Static frontend screenshot (local preview)",
+          "width": 1440,
+          "height": 1000
+        }
+      ],
+      "note": "Static version; PHP/MySQL administration and CMS belong to a separate repository."
+    },
+    {
+      "repo": "java-console-crud",
+      "title": "Java Console CRUD",
+      "description": "A JDBC console app for creating, searching, listing, editing, and deleting user records in MySQL.",
+      "category": "java",
+      "kind": "Learning project",
+      "stack": [
+        "Java",
+        "JDBC",
+        "MySQL",
+        "Maven"
+      ],
+      "url": "https://github.com/zalamanga/java-console-crud",
+      "sourceRef": "c44af6728020067396060d48d1d49c4775af785b",
+      "screenshots": [
+        {
+          "src": "assets/images/project-catalog/java-console-crud-preview.png",
+          "alt": "Java Console CRUD: terminal / http output (rendered)",
+          "label": "Terminal / HTTP output (rendered)",
+          "width": 960,
+          "height": 440
+        }
+      ],
+      "note": "No login system; role is stored data. README terminal image uses an isolated H2 fixture."
+    },
+    {
+      "repo": "kopikuyweb",
+      "title": "Kopi Kuy Web",
+      "description": "Browse nine coffee-shop products, filter and sort the catalog, and keep a cart in browser localStorage.",
+      "category": "web",
+      "kind": "Learning project",
+      "stack": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Bootstrap",
+        "localStorage"
+      ],
+      "url": "https://github.com/zalamanga/kopikuyweb",
+      "sourceRef": "2793fafb512c98b68e140b504248b7163ae18e36",
+      "screenshots": [
+        {
+          "src": "assets/images/project-catalog/kopikuyweb-preview.png",
+          "alt": "Kopi Kuy Web: static frontend captured in a local browser",
+          "label": "Static frontend screenshot (local preview)",
+          "width": 1440,
+          "height": 1000
+        }
+      ],
+      "note": "Static frontend using sample products and prices; no backend order or payment processing."
+    },
+    {
+      "repo": "lilith-bloom",
+      "title": "Lilith Bloom",
+      "description": "A JSF flower-workshop reservation demo with public booking forms and signed-in management of saved reservations.",
+      "category": "java",
+      "kind": "Application demo",
+      "stack": [
+        "Java",
+        "JSF",
+        "Hibernate",
+        "MySQL",
+        "Docker"
+      ],
+      "url": "https://github.com/zalamanga/lilith-bloom",
+      "sourceRef": "a837b63e652e3f972ee938c0c1cfaa75580afc2c",
+      "screenshots": [
+        {
+          "src": "assets/images/project-catalog/lilith-bloom-preview.png",
+          "alt": "Lilith Bloom: application screenshot",
+          "label": "Application screenshot",
+          "width": 1440,
+          "height": 1550
+        }
+      ],
+      "note": "No payments, class capacity, email confirmation, or account verification; schedule and images originate from a 2023 project."
+    },
+    {
+      "repo": "loker-lens",
+      "title": "Loker Lens",
+      "description": "Search and combine filters over cached job-post text, with excerpts and requirements in a local browser interface.",
+      "category": "tools",
+      "kind": "Application demo",
+      "stack": [
+        "Node.js",
+        "JavaScript",
+        "HTML",
+        "CSS"
+      ],
+      "url": "https://github.com/zalamanga/loker-lens",
+      "sourceRef": "0eb8eeae579e0f8427892741d0154ee46c046c18",
+      "screenshots": [
+        {
+          "src": "assets/images/project-catalog/loker-lens-preview.png",
+          "alt": "Loker Lens: application screenshot",
+          "label": "Application screenshot",
+          "width": 1280,
+          "height": 1809
+        }
+      ],
+      "note": "Starts with 24 fictional posts; optional DISNAKERJA.COM adapter is separate from the offline demo."
+    },
+    {
+      "repo": "lumbung-tourism",
+      "title": "Lumbung Tourism",
+      "description": "A React tourism catalog with date-based booking, visitor counts, and admin management of activities, articles, and booking status.",
+      "category": "web",
+      "kind": "Application demo",
+      "stack": [
+        "React",
+        "Vite",
+        "Express",
+        "MySQL"
+      ],
+      "url": "https://github.com/zalamanga/lumbung-tourism",
+      "sourceRef": "2c0876ec630a9e4c762aa11ea92cdb059261fb67",
+      "screenshots": [
+        {
+          "src": "assets/images/project-catalog/lumbung-tourism-preview.png",
+          "alt": "Lumbung Tourism: application screenshot",
+          "label": "Application screenshot",
+          "width": 1440,
+          "height": 1000
+        }
+      ],
+      "note": "Uses local project visuals and demo data; no payments, notifications, or actual business reservations."
+    },
+    {
+      "repo": "museum-bootstrap-demo",
+      "title": "Museum Bootstrap Demo",
+      "description": "A dinosaur-museum page used to practice Bootstrap grids, navigation, images, and content spacing.",
+      "category": "web",
+      "kind": "Learning project",
+      "stack": [
+        "HTML",
+        "CSS",
+        "Bootstrap",
+        "jQuery"
+      ],
+      "url": "https://github.com/zalamanga/museum-bootstrap-demo",
+      "sourceRef": "3447008a5c82b9150f00bc493e9c4462c6039151",
+      "screenshots": [
+        {
+          "src": "assets/images/project-catalog/museum-bootstrap-demo-preview.png",
+          "alt": "Museum Bootstrap Demo: static frontend captured in a local browser",
+          "label": "Static frontend screenshot (local preview)",
+          "width": 1440,
+          "height": 1000
+        }
+      ],
+      "note": "Some navigation remains placeholder; no tickets, accounts, or database-backed collection."
+    },
+    {
+      "repo": "pakeaja-link",
+      "title": "PakeAja Link",
+      "description": "Save, search, edit, and open up to 100 links per browser dataset, with aliases and local navigation URLs.",
+      "category": "tools",
+      "kind": "Application demo",
+      "stack": [
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "Web Locks"
+      ],
+      "url": "https://github.com/zalamanga/pakeaja-link",
+      "sourceRef": "0705f8bd40c51941e03f9ae8be50ab6e527c0bfe",
+      "screenshots": [
+        {
+          "src": "assets/images/project-catalog/pakeaja-link-preview.png",
+          "alt": "PakeAja Link: application screenshot",
+          "label": "Application screenshot",
+          "width": 1120,
+          "height": 778
+        }
+      ],
+      "note": "Local alias URLs only work with the same origin and browser profile; not a public URL-shortening service."
+    },
+    {
+      "repo": "pakeaja-qr",
+      "title": "PakeAja QR",
+      "description": "Create QR codes for six content types, adjust the preview, and request PNG or SVG downloads directly in the browser.",
+      "category": "tools",
+      "kind": "Application demo",
+      "stack": [
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "QR"
+      ],
+      "url": "https://github.com/zalamanga/pakeaja-qr",
+      "sourceRef": "769e087b228f5a05ed02a9e87af1a976da5f2400",
+      "screenshots": [
+        {
+          "src": "assets/images/project-catalog/pakeaja-qr-preview.png",
+          "alt": "PakeAja QR: application screenshot",
+          "label": "Application screenshot",
+          "width": 1440,
+          "height": 1974
+        }
+      ],
+      "note": "Static generator; no accounts, backend, saved history, or message delivery."
+    },
+    {
+      "repo": "pakeaja-pdf",
+      "title": "PakeAjaPDF",
+      "description": "A collection of 25 browser PDF tools for arranging pages, extracting text, converting images, adding text, and password operations.",
+      "category": "tools",
+      "kind": "Application demo",
+      "stack": [
+        "JavaScript",
+        "Web Workers",
+        "WebAssembly",
+        "PDF"
+      ],
+      "url": "https://github.com/zalamanga/pakeaja-pdf",
+      "sourceRef": "870745135f88e73076bf66084ccf0367fef9eb5b",
+      "screenshots": [
+        {
+          "src": "assets/images/project-catalog/pakeaja-pdf-preview.png",
+          "alt": "PakeAjaPDF: application screenshot",
+          "label": "Application screenshot",
+          "width": 1280,
+          "height": 1000
+        }
+      ],
+      "note": "Processes local files and writes new outputs; no server upload or account service."
+    },
+    {
+      "repo": "r-rent-car-jsf",
+      "title": "R Rent Car JSF",
+      "description": "Register a sample account, edit a personal profile, and manage that account's car records through a JSF interface.",
+      "category": "java",
+      "kind": "Application demo",
+      "stack": [
+        "Java",
+        "JSF",
+        "JDBC",
+        "MySQL",
+        "Tomcat"
+      ],
+      "url": "https://github.com/zalamanga/r-rent-car-jsf",
+      "sourceRef": "0bbd022ddd3db75aa8fd195d2b7f60078d9bb22c",
+      "screenshots": [
+        {
+          "src": "assets/images/project-catalog/r-rent-car-jsf-preview.png",
+          "alt": "R Rent Car JSF: application screenshot",
+          "label": "Application screenshot",
+          "width": 1440,
+          "height": 1000
+        }
+      ],
+      "note": "Per-account car management, not a payment or rental-booking service."
+    },
+    {
+      "repo": "random-picker-java",
+      "title": "Random Picker Java",
+      "description": "Enter a list and select one random entry through a Java console menu, or try the original 20-digit sample list.",
+      "category": "java",
+      "kind": "Learning project",
+      "stack": [
+        "Java",
+        "Maven"
+      ],
+      "url": "https://github.com/zalamanga/random-picker-java",
+      "sourceRef": "f04b70917ab2f7144c4cfdb929a1e8512a5cfa00",
+      "screenshots": [
+        {
+          "src": "assets/images/project-catalog/random-picker-java-preview.png",
+          "alt": "Random Picker Java: terminal / http output (rendered)",
+          "label": "Terminal / HTTP output (rendered)",
+          "width": 960,
+          "height": 656
+        }
+      ],
+      "note": "Local random-selection exercise with no database or runtime dependencies."
+    },
+    {
+      "repo": "salary-calculator-java",
+      "title": "Salary Calculator Java",
+      "description": "A Java console calculator using the original sample salary formula for HRA, special allowance, and PF deductions.",
+      "category": "java",
+      "kind": "Learning project",
+      "stack": [
+        "Java",
+        "Maven"
+      ],
+      "url": "https://github.com/zalamanga/salary-calculator-java",
+      "sourceRef": "2e49da46e91757204a0c7574520283a7db3e086c",
+      "screenshots": [
+        {
+          "src": "assets/images/project-catalog/salary-calculator-java-preview.png",
+          "alt": "Salary Calculator Java: terminal / http output (rendered)",
+          "label": "Terminal / HTTP output (rendered)",
+          "width": 960,
+          "height": 336
+        }
+      ],
+      "note": "Training percentages without a defined country, currency, pay period, or payroll regulation."
+    },
+    {
+      "repo": "car-rental-desktop-java",
+      "title": "Sewa Mobil Desktop",
+      "description": "Choose rental dates, record a car rental, review personal history, and complete returns through a Swing admin view.",
+      "category": "java",
+      "kind": "Application demo",
+      "stack": [
+        "Java",
+        "Swing",
+        "JDBC",
+        "MySQL",
+        "Maven"
+      ],
+      "url": "https://github.com/zalamanga/car-rental-desktop-java",
+      "sourceRef": "e0f6ec60cb64cdc1d190843c6198c83552c29872",
+      "screenshots": [
+        {
+          "src": "assets/images/project-catalog/car-rental-desktop-java-preview.png",
+          "alt": "Sewa Mobil Desktop: swing component preview (fixture)",
+          "label": "Swing component preview (fixture)",
+          "width": 1166,
+          "height": 700
+        }
+      ],
+      "note": "Local rental demo with synthetic vehicles; no payments, penalties, delivery, or identity-document processing."
+    },
+    {
+      "repo": "rental-car",
+      "title": "Sewa Mobil Estimate",
+      "description": "Compare six sample cars, choose days and units, and download a local rental-cost estimate as text.",
+      "category": "web",
+      "kind": "Learning project",
+      "stack": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
+      "url": "https://github.com/zalamanga/rental-car",
+      "sourceRef": "14fe23103ce3c0c3e319160ba4e24a557aa1deb4",
+      "screenshots": [
+        {
+          "src": "assets/images/project-catalog/rental-car-preview.png",
+          "alt": "Sewa Mobil Estimate: application screenshot",
+          "label": "Application screenshot",
+          "width": 1440,
+          "height": 1423
+        }
+      ],
+      "note": "Estimate only, with sample rates and a sample 10 percent addition; no booking or payment."
+    },
+    {
+      "repo": "shoestore3",
+      "title": "ShoeStore 3",
+      "description": "A static shoe-store interface with galleries, a nine-product catalog, size selection, and a persistent browser cart.",
+      "category": "web",
+      "kind": "Learning project",
+      "stack": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "localStorage"
+      ],
+      "url": "https://github.com/zalamanga/shoestore3",
+      "sourceRef": "565f878cfcdc1c85d00ad8a0fa907222fd44440f",
+      "screenshots": [
+        {
+          "src": "assets/images/project-catalog/shoestore3-preview.png",
+          "alt": "ShoeStore 3: static frontend captured in a local browser",
+          "label": "Static frontend screenshot (local preview)",
+          "width": 1440,
+          "height": 1000
+        }
+      ],
+      "note": "Login and registration are UI simulations; no verified accounts, payments, delivery, or real stock."
+    },
+    {
+      "repo": "shoe-store-web-java",
+      "title": "ShoeStore Web Java",
+      "description": "Browse shoe sizes, prices, and stock, try a member session cart, and manage shoes and accounts as an administrator.",
+      "category": "java",
+      "kind": "Application demo",
+      "stack": [
+        "Java",
+        "Servlets",
+        "JSP",
+        "JDBC",
+        "SQL Server"
+      ],
+      "url": "https://github.com/zalamanga/shoe-store-web-java",
+      "sourceRef": "0158ea39d2fe85ee6fa633e12d74f634976d5940",
+      "screenshots": [
+        {
+          "src": "assets/images/project-catalog/shoe-store-web-java-preview.png",
+          "alt": "ShoeStore Web Java: application screenshot",
+          "label": "Application screenshot",
+          "width": 1440,
+          "height": 1000
+        }
+      ],
+      "note": "A separate Java web demo from the Swing and static ShoeStore repositories."
+    },
+    {
+      "repo": "Tax-calculator",
+      "title": "Tax Calculator Java",
+      "description": "A Java console exercise that applies a three-band progressive tax formula to an entered income.",
+      "category": "java",
+      "kind": "Learning project",
+      "stack": [
+        "Java"
+      ],
+      "url": "https://github.com/zalamanga/Tax-calculator",
+      "sourceRef": "4d3f19551876dfada89319f85836bcff5f938d72",
+      "screenshots": [
+        {
+          "src": "assets/images/project-catalog/tax-calculator-preview.png",
+          "alt": "Tax Calculator Java: terminal / http output (rendered)",
+          "label": "Terminal / HTTP output (rendered)",
+          "width": 960,
+          "height": 100
+        }
+      ],
+      "note": "Original training rates have no stated country or tax year; not a current tax-rule calculator."
+    },
+    {
+      "repo": "university-information-java",
+      "title": "University Information Java",
+      "description": "Enter and display student and employee details through Person subclasses in a Java console program.",
+      "category": "java",
+      "kind": "Learning project",
+      "stack": [
+        "Java",
+        "Maven"
+      ],
+      "url": "https://github.com/zalamanga/university-information-java",
+      "sourceRef": "aeb2ab5c0bd37497a5924a353b4ae28aef202b83",
+      "screenshots": [
+        {
+          "src": "assets/images/project-catalog/university-information-java-preview.png",
+          "alt": "University Information Java: terminal / http output (rendered)",
+          "label": "Terminal / HTTP output (rendered)",
+          "width": 960,
+          "height": 1072
+        }
+      ],
+      "note": "Data remains in process memory only; an inheritance exercise, not a university information service."
+    },
+    {
+      "repo": "vape-store-catalog-demo",
+      "title": "Vape Store Catalog Demo",
+      "description": "A static product catalog with detail, cart, FAQ, about, and contact pages preserved from a local website variant.",
+      "category": "web",
+      "kind": "Learning project",
+      "stack": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
+      "url": "https://github.com/zalamanga/vape-store-catalog-demo",
+      "sourceRef": "1d23b0547b0006f252110a6b42e088940288822d",
+      "screenshots": [
+        {
+          "src": "assets/images/project-catalog/vape-store-catalog-demo-preview.png",
+          "alt": "Vape Store Catalog Demo: static frontend captured in a local browser",
+          "label": "Static frontend screenshot (local preview)",
+          "width": 1440,
+          "height": 1000
+        }
+      ],
+      "note": "Browser cart demonstration only; no backend, authentication, stock, payment, or business contact service."
+    },
+    {
+      "repo": "vapezoo-jdbc-java",
+      "title": "VapeZoo JDBC Category Reader",
+      "description": "A read-only JDBC console for listing categories, searching names and descriptions, and opening a category by ID.",
+      "category": "java",
+      "kind": "Learning project",
+      "stack": [
+        "Java",
+        "JDBC",
+        "MySQL",
+        "Maven"
+      ],
+      "url": "https://github.com/zalamanga/vapezoo-jdbc-java",
+      "sourceRef": "ed5e7111f58e94264f2315d5e0fac5230c1d4ee9",
+      "screenshots": [
+        {
+          "src": "assets/images/project-catalog/vapezoo-jdbc-java-preview.png",
+          "alt": "VapeZoo JDBC Category Reader: terminal / http output (rendered)",
+          "label": "Terminal / HTTP output (rendered)",
+          "width": 960,
+          "height": 560
+        }
+      ],
+      "note": "Category reader only, using a SELECT-only database account; no product CRUD or HTTP service."
+    },
+    {
+      "repo": "vapezoo",
+      "title": "Vapezoo Static Site",
+      "description": "A seven-page static Vapezoo website with local assets, navigation controls, and keyboard-interaction fixes.",
+      "category": "web",
+      "kind": "Static website",
+      "stack": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Docker",
+        "Nginx"
+      ],
+      "url": "https://github.com/zalamanga/vapezoo",
+      "sourceRef": "c26e8812fc54a572e1d7d6dfe915af3a5273372e",
+      "screenshots": [
+        {
+          "src": "assets/images/project-catalog/vapezoo-preview.png",
+          "alt": "Vapezoo Static Site: static frontend captured in a local browser",
+          "label": "Static frontend screenshot (local preview)",
+          "width": 1440,
+          "height": 1000
+        }
+      ],
+      "note": "Static version; the Laravel CMS is a separate application and forms do not imply a live store."
+    },
+    {
+      "repo": "vending-inventory-java",
+      "title": "Vending Inventory Java",
+      "description": "An operator console for product names, prices and stock, simulated purchases and change, and stored SQL Server receipts.",
+      "category": "java",
+      "kind": "Application demo",
+      "stack": [
+        "Java",
+        "JDBC",
+        "SQL Server",
+        "Maven"
+      ],
+      "url": "https://github.com/zalamanga/vending-inventory-java",
+      "sourceRef": "35f0647072fda630582ee36df57c3109b2577a1e",
+      "screenshots": [
+        {
+          "src": "assets/images/project-catalog/vending-inventory-java-preview.png",
+          "alt": "Vending Inventory Java: terminal / http output (rendered)",
+          "label": "Terminal / HTTP output (rendered)",
+          "width": 720,
+          "height": 302
+        }
+      ],
+      "note": "Simulation only; credits original contributor ilham fajri and uses a schema distinct from the other vending demos."
+    },
+    {
+      "repo": "vending-machine-java",
+      "title": "Vending Machine Java",
+      "description": "Choose a sample product and payment amount, then record the purchase and reduce MySQL stock in one transaction.",
+      "category": "java",
+      "kind": "Learning project",
+      "stack": [
+        "Java",
+        "JDBC",
+        "MySQL",
+        "Maven"
+      ],
+      "url": "https://github.com/zalamanga/vending-machine-java",
+      "sourceRef": "03660a05d1010bbd4ca4005faad6934f3e7b2b03",
+      "screenshots": [
+        {
+          "src": "assets/images/project-catalog/vending-machine-java-preview.png",
+          "alt": "Vending Machine Java: terminal / http output (rendered)",
+          "label": "Terminal / HTTP output (rendered)",
+          "width": 1312,
+          "height": 558
+        }
+      ],
+      "note": "No real money, hardware, goods, or payment processing; receipt appears after database commit."
+    },
+    {
+      "repo": "vending-sqlserver-database",
+      "title": "Vending SQL Server Lab",
+      "description": "A T-SQL lab with stored procedures for suppliers, products, quotes, sample payments, restocking, and gross-margin snapshots.",
+      "category": "data",
+      "kind": "SQL lab",
+      "stack": [
+        "T-SQL",
+        "SQL Server",
+        "PowerShell",
+        "Docker"
+      ],
+      "url": "https://github.com/zalamanga/vending-sqlserver-database",
+      "sourceRef": "7a5ab309e57749d35f4f99f79b0c329dc4089b02",
+      "screenshots": [
+        {
+          "src": "assets/images/project-catalog/vending-sqlserver-database-preview.png",
+          "alt": "Vending SQL Server Lab: terminal / http output (rendered)",
+          "label": "Terminal / HTTP output (rendered)",
+          "width": 760,
+          "height": 281
+        }
+      ],
+      "note": "Database lab with text-output examples, not a GUI, physical vending controller, payment processor, or full accounting system."
+    },
+    {
+      "repo": "product-catalog-vue",
+      "title": "Vue Clothing Catalog",
+      "description": "Browse sample product IDs from FakeStoreAPI, show clothing details, and open a simulated purchase summary in Vue.",
+      "category": "web",
+      "kind": "Learning project",
+      "stack": [
+        "Vue 3",
+        "JavaScript",
+        "Vite",
+        "FakeStoreAPI"
+      ],
+      "url": "https://github.com/zalamanga/product-catalog-vue",
+      "sourceRef": "a6dc90d0b2ae7c1f615dd7aceb7e9c3ad11f0ed0",
+      "screenshots": [
+        {
+          "src": "assets/images/project-catalog/product-catalog-vue-preview.png",
+          "alt": "Vue Clothing Catalog: application screenshot",
+          "label": "Application screenshot",
+          "width": 1440,
+          "height": 1000
+        }
+      ],
+      "note": "Training data and simulated purchases, not store offers. README screenshots use deterministic fixtures."
+    },
+    {
+      "repo": "web-ui-practice",
+      "title": "Web UI Practice",
+      "description": "Five separate HTML and CSS exercises covering FAQs, registration forms, a survey, and a cat-photo page.",
+      "category": "web",
+      "kind": "Learning collection",
+      "stack": [
+        "HTML",
+        "CSS"
+      ],
+      "url": "https://github.com/zalamanga/web-ui-practice",
+      "sourceRef": "e5d6196f89ba821b65a5b34cc80e9efe2d0bae13",
+      "screenshots": [
+        {
+          "src": "assets/images/project-catalog/web-ui-practice-preview.png",
+          "alt": "Web UI Practice: static frontend captured in a local browser",
+          "label": "Static frontend screenshot (local preview)",
+          "width": 1440,
+          "height": 1000
+        }
+      ],
+      "note": "Static exercises without account storage or a backend; some links follow original training material."
+    },
+    {
+      "repo": "zala-store-demo",
+      "title": "ZalaStore",
+      "description": "An eight-product PHP store demo with a browser cart, simulated orders, per-account order details, and an admin summary.",
+      "category": "web",
+      "kind": "Application demo",
+      "stack": [
+        "PHP",
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "JSON"
+      ],
+      "url": "https://github.com/zalamanga/zala-store-demo",
+      "sourceRef": "52c099ee25ee262dd73e6a79dfd63f32cb92edb1",
+      "screenshots": [
+        {
+          "src": "assets/images/project-catalog/zala-store-demo-preview.png",
+          "alt": "ZalaStore: application screenshot",
+          "label": "Application screenshot",
+          "width": 1440,
+          "height": 1914
+        }
+      ],
+      "note": "Local JSON persistence and simulated orders; no payment-provider integration."
+    },
+    {
+      "repo": "travel-booking-php",
+      "title": "Agih Travel Demo",
+      "description": "Choose a sample destination, request a date-and-guest quote, and manage local travel requests through a PHP admin interface.",
+      "category": "web",
+      "kind": "Application demo",
+      "stack": [
+        "PHP",
+        "MySQL",
+        "JavaScript"
+      ],
+      "url": "https://github.com/zalamanga/travel-booking-php",
+      "sourceRef": "961d22d08d63c5bc0c8742d79265aecfe82ab105",
+      "screenshots": [],
+      "note": "No real seats or hotels are booked, payments verified, or messages sent. Browser/HTTP/database behavior was not verified in the documented publication check."
+    },
+    {
+      "repo": "android-form-storage",
+      "title": "Android Form Storage",
+      "description": "Enter a student form, save it to app-specific internal or external files, and read it back after local sign-in.",
+      "category": "mobile",
+      "kind": "Learning project",
+      "stack": [
+        "Java",
+        "Android",
+        "Gradle",
+        "Local files"
+      ],
+      "url": "https://github.com/zalamanga/android-form-storage",
+      "sourceRef": "46ceaffe2e5ea9fc562a3df3042125d60f5a8827",
+      "screenshots": [],
+      "note": "One demo account and one form per storage location; not a multi-student system. A device or emulator screenshot is not available yet."
+    },
+    {
+      "repo": "android-movie-streaming",
+      "title": "Android Movie Streaming",
+      "description": "Explore a Firebase movie and series catalog, search titles, and play video URLs with ExoPlayer.",
+      "category": "mobile",
+      "kind": "Upstream study",
+      "stack": [
+        "Java",
+        "Android",
+        "Firebase Authentication",
+        "Firebase Realtime Database",
+        "ExoPlayer"
+      ],
+      "url": "https://github.com/zalamanga/android-movie-streaming",
+      "sourceRef": "04219c629837f68a95c8b301907cd348cef4bfd3",
+      "screenshots": [],
+      "note": "Study export based on Nimith-Nimeshana/MovieStreamingApp; attribution retained. A private Firebase project is required; real backend and device behavior have not been verified. A device or emulator screenshot is not available yet."
+    },
+    {
+      "repo": "android-navigation-demo",
+      "title": "Android Navigation Demo",
+      "description": "Switch between Home, Dashboard, and Notifications using Android bottom navigation and three fragments.",
+      "category": "mobile",
+      "kind": "Learning project",
+      "stack": [
+        "Java",
+        "Android",
+        "Android Jetpack",
+        "Gradle"
+      ],
+      "url": "https://github.com/zalamanga/android-navigation-demo",
+      "sourceRef": "84dc9302f2b863938f1b00fbcde7393e6bd736ea",
+      "screenshots": [],
+      "note": "Navigation exercise with placeholder text, no login or backend. A device or emulator screenshot is not available yet."
+    },
+    {
+      "repo": "android-video-upload-demo",
+      "title": "Android Video Upload Demo",
+      "description": "Sign in, choose a local video, preview it, and upload it to Firebase Storage with progress and cancellation.",
+      "category": "mobile",
+      "kind": "Learning project",
+      "stack": [
+        "Java",
+        "Android",
+        "Firebase Authentication",
+        "Firebase Storage"
+      ],
+      "url": "https://github.com/zalamanga/android-video-upload-demo",
+      "sourceRef": "0b8d0fefd0fd389b0569c06ed14088c9eee854b5",
+      "screenshots": [],
+      "note": "Uploads are activity-bound; no background resume, catalog, or metadata editor. Real Firebase transfers have not been verified. A device or emulator screenshot is not available yet."
+    },
+    {
+      "repo": "arcadia-mini-games",
+      "title": "Arcadia Mini Games",
+      "description": "Play 13 browser games, keep local high scores, or use a PHP demo API for accounts, achievements, and leaderboards.",
+      "category": "web",
+      "kind": "Application demo",
+      "stack": [
+        "React",
+        "Vite",
+        "PHP",
+        "MySQL"
+      ],
+      "url": "https://github.com/zalamanga/arcadia-mini-games",
+      "sourceRef": "14ca5c967a02427f661480dd9d3f956c6fe37655",
+      "screenshots": [],
+      "note": "Scores are calculated by the client; the leaderboard does not verify gameplay. Browser/HTTP/database behavior was not verified in the documented publication check."
+    },
+    {
+      "repo": "article-cms-php",
+      "title": "Article CMS PHP",
+      "description": "A PHP article CMS with public reading pages, categories, draft/publish forms, and an administrator area.",
+      "category": "web",
+      "kind": "Prototype",
+      "stack": [
+        "PHP",
+        "MySQL",
+        "PDO"
+      ],
+      "url": "https://github.com/zalamanga/article-cms-php",
+      "sourceRef": "bd277bf569198eb68d5b10cf447f5b2bd63e20e2",
+      "screenshots": [],
+      "note": "Legacy prototype; HTML sanitization, CSRF, uploads, deletion, and form compatibility require further review."
+    },
+    {
+      "repo": "certification-cms-demo",
+      "title": "Certification CMS Demo",
+      "description": "A PHP certification portal prototype with blog pages, competency schemes, assessment requirements, and account forms.",
+      "category": "web",
+      "kind": "Prototype",
+      "stack": [
+        "PHP",
+        "MySQL",
+        "PDO"
+      ],
+      "url": "https://github.com/zalamanga/certification-cms-demo",
+      "sourceRef": "18d415977d70eceef29c164987a05b1cca0b0d06",
+      "screenshots": [],
+      "note": "Administrator and content endpoints do not yet have consistent access protection; local prototype only."
+    },
+    {
+      "repo": "document-similarity-service",
+      "title": "Document Similarity Service",
+      "description": "A FastAPI service that downloads PDFs, searches candidate sources, compares text passages, and stores job results in MySQL.",
+      "category": "backend",
+      "kind": "Prototype",
+      "stack": [
+        "Python",
+        "FastAPI",
+        "MySQL",
+        "Google Custom Search"
+      ],
+      "url": "https://github.com/zalamanga/document-similarity-service",
+      "sourceRef": "8030cf196cdfc0081205677bf998d1ca425484f3",
+      "screenshots": [],
+      "note": "Similarity scores are algorithmic comparisons, not plagiarism verdicts. Requires external API credentials; jobs run in the API process."
+    },
+    {
+      "repo": "event-service-cms-demo",
+      "title": "Event Service CMS Demo",
+      "description": "A Laravel event-service catalog with packages, categories, galleries, banners, and an administrator interface.",
+      "category": "web",
+      "kind": "Prototype",
+      "stack": [
+        "PHP",
+        "Laravel",
+        "MySQL",
+        "Blade"
+      ],
+      "url": "https://github.com/zalamanga/event-service-cms-demo",
+      "sourceRef": "58aa131ee1092d2593a7f63705796572a28f3e27",
+      "screenshots": [],
+      "note": "Legacy demo; asset toolchain and complete runtime behavior were not reverified for publication."
+    },
+    {
+      "repo": "firebase-inventory-android",
+      "title": "Firebase Inventory Android",
+      "description": "Keep a per-account item list with name, brand, and price, using Firebase sign-in and realtime CRUD updates.",
+      "category": "mobile",
+      "kind": "Learning project",
+      "stack": [
+        "Java",
+        "Android",
+        "Firebase Authentication",
+        "Firebase Realtime Database"
+      ],
+      "url": "https://github.com/zalamanga/firebase-inventory-android",
+      "sourceRef": "054bde211e4781e5e22bfa4185351ed2c414d009",
+      "screenshots": [],
+      "note": "Requires a private Firebase setup; real backend/device behavior has not been verified. A device or emulator screenshot is not available yet."
+    },
+    {
+      "repo": "firebase-video-crud-android",
+      "title": "Firebase Video Catalog Android",
+      "description": "Store and edit video titles, HTTPS URLs, and descriptions, then play saved URLs from a per-account Firebase catalog.",
+      "category": "mobile",
+      "kind": "Learning project",
+      "stack": [
+        "Java",
+        "Android",
+        "Firebase Authentication",
+        "Firebase Realtime Database",
+        "VideoView"
+      ],
+      "url": "https://github.com/zalamanga/firebase-video-crud-android",
+      "sourceRef": "11857062fe22dccaeadfa0acb58053d9960e2a36",
+      "screenshots": [],
+      "note": "Manages video metadata and playback URLs; it does not upload files. Real Firebase/device behavior has not been verified. A device or emulator screenshot is not available yet."
+    },
+    {
+      "repo": "game-topup-demo-php",
+      "title": "Game Top-up Demo",
+      "description": "A PHP game-package catalog with account registration, administrator package management, and recorded demo orders.",
+      "category": "web",
+      "kind": "Application demo",
+      "stack": [
+        "PHP",
+        "MySQL"
+      ],
+      "url": "https://github.com/zalamanga/game-topup-demo-php",
+      "sourceRef": "40d835041a9a142a18fdf141eaf4e3d20e7018e2",
+      "screenshots": [],
+      "note": "No game credit delivery or payment-gateway integration."
+    },
+    {
+      "repo": "guepedia-company-frontend",
+      "title": "Guepedia Company Frontend",
+      "description": "A Vue 2 frontend export with book catalog, cart, account, manuscript, transaction, and administrator screens.",
+      "category": "web",
+      "kind": "Frontend export",
+      "stack": [
+        "Vue 2",
+        "JavaScript",
+        "Vue CLI",
+        "Bootstrap",
+        "Axios"
+      ],
+      "url": "https://github.com/zalamanga/guepedia-company-frontend",
+      "sourceRef": "6371d3cd115478db3bc05e485bd423d80ca9edb4",
+      "screenshots": [],
+      "note": "Company backend, account data, manuscripts, and credentials are absent; connected flows require a compatible backend."
+    },
+    {
+      "repo": "jalansukses-cms-demo",
+      "title": "Jalan Sukses CMS Demo",
+      "description": "A PHP CMS for published articles, client logos, and service-page content, with an admin login and contact form.",
+      "category": "web",
+      "kind": "Prototype",
+      "stack": [
+        "PHP",
+        "MySQL",
+        "PDO"
+      ],
+      "url": "https://github.com/zalamanga/jalansukses-cms-demo",
+      "sourceRef": "077457f62b22b8cdb7de59a8e5cd70bdf45ffb98",
+      "screenshots": [],
+      "note": "Separate from the static site; mail delivery depends on local PHP mail configuration and complete runtime behavior was not reverified."
+    },
+    {
+      "repo": "kopikuy-cms-php",
+      "title": "Kopikuy CMS PHP",
+      "description": "A PHP and MySQL coffee catalog with category browsing, product editing, deletion, and photo uploads.",
+      "category": "web",
+      "kind": "Prototype",
+      "stack": [
+        "PHP",
+        "MySQL"
+      ],
+      "url": "https://github.com/zalamanga/kopikuy-cms-php",
+      "sourceRef": "25a31601c5121c20e158b63d670ee0066eccf2ce",
+      "screenshots": [],
+      "note": "Legacy prototype separate from the static Kopi Kuy website; runtime flows require further review."
+    },
+    {
+      "repo": "livewire-shop-demo",
+      "title": "Livewire Shop Demo",
+      "description": "A Laravel and Livewire store demo with product components, cart summaries, and a Midtrans Snap checkout-token flow.",
+      "category": "web",
+      "kind": "Prototype",
+      "stack": [
+        "PHP",
+        "Laravel",
+        "Livewire",
+        "MySQL",
+        "Midtrans"
+      ],
+      "url": "https://github.com/zalamanga/livewire-shop-demo",
+      "sourceRef": "9dd1687ac692223cfa7a5eeb9c6766448535cd11",
+      "screenshots": [],
+      "note": "Legacy Laravel 7/Livewire 1 demo; external payment setup and complete runtime behavior are not verified."
+    },
+    {
+      "repo": "notes-app-back-end",
+      "title": "Notes App Back End",
+      "description": "A Hapi REST API for creating, reading, editing, and deleting notes with JSON persistence across restarts.",
+      "category": "backend",
+      "kind": "Learning project",
+      "stack": [
+        "Node.js",
+        "JavaScript",
+        "Hapi",
+        "JSON",
+        "Docker"
+      ],
+      "url": "https://github.com/zalamanga/notes-app-back-end",
+      "sourceRef": "db9c184e2328dc3987d8b026a8bb76bddd2410bd",
+      "screenshots": [],
+      "note": "Backend only, with no web page or Bookshelf endpoints."
+    },
+    {
+      "repo": "playwright-login-practice",
+      "title": "Playwright Login Practice",
+      "description": "Five TypeScript login scenarios for the public SauceDemo practice site, configured for Chromium and Firefox.",
+      "category": "tools",
+      "kind": "Test suite",
+      "stack": [
+        "TypeScript",
+        "Playwright"
+      ],
+      "url": "https://github.com/zalamanga/playwright-login-practice",
+      "sourceRef": "4d3fb8debc53a3bdc1666ee50a61ae2d21055627",
+      "screenshots": [],
+      "note": "A testing exercise against a public practice environment; not a login application."
+    },
+    {
+      "repo": "allo-frontend-test",
+      "title": "Rocket Atlas",
+      "description": "Browse and filter SpaceX rockets, view rocket details, and add temporary entries through a Vue interface.",
+      "category": "web",
+      "kind": "Assessment demo",
+      "stack": [
+        "Vue 3",
+        "TypeScript",
+        "Vuetify",
+        "Pinia",
+        "Vite"
+      ],
+      "url": "https://github.com/zalamanga/allo-frontend-test",
+      "sourceRef": "37d7fc8fe898ab99f03f35dda6e1c4c885c4ec95",
+      "screenshots": [],
+      "note": "Forked assignment repository; local additions remain in browser-session state. Public work is on feat/allo-spacex, not main."
+    },
+    {
+      "repo": "shipping-cost-calculator",
+      "title": "Shipping Cost Calculator",
+      "description": "A Laravel shipping-cost demo that selects origin, destination, weight, and courier before querying RajaOngkir.",
+      "category": "tools",
+      "kind": "Prototype",
+      "stack": [
+        "PHP",
+        "Laravel",
+        "MySQL",
+        "RajaOngkir"
+      ],
+      "url": "https://github.com/zalamanga/shipping-cost-calculator",
+      "sourceRef": "bdb86fb60648e4d6cb420c6f9cc507ae0ca6fc23",
+      "screenshots": [],
+      "note": "Requires external API configuration; legacy toolchain and live shipping results were not reverified."
+    },
+    {
+      "repo": "ticket-reservation-demo",
+      "title": "Ticket Reservation Demo",
+      "description": "A Laravel transport-ticket demo with admin, staff, and passenger roles, route management, bookings, and transaction reports.",
+      "category": "web",
+      "kind": "Prototype",
+      "stack": [
+        "PHP",
+        "Laravel",
+        "MySQL"
+      ],
+      "url": "https://github.com/zalamanga/ticket-reservation-demo",
+      "sourceRef": "b4be2d2dded8cd50bc6f3c3f5a85b8a1280c45b4",
+      "screenshots": [],
+      "note": "Legacy demo with payment-status workflows; complete booking and payment behavior was not reverified."
+    },
+    {
+      "repo": "TIGAC",
+      "title": "TIGAC Store",
+      "description": "A Laravel storefront with product variants, session carts, demo checkout and payments, order lookup, and content administration.",
+      "category": "web",
+      "kind": "Application demo",
+      "stack": [
+        "PHP",
+        "Laravel",
+        "Blade",
+        "Fortify",
+        "MySQL",
+        "Docker"
+      ],
+      "url": "https://github.com/zalamanga/TIGAC",
+      "sourceRef": "c44539d6731af189d3605fa7ed14250a344dbafa",
+      "screenshots": [],
+      "note": "Payment is simulated; the repo is not connected to a live commerce operation."
+    },
+    {
+      "repo": "vapezoo-cms-laravel",
+      "title": "Vapezoo CMS Laravel",
+      "description": "A Laravel catalog prototype with products, news, FAQs, banners, contact content, and content-management CRUD.",
+      "category": "web",
+      "kind": "Prototype",
+      "stack": [
+        "PHP",
+        "Laravel",
+        "MySQL",
+        "Blade"
+      ],
+      "url": "https://github.com/zalamanga/vapezoo-cms-laravel",
+      "sourceRef": "42925ee15a3113445489be89c5c9bc3db024fa5d",
+      "screenshots": [],
+      "note": "Legacy prototype; complete runtime behavior and asset builds were not reverified."
+    },
+    {
+      "repo": "video-watermark-player-php",
+      "title": "Video Library Overlay Player",
+      "description": "Upload videos to a local PHP library and configure per-video text watermark position, size, and opacity for browser playback.",
+      "category": "web",
+      "kind": "Application demo",
+      "stack": [
+        "PHP",
+        "JavaScript",
+        "CSS",
+        "JSON"
+      ],
+      "url": "https://github.com/zalamanga/video-watermark-player-php",
+      "sourceRef": "8e90b18713bf82f7f9cd9efd6a6e6d6584fadde0",
+      "screenshots": [],
+      "note": "Watermarks are browser overlays; source video is unchanged. No transcode, burned-in watermark, or DRM; browser playback was not verified in publication checks."
+    },
+    {
+      "repo": "zala-cms",
+      "title": "ZalaCMS",
+      "description": "A Laravel company-profile CMS with public pages, news, contact inbox, content editing, site settings, users, and audit logs.",
+      "category": "web",
+      "kind": "Application demo",
+      "stack": [
+        "PHP",
+        "Laravel",
+        "Blade",
+        "MySQL",
+        "Vite"
+      ],
+      "url": "https://github.com/zalamanga/zala-cms",
+      "sourceRef": "e198ade71a02db604108249184403e7bb660e73b",
+      "screenshots": [],
+      "note": "Published source excludes real site configuration and runtime data; use demo accounts and content for local evaluation."
+    }
+  ]
+}

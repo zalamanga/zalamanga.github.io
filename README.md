@@ -2,6 +2,31 @@
 
 Panduan ini dibuat supaya nanti gampang update portfolio tanpa database. Website ini cocok untuk GitHub Pages karena semua data disimpan sebagai file statis.
 
+## Katalog proyek GitHub
+
+Bagian **Project library**, di bawah proyek unggulan, menampilkan repo proyek publik dengan pencarian, kategori, dan tombol **Show more projects**. Katalog memuat 12 entri pada awalnya. Nama proyek, deskripsi, teknologi, dan jenis proyek bisa dicari sekaligus.
+
+Data katalog ada di [`assets/data/projects.json`](assets/data/projects.json). Script [`assets/js/project-catalog.js`](assets/js/project-catalog.js) memuat file tersebut; katalog tidak membutuhkan token GitHub atau request API GitHub dari browser pengunjung.
+
+Untuk menambahkan atau memperbarui entri:
+
+1. Edit objek pada array `projects`. Isi `repo`, `title`, `description`, `category`, `kind`, `stack`, dan `url` berdasarkan proyek yang benar-benar tersedia.
+2. Pilih kategori `web`, `backend`, `java`, `mobile`, `data`, atau `tools`.
+3. Simpan gambar dokumentasi yang sudah boleh dipublikasikan di `assets/images/project-catalog/`. Masukkan path lokal, `alt`, `label`, `width`, dan `height` pada array `screenshots`. Gambar pertama menjadi preview; tombol **View image** membuka gambar ukuran asli.
+4. Bedakan screenshot aplikasi, render output terminal/HTTP, preview komponen, dan hasil PDF pada `label`. Ikon, foto produk, atau mockup tidak boleh disebut screenshot aplikasi.
+5. Jika belum ada gambar, gunakan `screenshots: []` dan isi `note` dengan keterangannya. Kartu tetap tampil dan menautkan source code.
+6. Jalankan preview lokal, lalu cek pencarian, kategori, kondisi hasil kosong, pemuatan gambar, dan tombol untuk menampilkan sisa entri.
+
+Field opsional `sourceRef` berisi commit SHA lengkap dengan 40 digit heksadesimal. Dengan field ini, **View source** membuka versi yang menjadi rujukan deskripsi dan gambar. Ini juga menjaga tautan proyek yang dikerjakan pada feature branch agar tidak membuka README cabang utama yang berbeda.
+
+Sebagian gambar berasal dari dokumentasi repo; sepuluh screenshot website statis dibuat melalui preview lokal dari source publik tanpa perubahan. Capture frontend tersebut tidak membuktikan backend, akun, pembayaran, atau layanan eksternal sudah berjalan.
+
+Katalog berisi proyek publik, termasuk latihan, demo, dan starter yang diberi jenisnya. Repo privat, README profil akun, serta repo portfolio ini sendiri tidak dimasukkan. Proyek Moonlight, Pakeaja Interview, dan QRCBN yang sebelumnya dikecualikan tidak ditambahkan sebagai source publik.
+
+Delapan proyek Android baru belum mempunyai screenshot runtime dalam dokumentasi sumber. Entri tersebut tetap tercantum dengan catatan. Tambahkan tangkapan emulator atau perangkat setelah aplikasinya benar-benar dijalankan.
+
+Proyek unggulan dan detail pengalamannya tetap menggunakan `portfolioCases` di `assets/js/main.js`, sesuai panduan berikut.
+
 ## Struktur File
 
 ```txt
@@ -9,10 +34,15 @@ index.html
 assets/
   css/
     styles.css
+    project-catalog.css
   js/
     main.js
     partials.js
+    project-catalog.js
+  data/
+    projects.json
   images/
+    project-catalog/
     portfolio/
       foto.jpeg
 sections/
@@ -354,7 +384,7 @@ Contoh:
 - [KYB Onboarding Analytics](projects/kyb-onboarding-analytics/) adalah demo analitik dengan 840 catatan sintetis. Generator data, SQL, dan dokumentasinya tersedia pada folder proyek tersebut.
 
 - Website ini tidak memakai database.
-- Semua portfolio disimpan di `assets/js/main.js`.
-- Semua gambar disimpan di `assets/images/portfolio/`.
+- Proyek unggulan disimpan di `assets/js/main.js`; katalog repo publik disimpan di `assets/data/projects.json`.
+- Gambar unggulan ada di `assets/images/portfolio/`; visual katalog ada di `assets/images/project-catalog/`.
 - Aman untuk GitHub Pages.
 - Jangan hapus `assets/js/partials.js`, karena file ini yang memuat section HTML.

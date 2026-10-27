@@ -39,5 +39,42 @@
       </div>
     </div>
     <div class="showcase-grid" id="showcaseGrid"></div>
+    <section class="project-catalog" id="projectCatalog" aria-labelledby="projectCatalogTitle" aria-busy="true">
+      <div class="project-catalog-heading">
+        <div>
+          <h3 id="projectCatalogTitle">Project library</h3>
+          <p>Browse my public repositories, from websites and APIs to Java desktop, terminal, and Android projects.</p>
+        </div>
+        <a class="project-catalog-github" href="https://github.com/zalamanga?tab=repositories" target="_blank" rel="noopener noreferrer">GitHub profile</a>
+      </div>
+      <div class="project-catalog-controls">
+        <div class="project-catalog-search">
+          <label for="projectSearch">Search projects</label>
+          <input id="projectSearch" type="search" placeholder="Project name or technology" autocomplete="off" aria-controls="projectList" disabled>
+        </div>
+        <div class="project-catalog-filter">
+          <label for="projectCategory">Category</label>
+          <select id="projectCategory" aria-controls="projectList" disabled>
+            <option value="all">All categories</option>
+            <option value="web">Websites</option>
+            <option value="backend">APIs &amp; backend</option>
+            <option value="java">Java web, desktop &amp; terminal</option>
+            <option value="mobile">Android &amp; mobile</option>
+            <option value="data">Data &amp; databases</option>
+            <option value="tools">Tools &amp; learning</option>
+          </select>
+        </div>
+        <button class="project-catalog-reset" id="projectReset" type="button" disabled>Clear filters</button>
+      </div>
+      <p class="project-catalog-count" id="projectCount" role="status" aria-live="polite" aria-atomic="true">Loading projects…</p>
+      <p class="project-catalog-guidance">Images show repository documentation or local frontend captures. Terminal output and component previews are labelled. Projects without a screenshot are listed with a note.</p>
+      <p class="project-catalog-state" id="projectState">Loading the project library.</p>
+      <button class="project-catalog-retry" id="projectRetry" type="button" hidden>Reload projects</button>
+      <div class="project-catalog-list" id="projectList"></div>
+      <div class="project-catalog-pagination">
+        <button class="project-catalog-more" id="projectMore" type="button" hidden>Show more projects</button>
+      </div>
+      <noscript><p>This library needs JavaScript. You can <a href="https://github.com/zalamanga?tab=repositories">browse the repositories on GitHub</a>.</p></noscript>
+    </section>
   </div>
 </section>
