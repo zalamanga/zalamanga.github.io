@@ -33,8 +33,8 @@ Proyek unggulan dan detail pengalamannya tetap menggunakan `portfolioCases` di `
 
 - [`Muhammad_Rafik_CV.pdf`](Muhammad_Rafik_CV.pdf) adalah CV yang dipakai pada tombol download di navigasi, hero, dan kontak.
 - `sections/skills.html` dan daftar marquee di `assets/js/main.js` mengikuti teknologi serta praktik yang tertulis pada CV. Teknologi pada kartu proyek mengikuti source masing-masing repo.
-- Potret formal ada di `assets/images/portfolio/rafik-portrait.png`; file asli disalin tanpa edit gambar.
-- Logo asli Zalamanga ada di `assets/images/brand/zalamanga-logo.png`. Navigasi dan footer memakai file yang sama; CSS hanya mengatur tampilan dan ruang kosongnya.
+- Potret untuk hero ada di `assets/images/portfolio/rafik-portrait-cutout.png`. Latar foto dihapus dengan bantuan AI dan ditampilkan di atas bidang charcoal-lilac; foto sumber tetap ada di `rafik-portrait.png`.
+- Logo tema gelap ada di `assets/images/brand/zalamanga-dark.png`: motif gunung dan tulisan Zalamanga berwarna lilac dengan latar transparan. Navigasi dan footer memakai file yang sama; favicon memakai versi ikon gunung `zalamanga-mark.svg`. Logo sumber berlatar putih tetap ada di `zalamanga-logo.png`.
 - `assets/css/profile.css` mengatur potret, logo, menu mobile, dan tambahan styling Skills. Menu mobile dapat dibuka dengan keyboard dan ditutup melalui Escape.
 
 ## Struktur File
@@ -56,9 +56,12 @@ assets/
   images/
     brand/
       zalamanga-logo.png
+      zalamanga-dark.png
+      zalamanga-mark.svg
     project-catalog/
     portfolio/
       rafik-portrait.png
+      rafik-portrait-cutout.png
 sections/
   nav.html
   hero.html
