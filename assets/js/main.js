@@ -622,13 +622,27 @@ function initPortfolio() {
     }
     attachTilt();
   
-    // ============ Hero photo subtle parallax ============
-    if (window.matchMedia('(min-width: 901px)').matches) {
-      window.addEventListener('mousemove', (e) => {
-        const x = (e.clientX / window.innerWidth - 0.5) * 20;
-        const y = (e.clientY / window.innerHeight - 0.5) * 20;
-        gsap.to('.hero-photo', { x, y, duration: 1.2, ease: 'power3.out' });
-        gsap.to('.gradient-mesh', { x: -x * 0.5, y: -y * 0.5, duration: 1.5, ease: 'power3.out' });
+    const hero = document.querySelector('.hero');
+    const heroPhoto = hero?.querySelector('.hero-photo');
+    if (hero && heroPhoto) {
+      const heroDepthMotion = window.matchMedia('(min-width: 901px) and (pointer: fine) and (prefers-reduced-motion: no-preference)');
+      const resetHeroDepth = () => {
+        gsap.killTweensOf(heroPhoto);
+        gsap.set(heroPhoto, { clearProps: 'transform,transformOrigin' });
+      };
+      hero.addEventListener('pointermove', (event) => {
+        if (!heroDepthMotion.matches) return;
+        const bounds = hero.getBoundingClientRect();
+        const x = (event.clientX - bounds.left) / bounds.width - 0.5;
+        const y = (event.clientY - bounds.top) / bounds.height - 0.5;
+        gsap.to(heroPhoto, {
+          x: x * 12, y: y * 8, rotationY: x * 4, rotationX: -y * 3,
+          duration: 0.7, ease: 'power2.out', overwrite: 'auto',
+        });
+      });
+      hero.addEventListener('pointerleave', resetHeroDepth);
+      heroDepthMotion.addEventListener('change', () => {
+        if (!heroDepthMotion.matches) resetHeroDepth();
       });
     }
   

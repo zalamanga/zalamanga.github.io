@@ -65,7 +65,27 @@ nav :is(a, button):focus-visible,
 
 .hero {
   min-height: 90vh;
-  padding-top: 11rem;
+  padding-top: 14rem;
+}
+
+.hero > .container {
+  width: 100%;
+  max-width: 1440px;
+}
+
+.hero-grid {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: clamp(1.5rem, 4vw, 4rem);
+}
+
+.hero-text {
+  position: relative;
+  z-index: 3;
+  min-width: 0;
+}
+
+h1.hero-title {
+  font-size: clamp(3rem, 8vw, 7.5rem);
 }
 
 section.block,
@@ -75,23 +95,34 @@ section.block,
 
 .hero-photo-wrap {
   width: 100%;
-  max-width: 400px;
+  max-width: none;
+  aspect-ratio: 1.16;
+  perspective: 1000px;
+  pointer-events: none;
 }
 
 .hero-photo {
-  border-radius: 18px;
-  border: 1px solid #393142;
-  background: #1b1725;
+  border-radius: 0;
+  border: 0;
+  background: transparent;
   box-shadow: none;
+  overflow: visible;
+  transform-style: preserve-3d;
 }
 
 .hero-photo img {
   display: block;
+  position: absolute;
+  bottom: 0;
+  right: -13.5%;
+  width: 135%;
+  height: auto;
+  max-width: none;
   object-fit: contain;
   object-position: center bottom;
-  filter: none;
-  transform: scale(1.15);
-  transform-origin: center bottom;
+  filter: drop-shadow(14px 20px 22px rgba(0, 0, 0, 0.45));
+  mask-image: linear-gradient(to bottom, #000 87%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, #000 87%, transparent 100%);
 }
 
 .hero-photo::after,
@@ -107,6 +138,10 @@ section.block,
 
 .skills-grid {
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+}
+
+.edu-grid {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
 }
 
 .skill-card {
@@ -209,17 +244,24 @@ section.block,
     min-height: auto;
     padding-top: 9rem;
   }
+
+  .hero-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 5rem;
+  }
+
+  h1.hero-title {
+    font-size: clamp(3rem, 11vw, 5.5rem);
+  }
+
+  .hero-photo-wrap {
+    order: 1;
+    max-width: 440px;
+    margin: 0 auto;
+  }
 }
 
 @media (max-width: 600px) {
-  .hero-photo-wrap {
-    max-width: 260px;
-  }
-
-  .hero-photo {
-    border-radius: 12px;
-  }
-
   .hero-cta-row .btn {
     min-height: 44px;
   }
