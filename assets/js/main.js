@@ -92,15 +92,6 @@ function initPortfolio() {
     let marqueeGroupWidth = 1;
     let marqueeFrame = null;
     const marqueeSpeed = 90;
-    const marqueeToggle = document.getElementById('marqueeToggle');
-    const marqueeMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-    const marqueePreferenceKey = 'zalamanga:marquee-motion';
-    let marqueePreference = null;
-    try {
-      const stored = localStorage.getItem(marqueePreferenceKey);
-      if (stored === 'play' || stored === 'pause') marqueePreference = stored;
-    } catch {}
-    let marqueePlaying = marqueePreference ? marqueePreference === 'play' : !marqueeMotion.matches;
 
     const measureMarquee = () => {
       marqueeGroupWidth = track.querySelector('.marquee-group')?.getBoundingClientRect().width || 1;
@@ -118,7 +109,7 @@ function initPortfolio() {
 
     function animateMarquee(time) {
       marqueeFrame = null;
-      if (!marqueePlaying || document.hidden) return;
+      if (document.hidden) return;
       const delta = Math.min(time - lastMarqueeTime, 40);
       lastMarqueeTime = time;
       marqueeX = (marqueeX + (delta / 1000) * marqueeSpeed) % marqueeGroupWidth;
@@ -127,30 +118,15 @@ function initPortfolio() {
     }
 
     function syncMarquee() {
-      track.dataset.motion = marqueePlaying ? 'playing' : 'paused';
-      if (marqueeToggle) {
-        marqueeToggle.hidden = false;
-        marqueeToggle.textContent = marqueePlaying ? 'Pause motion' : 'Play motion';
-      }
+      track.dataset.motion = document.hidden ? 'paused' : 'playing';
       if (marqueeFrame !== null) cancelAnimationFrame(marqueeFrame);
       marqueeFrame = null;
-      if (marqueePlaying && !document.hidden) {
+      if (!document.hidden) {
         lastMarqueeTime = performance.now();
         marqueeFrame = requestAnimationFrame(animateMarquee);
       }
     }
 
-    marqueeToggle?.addEventListener('click', () => {
-      marqueePlaying = !marqueePlaying;
-      marqueePreference = marqueePlaying ? 'play' : 'pause';
-      try { localStorage.setItem(marqueePreferenceKey, marqueePreference); } catch {}
-      syncMarquee();
-    });
-    marqueeMotion.addEventListener('change', () => {
-      if (marqueePreference !== null) return;
-      marqueePlaying = !marqueeMotion.matches;
-      syncMarquee();
-    });
     document.addEventListener('visibilitychange', syncMarquee);
     syncMarquee();
   
