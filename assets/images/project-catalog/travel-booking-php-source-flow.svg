@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="900" viewBox="0 0 1280 900" role="img">
+<title>Agih Travel Demo source workflow diagram</title>
+<desc>Diagram generated from the cited public source. This is not an application screenshot or runtime verification.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#386d76"/></marker></defs>
+<rect width="1280" height="900" fill="#f6f5f0"/>
+<path d="M60 54H1220" stroke="#2c6b72" stroke-width="4"/>
+<text x="60" y="94" font-family="Arial, sans-serif" font-size="16" fill="#2c6b72" font-weight="bold"><tspan x="60" dy="0">Source-based workflow diagram</tspan></text>
+<text x="60" y="144" font-family="Arial, sans-serif" font-size="34" fill="#142e38" font-weight="bold"><tspan x="60" dy="0">Agih Travel Demo</tspan></text>
+<text x="60" y="184" font-family="Arial, sans-serif" font-size="18" fill="#40575e" font-weight="normal"><tspan x="60" dy="0">Selected modules and data flow from the published code. This is a diagram, not a running screen.</tspan></text>
+<path d="M320 339H356" fill="none" stroke="#386d76" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="60" y="242" width="260" height="220" rx="4" fill="#fff" stroke="#769096" stroke-width="1.5"/>
+<text x="80" y="274" font-family="Arial, sans-serif" font-size="15" fill="#2c6b72" font-weight="bold"><tspan x="80" dy="0">01</tspan></text>
+<text x="80" y="308" font-family="Arial, sans-serif" font-size="20" fill="#142e38" font-weight="bold"><tspan x="80" dy="0">Choose a destination</tspan></text>
+<text x="80" y="367" font-family="Arial, sans-serif" font-size="14" fill="#2c6b72" font-weight="bold"><tspan x="80" dy="0">package.php and book.php</tspan></text>
+<text x="80" y="413" font-family="Arial, sans-serif" font-size="15" fill="#40575e" font-weight="normal"><tspan x="80" dy="0">Destination, travel dates, and</tspan><tspan x="80" dy="21.0">guest count.</tspan></text>
+<path d="M620 339H656" fill="none" stroke="#386d76" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="360" y="242" width="260" height="220" rx="4" fill="#fff" stroke="#769096" stroke-width="1.5"/>
+<text x="380" y="274" font-family="Arial, sans-serif" font-size="15" fill="#2c6b72" font-weight="bold"><tspan x="380" dy="0">02</tspan></text>
+<text x="380" y="308" font-family="Arial, sans-serif" font-size="20" fill="#142e38" font-weight="bold"><tspan x="380" dy="0">Request a quote</tspan></text>
+<text x="380" y="367" font-family="Arial, sans-serif" font-size="14" fill="#2c6b72" font-weight="bold"><tspan x="380" dy="0">quote.php / Catalog / Money</tspan></text>
+<text x="380" y="413" font-family="Arial, sans-serif" font-size="15" fill="#40575e" font-weight="normal"><tspan x="380" dy="0">Price per person per day ×</tspan><tspan x="380" dy="21.0">guests × days.</tspan></text>
+<path d="M920 339H956" fill="none" stroke="#386d76" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="660" y="242" width="260" height="220" rx="4" fill="#fff" stroke="#769096" stroke-width="1.5"/>
+<text x="680" y="274" font-family="Arial, sans-serif" font-size="15" fill="#2c6b72" font-weight="bold"><tspan x="680" dy="0">03</tspan></text>
+<text x="680" y="308" font-family="Arial, sans-serif" font-size="20" fill="#142e38" font-weight="bold"><tspan x="680" dy="0">Save the request</tspan></text>
+<text x="680" y="367" font-family="Arial, sans-serif" font-size="14" fill="#2c6b72" font-weight="bold"><tspan x="680" dy="0">BookingService / BookingStore</tspan></text>
+<text x="680" y="413" font-family="Arial, sans-serif" font-size="15" fill="#40575e" font-weight="normal"><tspan x="680" dy="0">Store a booking with a stable</tspan><tspan x="680" dy="21.0">operation key and receipt.</tspan></text>
+<rect x="960" y="242" width="260" height="220" rx="4" fill="#fff" stroke="#769096" stroke-width="1.5"/>
+<text x="980" y="274" font-family="Arial, sans-serif" font-size="15" fill="#2c6b72" font-weight="bold"><tspan x="980" dy="0">04</tspan></text>
+<text x="980" y="308" font-family="Arial, sans-serif" font-size="20" fill="#142e38" font-weight="bold"><tspan x="980" dy="0">Review as operator</tspan></text>
+<text x="980" y="367" font-family="Arial, sans-serif" font-size="14" fill="#2c6b72" font-weight="bold"><tspan x="980" dy="0">admin.php / edit_booking.php</tspan></text>
+<text x="980" y="413" font-family="Arial, sans-serif" font-size="15" fill="#40575e" font-weight="normal"><tspan x="980" dy="0">Update contacts, itinerary</tspan><tspan x="980" dy="21.0">quotes, and manual status.</tspan></text>
+<path d="M640 480V505" stroke="#386d76" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="60" y="551" font-family="Arial, sans-serif" font-size="16" fill="#2c6b72" font-weight="bold"><tspan x="60" dy="0">DATA AND DEPENDENCIES</tspan></text>
+<text x="60" y="586" font-family="Arial, sans-serif" font-size="20" fill="#172d36" font-weight="normal"><tspan x="60" dy="0">MySQL: destinations, bookings, operation_receipts. Local operator session and request receipts.</tspan></text>
+<path d="M60 661H1220" stroke="#b0bdbd"/>
+<text x="60" y="700" font-family="Arial, sans-serif" font-size="16" fill="#2c6b72" font-weight="bold"><tspan x="60" dy="0">BOUNDARY OF THIS PREVIEW</tspan></text>
+<text x="60" y="734" font-family="Arial, sans-serif" font-size="18" fill="#40575e" font-weight="normal"><tspan x="60" dy="0">Demo prices and manual status only. No real seats or hotels, verified payment, or automatic messages. This</tspan><tspan x="60" dy="25.2">diagram is not runtime verification.</tspan></text>
+<text x="60" y="840" font-family="Arial, sans-serif" font-size="15" fill="#40575e" font-weight="normal"><tspan x="60" dy="0">PUBLIC SOURCE  zalamanga/travel-booking-php  ·  commit 961d22d08d63</tspan></text>
+<text x="60" y="871" font-family="Arial, sans-serif" font-size="14" fill="#40575e" font-weight="normal"><tspan x="60" dy="0">Not a runtime screenshot. Generated from public source inspection; no successful service call is implied.</tspan></text>
+</svg>

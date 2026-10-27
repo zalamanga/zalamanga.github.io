@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="900" viewBox="0 0 1280 900" role="img">
+<title>Document Similarity Service source workflow diagram</title>
+<desc>Diagram generated from the cited public source. This is not an application screenshot or runtime verification.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#386d76"/></marker></defs>
+<rect width="1280" height="900" fill="#f6f5f0"/>
+<path d="M60 54H1220" stroke="#2c6b72" stroke-width="4"/>
+<text x="60" y="94" font-family="Arial, sans-serif" font-size="16" fill="#2c6b72" font-weight="bold"><tspan x="60" dy="0">Source-based workflow diagram</tspan></text>
+<text x="60" y="144" font-family="Arial, sans-serif" font-size="34" fill="#142e38" font-weight="bold"><tspan x="60" dy="0">Document Similarity Service</tspan></text>
+<text x="60" y="184" font-family="Arial, sans-serif" font-size="18" fill="#40575e" font-weight="normal"><tspan x="60" dy="0">Selected modules and data flow from the published code. This is a diagram, not a running screen.</tspan></text>
+<path d="M320 339H356" fill="none" stroke="#386d76" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="60" y="242" width="260" height="220" rx="4" fill="#fff" stroke="#769096" stroke-width="1.5"/>
+<text x="80" y="274" font-family="Arial, sans-serif" font-size="15" fill="#2c6b72" font-weight="bold"><tspan x="80" dy="0">01</tspan></text>
+<text x="80" y="308" font-family="Arial, sans-serif" font-size="20" fill="#142e38" font-weight="bold"><tspan x="80" dy="0">Submit a PDF job</tspan></text>
+<text x="80" y="367" font-family="Arial, sans-serif" font-size="14" fill="#2c6b72" font-weight="bold"><tspan x="80" dy="0">POST /check_plagiarism</tspan></text>
+<text x="80" y="413" font-family="Arial, sans-serif" font-size="15" fill="#40575e" font-weight="normal"><tspan x="80" dy="0">file_name, book_id, and</tspan><tspan x="80" dy="21.0">market_id are validated.</tspan></text>
+<path d="M620 339H656" fill="none" stroke="#386d76" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="360" y="242" width="260" height="220" rx="4" fill="#fff" stroke="#769096" stroke-width="1.5"/>
+<text x="380" y="274" font-family="Arial, sans-serif" font-size="15" fill="#2c6b72" font-weight="bold"><tspan x="380" dy="0">02</tspan></text>
+<text x="380" y="308" font-family="Arial, sans-serif" font-size="20" fill="#142e38" font-weight="bold"><tspan x="380" dy="0">Queue in the API</tspan><tspan x="380" dy="28.0">process</tspan></text>
+<text x="380" y="367" font-family="Arial, sans-serif" font-size="14" fill="#2c6b72" font-weight="bold"><tspan x="380" dy="0">FastAPI BackgroundTasks</tspan></text>
+<text x="380" y="413" font-family="Arial, sans-serif" font-size="15" fill="#40575e" font-weight="normal"><tspan x="380" dy="0">Insert a job, return accepted</tspan><tspan x="380" dy="21.0">plus job_id, then run the</tspan><tspan x="380" dy="21.0">pipeline.</tspan></text>
+<path d="M920 339H956" fill="none" stroke="#386d76" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="660" y="242" width="260" height="220" rx="4" fill="#fff" stroke="#769096" stroke-width="1.5"/>
+<text x="680" y="274" font-family="Arial, sans-serif" font-size="15" fill="#2c6b72" font-weight="bold"><tspan x="680" dy="0">03</tspan></text>
+<text x="680" y="308" font-family="Arial, sans-serif" font-size="20" fill="#142e38" font-weight="bold"><tspan x="680" dy="0">Compare extracted text</tspan></text>
+<text x="680" y="367" font-family="Arial, sans-serif" font-size="14" fill="#2c6b72" font-weight="bold"><tspan x="680" dy="0">pipeline / SimilarityMatcher</tspan></text>
+<text x="680" y="413" font-family="Arial, sans-serif" font-size="15" fill="#40575e" font-weight="normal"><tspan x="680" dy="0">Download PDF, extract text,</tspan><tspan x="680" dy="21.0">search candidate pages, compare</tspan><tspan x="680" dy="21.0">passages.</tspan></text>
+<rect x="960" y="242" width="260" height="220" rx="4" fill="#fff" stroke="#769096" stroke-width="1.5"/>
+<text x="980" y="274" font-family="Arial, sans-serif" font-size="15" fill="#2c6b72" font-weight="bold"><tspan x="980" dy="0">04</tspan></text>
+<text x="980" y="308" font-family="Arial, sans-serif" font-size="20" fill="#142e38" font-weight="bold"><tspan x="980" dy="0">Save the result</tspan></text>
+<text x="980" y="367" font-family="Arial, sans-serif" font-size="14" fill="#2c6b72" font-weight="bold"><tspan x="980" dy="0">db.py completion / failure</tspan></text>
+<text x="980" y="413" font-family="Arial, sans-serif" font-size="15" fill="#40575e" font-weight="normal"><tspan x="980" dy="0">Update job status, score, and</tspan><tspan x="980" dy="21.0">the JSON report in MySQL.</tspan></text>
+<path d="M640 480V505" stroke="#386d76" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="60" y="551" font-family="Arial, sans-serif" font-size="16" fill="#2c6b72" font-weight="bold"><tspan x="60" dy="0">DATA AND DEPENDENCIES</tspan></text>
+<text x="60" y="586" font-family="Arial, sans-serif" font-size="20" fill="#172d36" font-weight="normal"><tspan x="60" dy="0">MySQL table: plagiarims_checker. Google Custom Search credentials and reachable PDF sources are external</tspan><tspan x="60" dy="28.0">requirements.</tspan></text>
+<path d="M60 661H1220" stroke="#b0bdbd"/>
+<text x="60" y="700" font-family="Arial, sans-serif" font-size="16" fill="#2c6b72" font-weight="bold"><tspan x="60" dy="0">BOUNDARY OF THIS PREVIEW</tspan></text>
+<text x="60" y="734" font-family="Arial, sans-serif" font-size="18" fill="#40575e" font-weight="normal"><tspan x="60" dy="0">A similarity score is not a plagiarism verdict. No external search, private PDF, or real database was used for</tspan><tspan x="60" dy="25.2">this diagram.</tspan></text>
+<text x="60" y="840" font-family="Arial, sans-serif" font-size="15" fill="#40575e" font-weight="normal"><tspan x="60" dy="0">PUBLIC SOURCE  zalamanga/document-similarity-service  ·  commit 8030cf196cdf</tspan></text>
+<text x="60" y="871" font-family="Arial, sans-serif" font-size="14" fill="#40575e" font-weight="normal"><tspan x="60" dy="0">Not a runtime screenshot. Generated from public source inspection; no successful service call is implied.</tspan></text>
+</svg>

@@ -48,25 +48,43 @@ function initPortfolio() {
   
     // ============ Marquee ============
     const techStack = [
-      { name: 'Vue.js', icon: 'vuedotjs' },
       { name: 'React', icon: 'react' },
-      { name: 'Laravel', icon: 'laravel' },
-      { name: 'PHP', icon: 'php' },
-      { name: 'Flutter', icon: 'flutter' },
-      { name: 'Node.js', icon: 'nodedotjs' },
       { name: 'TypeScript', icon: 'typescript' },
+      { name: 'Next.js', icon: 'nextdotjs', invert: true },
+      { name: 'Vue.js', icon: 'vuedotjs' },
+      { name: 'JavaScript', icon: 'javascript' },
+      { name: 'HTML/CSS', icon: 'html5' },
+      { name: 'Bootstrap', icon: 'bootstrap' },
+      { name: 'Tailwind CSS', icon: 'tailwindcss' },
+      { name: 'PHP', icon: 'php' },
+      { name: 'Laravel', icon: 'laravel' },
+      { name: 'Node.js', icon: 'nodedotjs' },
       { name: 'MySQL', icon: 'mysql' },
-      { name: 'Tailwind', icon: 'tailwindcss' },
-      { name: 'Docker', icon: 'docker' },
-      { name: 'Firebase', icon: 'firebase' },
+      { name: 'SQL Server' },
+      { name: 'Flutter', icon: 'flutter' },
+      { name: 'Android Studio', icon: 'androidstudio' },
       { name: 'Git', icon: 'git' },
       { name: 'GitHub', icon: 'github', invert: true },
+      { name: 'Docker', icon: 'docker' },
+      { name: 'Jenkins', icon: 'jenkins' },
+      { name: 'Postman', icon: 'postman' },
+      { name: 'aapanel' },
       { name: 'Figma', icon: 'figma' },
-      { name: 'Bootstrap', icon: 'bootstrap' },
+      { name: 'Canva' },
+      { name: 'Photoshop' },
     ];
     const track = document.getElementById('marqueeTrack');
-    const buildItem = (t) => `<span class="marquee-item"><img src="https://cdn.simpleicons.org/${t.icon}" alt="" class="${t.invert ? 'invert-dark' : ''}"/>${t.name}</span>`;
+    const escapeMarqueeText = (value) => String(value).replace(/[&<>"']/g, (char) => ({
+      '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;',
+    }[char]));
+    const buildItem = (t) => {
+      const icon = t.icon ? `<img src="https://cdn.simpleicons.org/${encodeURIComponent(t.icon)}" alt="" class="${t.invert ? 'invert-dark' : ''}"/>` : '';
+      return `<span class="marquee-item">${icon}${escapeMarqueeText(t.name)}</span>`;
+    };
     const buildGroup = () => `<div class="marquee-group">${techStack.map(buildItem).join('')}</div>`;
+    track.addEventListener('error', (event) => {
+      if (event.target.tagName === 'IMG') event.target.remove();
+    }, true);
     track.innerHTML = Array.from({ length: 4 }, buildGroup).join('');
 
     let marqueeX = 0;
@@ -572,10 +590,44 @@ function initPortfolio() {
     // ============ Year ============
     document.getElementById('year').textContent = new Date().getFullYear();
   
-    // ============ Burger (mobile nav simple scroll) ============
-    document.getElementById('burger')?.addEventListener('click', () => {
-      document.querySelector('#about').scrollIntoView({ behavior: 'smooth' });
-    });
+    // ============ Mobile navigation ============
+    const burger = document.getElementById('burger');
+    const primaryNav = document.getElementById('primaryNav');
+    if (burger && primaryNav) {
+      const desktopNavigation = window.matchMedia('(min-width: 901px)');
+      const setMenuOpen = (open) => {
+        const expanded = Boolean(open && !desktopNavigation.matches);
+        primaryNav.classList.toggle('is-open', expanded);
+        burger.setAttribute('aria-expanded', String(expanded));
+        burger.setAttribute('aria-label', expanded ? 'Close navigation menu' : 'Open navigation menu');
+      };
+      const closeMenu = (restoreFocus = false) => {
+        setMenuOpen(false);
+        if (restoreFocus) burger.focus({ preventScroll: true });
+      };
+      setMenuOpen(false);
+      burger.addEventListener('click', () => {
+        setMenuOpen(!primaryNav.classList.contains('is-open'));
+      });
+      primaryNav.addEventListener('click', (event) => {
+        const menuLink = event.target.closest?.('a');
+        if (menuLink && primaryNav.contains(menuLink)) closeMenu(primaryNav.contains(document.activeElement));
+      });
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && primaryNav.classList.contains('is-open')) {
+          event.preventDefault();
+          closeMenu(true);
+        }
+      });
+      document.addEventListener('click', (event) => {
+        if (primaryNav.classList.contains('is-open') && !primaryNav.contains(event.target) && !burger.contains(event.target)) {
+          closeMenu(primaryNav.contains(document.activeElement));
+        }
+      });
+      window.addEventListener('resize', () => {
+        if (desktopNavigation.matches) closeMenu();
+      });
+    }
 }
 
 if (window.__portfolioPartialsReady) {

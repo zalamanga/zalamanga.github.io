@@ -13,7 +13,7 @@ Untuk menambahkan atau memperbarui entri:
 1. Edit objek pada array `projects`. Isi `repo`, `title`, `description`, `category`, `kind`, `stack`, dan `url` berdasarkan proyek yang benar-benar tersedia.
 2. Pilih kategori `web`, `backend`, `java`, `mobile`, `data`, atau `tools`.
 3. Simpan gambar dokumentasi yang sudah boleh dipublikasikan di `assets/images/project-catalog/`. Masukkan path lokal, `alt`, `label`, `width`, dan `height` pada array `screenshots`. Gambar pertama menjadi preview; tombol **View image** membuka gambar ukuran asli.
-4. Bedakan screenshot aplikasi, render output terminal/HTTP, preview komponen, dan hasil PDF pada `label`. Ikon, foto produk, atau mockup tidak boleh disebut screenshot aplikasi.
+4. Bedakan screenshot aplikasi, render output terminal/HTTP, preview komponen, hasil PDF, dan diagram source pada `label`. Ikon, foto produk, atau diagram tidak boleh disebut screenshot aplikasi berjalan.
 5. Jika belum ada gambar, gunakan `screenshots: []` dan isi `note` dengan keterangannya. Kartu tetap tampil dan menautkan source code.
 6. Jalankan preview lokal, lalu cek pencarian, kategori, kondisi hasil kosong, pemuatan gambar, dan tombol untuk menampilkan sisa entri.
 
@@ -23,18 +23,30 @@ Sebagian gambar berasal dari dokumentasi repo; sepuluh screenshot website statis
 
 Katalog berisi proyek publik, termasuk latihan, demo, dan starter yang diberi jenisnya. Repo privat, README profil akun, serta repo portfolio ini sendiri tidak dimasukkan. Proyek Moonlight, Pakeaja Interview, dan QRCBN yang sebelumnya dikecualikan tidak ditambahkan sebagai source publik.
 
-Delapan proyek Android baru belum mempunyai screenshot runtime dalam dokumentasi sumber. Entri tersebut tetap tercantum dengan catatan. Tambahkan tangkapan emulator atau perangkat setelah aplikasinya benar-benar dijalankan.
+Seluruh 84 proyek sudah memiliki preview. Delapan Android memakai diagram layar/alur yang dibuat dari Java/XML asli; proyek backend atau legacy yang belum bisa dijalankan memakai diagram alur dari route, controller, model, dan README. Diagram berlabel **Source-based** dan menyertakan penjelasan bahwa itu bukan screenshot runtime. Source SVG disimpan di samping PNG agar bisa diperbarui. Tambahkan atau ganti dengan tangkapan emulator/perangkat setelah aplikasinya dijalankan.
+
+Capture lokal memakai data demo atau fixture sintetis jika API/database asli tidak tersedia. Preview output Playwright menampilkan hasil penemuan tes (`--list`), bukan klaim bahwa tes login sudah dijalankan. Capture halaman landing juga tidak membuktikan seluruh CMS atau backend berhasil diuji.
 
 Proyek unggulan dan detail pengalamannya tetap menggunakan `portfolioCases` di `assets/js/main.js`, sesuai panduan berikut.
+
+## Profil, CV, dan identitas
+
+- [`Muhammad_Rafik_CV.pdf`](Muhammad_Rafik_CV.pdf) adalah CV yang dipakai pada tombol download di navigasi, hero, dan kontak.
+- `sections/skills.html` dan daftar marquee di `assets/js/main.js` mengikuti teknologi serta praktik yang tertulis pada CV. Teknologi pada kartu proyek mengikuti source masing-masing repo.
+- Potret formal ada di `assets/images/portfolio/rafik-portrait.png`; file asli disalin tanpa edit gambar.
+- Logo asli Zalamanga ada di `assets/images/brand/zalamanga-logo.png`. Navigasi dan footer memakai file yang sama; CSS hanya mengatur tampilan dan ruang kosongnya.
+- `assets/css/profile.css` mengatur potret, logo, menu mobile, dan tambahan styling Skills. Menu mobile dapat dibuka dengan keyboard dan ditutup melalui Escape.
 
 ## Struktur File
 
 ```txt
 index.html
+Muhammad_Rafik_CV.pdf
 assets/
   css/
     styles.css
     project-catalog.css
+    profile.css
   js/
     main.js
     partials.js
@@ -42,9 +54,11 @@ assets/
   data/
     projects.json
   images/
+    brand/
+      zalamanga-logo.png
     project-catalog/
     portfolio/
-      foto.jpeg
+      rafik-portrait.png
 sections/
   nav.html
   hero.html

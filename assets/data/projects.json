@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-27T20:40:01+07:00",
+  "updatedAt": "2026-10-27T23:10:42+07:00",
   "projects": [
     {
       "repo": "fti-authentication-assessment",
@@ -265,7 +265,15 @@
       ],
       "url": "https://github.com/zalamanga/android-student-database",
       "sourceRef": "85168d7fb06899763790afa84b83dc3722a4fb74",
-      "screenshots": [],
+      "screenshots": [
+        {
+          "src": "assets/images/project-catalog/android-student-database-source-flow.png",
+          "alt": "Android Student Database: source-based screen and flow diagram",
+          "label": "Source-based screen & flow diagram",
+          "width": 1600,
+          "height": 1000
+        }
+      ],
       "note": "All demo accounts share the same local student records; there is no server or sync. A device or emulator screenshot is not available yet."
     },
     {
@@ -283,7 +291,15 @@
       ],
       "url": "https://github.com/zalamanga/android-video-library",
       "sourceRef": "4a0e90c8e4466ff1597a9205c541e0efdf5fb8f4",
-      "screenshots": [],
+      "screenshots": [
+        {
+          "src": "assets/images/project-catalog/android-video-library-source-flow.png",
+          "alt": "Android Video Library: source-based screen and flow diagram",
+          "label": "Source-based screen & flow diagram",
+          "width": 1600,
+          "height": 1000
+        }
+      ],
       "note": "Admin/client modules require a privately configured Firebase project and authorization rules. Real cloud and device behavior have not been verified. A device or emulator screenshot is not available yet."
     },
     {
@@ -1442,7 +1458,15 @@
       ],
       "url": "https://github.com/zalamanga/travel-booking-php",
       "sourceRef": "961d22d08d63c5bc0c8742d79265aecfe82ab105",
-      "screenshots": [],
+      "screenshots": [
+        {
+          "src": "assets/images/project-catalog/travel-booking-php-source-flow.png",
+          "alt": "Agih Travel Demo workflow diagram derived from public source; not an application screenshot.",
+          "label": "Workflow diagram (from public source)",
+          "width": 1280,
+          "height": 900
+        }
+      ],
       "note": "No real seats or hotels are booked, payments verified, or messages sent. Browser/HTTP/database behavior was not verified in the documented publication check."
     },
     {
@@ -1459,7 +1483,15 @@
       ],
       "url": "https://github.com/zalamanga/android-form-storage",
       "sourceRef": "46ceaffe2e5ea9fc562a3df3042125d60f5a8827",
-      "screenshots": [],
+      "screenshots": [
+        {
+          "src": "assets/images/project-catalog/android-form-storage-source-flow.png",
+          "alt": "Android Form Storage: source-based screen and flow diagram",
+          "label": "Source-based screen & flow diagram",
+          "width": 1600,
+          "height": 1000
+        }
+      ],
       "note": "One demo account and one form per storage location; not a multi-student system. A device or emulator screenshot is not available yet."
     },
     {
@@ -1477,7 +1509,15 @@
       ],
       "url": "https://github.com/zalamanga/android-movie-streaming",
       "sourceRef": "04219c629837f68a95c8b301907cd348cef4bfd3",
-      "screenshots": [],
+      "screenshots": [
+        {
+          "src": "assets/images/project-catalog/android-movie-streaming-source-flow.png",
+          "alt": "Android Movie Streaming: source-based screen and flow diagram",
+          "label": "Source-based screen & flow diagram",
+          "width": 1600,
+          "height": 1000
+        }
+      ],
       "note": "Study export based on Nimith-Nimeshana/MovieStreamingApp; attribution retained. A private Firebase project is required; real backend and device behavior have not been verified. A device or emulator screenshot is not available yet."
     },
     {
@@ -1494,7 +1534,15 @@
       ],
       "url": "https://github.com/zalamanga/android-navigation-demo",
       "sourceRef": "84dc9302f2b863938f1b00fbcde7393e6bd736ea",
-      "screenshots": [],
+      "screenshots": [
+        {
+          "src": "assets/images/project-catalog/android-navigation-demo-source-flow.png",
+          "alt": "Android Navigation Demo: source-based screen and flow diagram",
+          "label": "Source-based screen & flow diagram",
+          "width": 1600,
+          "height": 1000
+        }
+      ],
       "note": "Navigation exercise with placeholder text, no login or backend. A device or emulator screenshot is not available yet."
     },
     {
@@ -1511,7 +1559,15 @@
       ],
       "url": "https://github.com/zalamanga/android-video-upload-demo",
       "sourceRef": "0b8d0fefd0fd389b0569c06ed14088c9eee854b5",
-      "screenshots": [],
+      "screenshots": [
+        {
+          "src": "assets/images/project-catalog/android-video-upload-demo-source-flow.png",
+          "alt": "Android Video Upload Demo: source-based screen and flow diagram",
+          "label": "Source-based screen & flow diagram",
+          "width": 1600,
+          "height": 1000
+        }
+      ],
       "note": "Uploads are activity-bound; no background resume, catalog, or metadata editor. Real Firebase transfers have not been verified. A device or emulator screenshot is not available yet."
     },
     {
@@ -1528,7 +1584,15 @@
       ],
       "url": "https://github.com/zalamanga/arcadia-mini-games",
       "sourceRef": "14ca5c967a02427f661480dd9d3f956c6fe37655",
-      "screenshots": [],
+      "screenshots": [
+        {
+          "src": "assets/images/project-catalog/arcadia-mini-games-capture.png",
+          "alt": "Arcadia Tic-Tac-Toe running locally in guest mode, with synthetic empty session and leaderboard responses.",
+          "label": "Application UI (synthetic API fixtures)",
+          "width": 1440,
+          "height": 1000
+        }
+      ],
       "note": "Scores are calculated by the client; the leaderboard does not verify gameplay. Browser/HTTP/database behavior was not verified in the documented publication check."
     },
     {
@@ -1544,7 +1608,15 @@
       ],
       "url": "https://github.com/zalamanga/article-cms-php",
       "sourceRef": "bd277bf569198eb68d5b10cf447f5b2bd63e20e2",
-      "screenshots": [],
+      "screenshots": [
+        {
+          "src": "assets/images/project-catalog/article-cms-php-source-flow.png",
+          "alt": "Article CMS PHP workflow diagram derived from public source; not an application screenshot.",
+          "label": "Workflow diagram (from public source)",
+          "width": 1280,
+          "height": 900
+        }
+      ],
       "note": "Legacy prototype; HTML sanitization, CSRF, uploads, deletion, and form compatibility require further review."
     },
     {
@@ -1560,7 +1632,15 @@
       ],
       "url": "https://github.com/zalamanga/certification-cms-demo",
       "sourceRef": "18d415977d70eceef29c164987a05b1cca0b0d06",
-      "screenshots": [],
+      "screenshots": [
+        {
+          "src": "assets/images/project-catalog/certification-cms-demo-capture.png",
+          "alt": "The unchanged LSP-DKS public landing page served from the certification prototype; database and CMS features were not exercised.",
+          "label": "Static landing page (CMS not exercised)",
+          "width": 1440,
+          "height": 1000
+        }
+      ],
       "note": "Administrator and content endpoints do not yet have consistent access protection; local prototype only."
     },
     {
@@ -1577,7 +1657,15 @@
       ],
       "url": "https://github.com/zalamanga/document-similarity-service",
       "sourceRef": "8030cf196cdfc0081205677bf998d1ca425484f3",
-      "screenshots": [],
+      "screenshots": [
+        {
+          "src": "assets/images/project-catalog/document-similarity-service-source-flow.png",
+          "alt": "Document Similarity Service workflow diagram derived from public source; not an application screenshot.",
+          "label": "Workflow diagram (from public source)",
+          "width": 1280,
+          "height": 900
+        }
+      ],
       "note": "Similarity scores are algorithmic comparisons, not plagiarism verdicts. Requires external API credentials; jobs run in the API process."
     },
     {
@@ -1594,7 +1682,15 @@
       ],
       "url": "https://github.com/zalamanga/event-service-cms-demo",
       "sourceRef": "58aa131ee1092d2593a7f63705796572a28f3e27",
-      "screenshots": [],
+      "screenshots": [
+        {
+          "src": "assets/images/project-catalog/event-service-cms-demo-source-flow.png",
+          "alt": "Event Service CMS Demo workflow diagram derived from public source; not an application screenshot.",
+          "label": "Workflow diagram (from public source)",
+          "width": 1280,
+          "height": 900
+        }
+      ],
       "note": "Legacy demo; asset toolchain and complete runtime behavior were not reverified for publication."
     },
     {
@@ -1611,7 +1707,15 @@
       ],
       "url": "https://github.com/zalamanga/firebase-inventory-android",
       "sourceRef": "054bde211e4781e5e22bfa4185351ed2c414d009",
-      "screenshots": [],
+      "screenshots": [
+        {
+          "src": "assets/images/project-catalog/firebase-inventory-android-source-flow.png",
+          "alt": "Firebase Inventory Android: source-based screen and flow diagram",
+          "label": "Source-based screen & flow diagram",
+          "width": 1600,
+          "height": 1000
+        }
+      ],
       "note": "Requires a private Firebase setup; real backend/device behavior has not been verified. A device or emulator screenshot is not available yet."
     },
     {
@@ -1629,7 +1733,15 @@
       ],
       "url": "https://github.com/zalamanga/firebase-video-crud-android",
       "sourceRef": "11857062fe22dccaeadfa0acb58053d9960e2a36",
-      "screenshots": [],
+      "screenshots": [
+        {
+          "src": "assets/images/project-catalog/firebase-video-crud-android-source-flow.png",
+          "alt": "Firebase Video Catalog Android: source-based screen and flow diagram",
+          "label": "Source-based screen & flow diagram",
+          "width": 1600,
+          "height": 1000
+        }
+      ],
       "note": "Manages video metadata and playback URLs; it does not upload files. Real Firebase/device behavior has not been verified. A device or emulator screenshot is not available yet."
     },
     {
@@ -1644,7 +1756,15 @@
       ],
       "url": "https://github.com/zalamanga/game-topup-demo-php",
       "sourceRef": "40d835041a9a142a18fdf141eaf4e3d20e7018e2",
-      "screenshots": [],
+      "screenshots": [
+        {
+          "src": "assets/images/project-catalog/game-topup-demo-php-source-flow.png",
+          "alt": "Game Top-up Demo workflow diagram derived from public source; not an application screenshot.",
+          "label": "Workflow diagram (from public source)",
+          "width": 1280,
+          "height": 900
+        }
+      ],
       "note": "No game credit delivery or payment-gateway integration."
     },
     {
@@ -1662,7 +1782,15 @@
       ],
       "url": "https://github.com/zalamanga/guepedia-company-frontend",
       "sourceRef": "6371d3cd115478db3bc05e485bd423d80ca9edb4",
-      "screenshots": [],
+      "screenshots": [
+        {
+          "src": "assets/images/project-catalog/guepedia-company-frontend-source-flow.png",
+          "alt": "Guepedia Company Frontend workflow diagram derived from public source; not an application screenshot.",
+          "label": "Workflow diagram (from public source)",
+          "width": 1280,
+          "height": 900
+        }
+      ],
       "note": "Company backend, account data, manuscripts, and credentials are absent; connected flows require a compatible backend."
     },
     {
@@ -1678,7 +1806,15 @@
       ],
       "url": "https://github.com/zalamanga/jalansukses-cms-demo",
       "sourceRef": "077457f62b22b8cdb7de59a8e5cd70bdf45ffb98",
-      "screenshots": [],
+      "screenshots": [
+        {
+          "src": "assets/images/project-catalog/jalansukses-cms-demo-source-flow.png",
+          "alt": "Jalan Sukses CMS Demo workflow diagram derived from public source; not an application screenshot.",
+          "label": "Workflow diagram (from public source)",
+          "width": 1280,
+          "height": 900
+        }
+      ],
       "note": "Separate from the static site; mail delivery depends on local PHP mail configuration and complete runtime behavior was not reverified."
     },
     {
@@ -1693,7 +1829,15 @@
       ],
       "url": "https://github.com/zalamanga/kopikuy-cms-php",
       "sourceRef": "25a31601c5121c20e158b63d670ee0066eccf2ce",
-      "screenshots": [],
+      "screenshots": [
+        {
+          "src": "assets/images/project-catalog/kopikuy-cms-php-capture.png",
+          "alt": "Kopi Kuy native static landing page from the PHP CMS repository, including its original shop illustration and navigation.",
+          "label": "Static landing page (CMS not exercised)",
+          "width": 1440,
+          "height": 1000
+        }
+      ],
       "note": "Legacy prototype separate from the static Kopi Kuy website; runtime flows require further review."
     },
     {
@@ -1711,7 +1855,15 @@
       ],
       "url": "https://github.com/zalamanga/livewire-shop-demo",
       "sourceRef": "9dd1687ac692223cfa7a5eeb9c6766448535cd11",
-      "screenshots": [],
+      "screenshots": [
+        {
+          "src": "assets/images/project-catalog/livewire-shop-demo-source-flow.png",
+          "alt": "Livewire Shop Demo workflow diagram derived from public source; not an application screenshot.",
+          "label": "Workflow diagram (from public source)",
+          "width": 1280,
+          "height": 900
+        }
+      ],
       "note": "Legacy Laravel 7/Livewire 1 demo; external payment setup and complete runtime behavior are not verified."
     },
     {
@@ -1729,7 +1881,15 @@
       ],
       "url": "https://github.com/zalamanga/notes-app-back-end",
       "sourceRef": "db9c184e2328dc3987d8b026a8bb76bddd2410bd",
-      "screenshots": [],
+      "screenshots": [
+        {
+          "src": "assets/images/project-catalog/notes-app-back-end-capture.png",
+          "alt": "Actual localhost Notes API responses for creating, listing, and reading a synthetic note; rendered output, not a graphical interface.",
+          "label": "HTTP output (rendered)",
+          "width": 1280,
+          "height": 1476
+        }
+      ],
       "note": "Backend only, with no web page or Bookshelf endpoints."
     },
     {
@@ -1744,7 +1904,15 @@
       ],
       "url": "https://github.com/zalamanga/playwright-login-practice",
       "sourceRef": "4d3fb8debc53a3bdc1666ee50a61ae2d21055627",
-      "screenshots": [],
+      "screenshots": [
+        {
+          "src": "assets/images/project-catalog/playwright-login-practice-capture.png",
+          "alt": "Real Playwright test discovery listing five login cases for Chromium and Firefox; tests were listed rather than executed.",
+          "label": "Test discovery output (rendered)",
+          "width": 1280,
+          "height": 900
+        }
+      ],
       "note": "A testing exercise against a public practice environment; not a login application."
     },
     {
@@ -1762,7 +1930,15 @@
       ],
       "url": "https://github.com/zalamanga/allo-frontend-test",
       "sourceRef": "37d7fc8fe898ab99f03f35dda6e1c4c885c4ec95",
-      "screenshots": [],
+      "screenshots": [
+        {
+          "src": "assets/images/project-catalog/allo-frontend-test-capture.png",
+          "alt": "Rocket Atlas running locally with three clearly synthetic rocket records and native missing-image and missing-date fallbacks.",
+          "label": "Application UI (synthetic API fixtures)",
+          "width": 1440,
+          "height": 1000
+        }
+      ],
       "note": "Forked assignment repository; local additions remain in browser-session state. Public work is on feat/allo-spacex, not main."
     },
     {
@@ -1779,7 +1955,15 @@
       ],
       "url": "https://github.com/zalamanga/shipping-cost-calculator",
       "sourceRef": "bdb86fb60648e4d6cb420c6f9cc507ae0ca6fc23",
-      "screenshots": [],
+      "screenshots": [
+        {
+          "src": "assets/images/project-catalog/shipping-cost-calculator-source-flow.png",
+          "alt": "Shipping Cost Calculator workflow diagram derived from public source; not an application screenshot.",
+          "label": "Workflow diagram (from public source)",
+          "width": 1280,
+          "height": 900
+        }
+      ],
       "note": "Requires external API configuration; legacy toolchain and live shipping results were not reverified."
     },
     {
@@ -1795,7 +1979,15 @@
       ],
       "url": "https://github.com/zalamanga/ticket-reservation-demo",
       "sourceRef": "b4be2d2dded8cd50bc6f3c3f5a85b8a1280c45b4",
-      "screenshots": [],
+      "screenshots": [
+        {
+          "src": "assets/images/project-catalog/ticket-reservation-demo-source-flow.png",
+          "alt": "Ticket Reservation Demo workflow diagram derived from public source; not an application screenshot.",
+          "label": "Workflow diagram (from public source)",
+          "width": 1280,
+          "height": 900
+        }
+      ],
       "note": "Legacy demo with payment-status workflows; complete booking and payment behavior was not reverified."
     },
     {
@@ -1814,7 +2006,15 @@
       ],
       "url": "https://github.com/zalamanga/TIGAC",
       "sourceRef": "c44539d6731af189d3605fa7ed14250a344dbafa",
-      "screenshots": [],
+      "screenshots": [
+        {
+          "src": "assets/images/project-catalog/tigac-source-flow.png",
+          "alt": "TIGAC Store workflow diagram derived from public source; not an application screenshot.",
+          "label": "Workflow diagram (from public source)",
+          "width": 1280,
+          "height": 900
+        }
+      ],
       "note": "Payment is simulated; the repo is not connected to a live commerce operation."
     },
     {
@@ -1831,7 +2031,15 @@
       ],
       "url": "https://github.com/zalamanga/vapezoo-cms-laravel",
       "sourceRef": "42925ee15a3113445489be89c5c9bc3db024fa5d",
-      "screenshots": [],
+      "screenshots": [
+        {
+          "src": "assets/images/project-catalog/vapezoo-cms-laravel-source-flow.png",
+          "alt": "Vapezoo CMS Laravel workflow diagram derived from public source; not an application screenshot.",
+          "label": "Workflow diagram (from public source)",
+          "width": 1280,
+          "height": 900
+        }
+      ],
       "note": "Legacy prototype; complete runtime behavior and asset builds were not reverified."
     },
     {
@@ -1848,7 +2056,15 @@
       ],
       "url": "https://github.com/zalamanga/video-watermark-player-php",
       "sourceRef": "8e90b18713bf82f7f9cd9efd6a6e6d6584fadde0",
-      "screenshots": [],
+      "screenshots": [
+        {
+          "src": "assets/images/project-catalog/video-watermark-player-php-capture.png",
+          "alt": "The native PHP video-upload form and watermark-placement preview, opened with a new synthetic local operator.",
+          "label": "Upload UI (local demo operator)",
+          "width": 1440,
+          "height": 1100
+        }
+      ],
       "note": "Watermarks are browser overlays; source video is unchanged. No transcode, burned-in watermark, or DRM; browser playback was not verified in publication checks."
     },
     {
@@ -1866,7 +2082,15 @@
       ],
       "url": "https://github.com/zalamanga/zala-cms",
       "sourceRef": "e198ade71a02db604108249184403e7bb660e73b",
-      "screenshots": [],
+      "screenshots": [
+        {
+          "src": "assets/images/project-catalog/zala-cms-source-flow.png",
+          "alt": "ZalaCMS workflow diagram derived from public source; not an application screenshot.",
+          "label": "Workflow diagram (from public source)",
+          "width": 1280,
+          "height": 900
+        }
+      ],
       "note": "Published source excludes real site configuration and runtime data; use demo accounts and content for local evaluation."
     }
   ]
