@@ -36,6 +36,7 @@ Proyek unggulan dan detail pengalamannya tetap menggunakan `portfolioCases` di `
 - Potret untuk hero ada di `assets/images/portfolio/rafik-portrait-cutout.png`. Latar foto dihapus dengan bantuan AI dan ditampilkan di atas bidang charcoal-lilac; foto sumber tetap ada di `rafik-portrait.png`.
 - Logo tema gelap ada di `assets/images/brand/zalamanga-dark.png`: motif gunung dan tulisan Zalamanga berwarna lilac dengan latar transparan. Navigasi dan footer memakai file yang sama; favicon memakai versi ikon gunung `zalamanga-mark.svg`. Logo sumber berlatar putih tetap ada di `zalamanga-logo.png`.
 - `assets/css/profile.css` mengatur potret, logo, menu mobile, dan tambahan styling Skills. Menu mobile dapat dibuka dengan keyboard dan ditutup melalui Escape.
+- Carousel teknologi memiliki tombol **Play motion / Pause motion**. Saat preferensi perangkat meminta pengurangan animasi, carousel mulai dalam keadaan berhenti; pilihan tombol disimpan di browser agar tetap berlaku setelah reload. Animasi berhenti bekerja saat dijeda atau tab disembunyikan.
 
 ## Struktur File
 

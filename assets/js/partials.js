@@ -1,6 +1,6 @@
 async function loadPartials() {
   const includes = [...document.querySelectorAll('[data-include]')];
-  const version = '20261028-brand';
+  const version = '20261028-carousel';
 
   for (const slot of includes) {
     const url = slot.dataset.include;
