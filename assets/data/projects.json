@@ -1,6 +1,90 @@
 {
-  "updatedAt": "2026-10-27T23:10:42+07:00",
+  "updatedAt": "2026-10-28",
   "projects": [
+    {
+      "repo": "opsdesk-helpdesk",
+      "title": "OpsDesk",
+      "description": "An IT service desk with ticket access by role, agent assignment, public and internal replies, SLA deadlines calculated on the server, and checks for conflicting updates.",
+      "category": "backend",
+      "kind": "Application demo",
+      "stack": [
+        "Python",
+        "FastAPI",
+        "React",
+        "TypeScript",
+        "PostgreSQL",
+        "Docker",
+        "Nginx"
+      ],
+      "url": "https://github.com/zalamanga/opsdesk-helpdesk",
+      "screenshots": [
+        {
+          "src": "assets/images/project-catalog/opsdesk-helpdesk-preview.png",
+          "alt": "OpsDesk service queue with ticket priorities, assignments, and SLA deadlines",
+          "label": "Application screenshot",
+          "width": 1440,
+          "height": 1000
+        }
+      ],
+      "note": "Screenshots show synthetic Training accounts and tickets. SLA time includes nights and weekends.",
+      "sourceRef": "d51a6460af9668ab67a0383b62573b1e1e01f0c2"
+    },
+    {
+      "repo": "supplyflow-odoo",
+      "title": "SupplyFlow Office",
+      "description": "An Odoo Community ERP for distributing office supplies, with independent purchase approvals, native purchasing and stock flows, and supplier returns.",
+      "category": "web",
+      "kind": "Application demo",
+      "stack": [
+        "Python",
+        "Odoo Community 19",
+        "PostgreSQL",
+        "Owl JavaScript",
+        "XML/QWeb",
+        "Docker"
+      ],
+      "url": "https://github.com/zalamanga/supplyflow-odoo",
+      "sourceRef": "a0f286d2dd49dc7c6cf7a0c02553e3d3ec375be1",
+      "screenshots": [
+        {
+          "src": "assets/images/project-catalog/supplyflow-odoo-preview.png",
+          "alt": "SupplyFlow Office operations workspace with purchase approvals and supplier follow-up",
+          "label": "Application screenshot",
+          "width": 1440,
+          "height": 960
+        }
+      ],
+      "note": "Training records carry the [Training] label. The app uses Odoo Community; purchase estimates are not accounting totals."
+    },
+    {
+      "repo": "stockpilot-dotnet",
+      "title": "StockPilot",
+      "description": "A purchasing and inventory app with independent purchase approvals, partial receipts, stock transfers, and a ledger recorded within database transactions.",
+      "category": "web",
+      "kind": "Application demo",
+      "stack": [
+        "C#",
+        ".NET 10",
+        "ASP.NET Core",
+        "EF Core",
+        "React",
+        "TypeScript",
+        "PostgreSQL",
+        "Docker"
+      ],
+      "url": "https://github.com/zalamanga/stockpilot-dotnet",
+      "sourceRef": "0c65abc943d3a825bf431e374f5ed83c06e9e1a9",
+      "screenshots": [
+        {
+          "src": "assets/images/project-catalog/stockpilot-dotnet-preview.png",
+          "alt": "StockPilot operations overview with inventory positions, stock movements, and purchase orders",
+          "label": "Application screenshot",
+          "width": 1440,
+          "height": 1376
+        }
+      ],
+      "note": "Screenshots show synthetic records from application verification; a new installation starts empty."
+    },
     {
       "repo": "fti-authentication-assessment",
       "title": "FTI Access",
