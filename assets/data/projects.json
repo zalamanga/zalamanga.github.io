@@ -2176,6 +2176,90 @@
         }
       ],
       "note": "Published source excludes real site configuration and runtime data; use demo accounts and content for local evaluation."
+    },
+    {
+      "repo": "peoplecore-hris",
+      "title": "PeopleCore HRIS",
+      "description": "An employee lifecycle workspace with role-owned onboarding, private employee profiles, versioned updates, and session revocation during offboarding.",
+      "category": "web",
+      "kind": "Application demo",
+      "stack": [
+        "Python",
+        "FastAPI",
+        "React",
+        "TypeScript",
+        "PostgreSQL",
+        "Docker",
+        "Nginx"
+      ],
+      "url": "https://github.com/zalamanga/peoplecore-hris",
+      "sourceRef": "e991751a10a39641a37d985a87914de8a43f96f2",
+      "screenshots": [
+        {
+          "src": "assets/images/project-catalog/peoplecore-hris-preview.png",
+          "alt": "PeopleCore employee profile with completed onboarding tasks and an audit timeline",
+          "label": "Application screenshot",
+          "width": 1440,
+          "height": 1000
+        }
+      ],
+      "note": "Synthetic Training profiles. Onboarding and offboarding follow the demo policy."
+    },
+    {
+      "repo": "leaveflow-hris",
+      "title": "LeaveFlow HRIS",
+      "description": "Annual leave requests with reserved balances, direct-manager approvals, cancellation audit trails, and a team calendar that hides private reasons.",
+      "category": "web",
+      "kind": "Application demo",
+      "stack": [
+        "Python",
+        "FastAPI",
+        "React",
+        "TypeScript",
+        "PostgreSQL",
+        "Docker",
+        "Nginx"
+      ],
+      "url": "https://github.com/zalamanga/leaveflow-hris",
+      "sourceRef": "91f3d14eb24044a9f1192fcf191aac1a5b5b0464",
+      "screenshots": [
+        {
+          "src": "assets/images/project-catalog/leaveflow-hris-preview.png",
+          "alt": "LeaveFlow manager reviewing a direct report leave request and decision history",
+          "label": "Application screenshot",
+          "width": 1440,
+          "height": 1000
+        }
+      ],
+      "note": "Synthetic Training requests. The twelve-day annual grant is a demo policy."
+    },
+    {
+      "repo": "timedesk-hris",
+      "title": "TimeDesk HRIS",
+      "description": "Server-timestamped attendance, daily WIB recaps, versioned time corrections, and manager review that preserves the original intervals.",
+      "category": "web",
+      "kind": "Application demo",
+      "stack": [
+        "Python",
+        "FastAPI",
+        "React",
+        "TypeScript",
+        "PostgreSQL",
+        "Docker",
+        "Nginx"
+      ],
+      "url": "https://github.com/zalamanga/timedesk-hris",
+      "sourceRef": "25ed0548003e74bb410b1da21ff4d561bbfd15db",
+      "screenshots": [
+        {
+          "src": "assets/images/project-catalog/timedesk-hris-preview.png",
+          "alt": "TimeDesk employee clock controls and server-recorded attendance history",
+          "label": "Application screenshot",
+          "width": 1440,
+          "height": 1000
+        }
+      ],
+      "note": "Synthetic Training records. This demo records time without calculating wages or using biometrics."
     }
   ]
 }
