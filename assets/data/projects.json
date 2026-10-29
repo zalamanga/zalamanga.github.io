@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-28",
+  "updatedAt": "2026-10-29",
   "projects": [
     {
       "repo": "opsdesk-helpdesk",
@@ -2260,6 +2260,35 @@
         }
       ],
       "note": "Synthetic Training records. This demo records time without calculating wages or using biometrics."
+    },
+    {
+      "repo": "recondesk",
+      "title": "ReconDesk",
+      "description": "A transaction reconciliation app with CSV comparison, duplicate evidence, operator explanations, independent reviewer decisions, and version checks for conflicting changes.",
+      "category": "java",
+      "kind": "Application demo",
+      "stack": [
+        "Java 17",
+        "Spring Boot",
+        "Spring JDBC",
+        "PostgreSQL 17",
+        "React",
+        "TypeScript",
+        "Docker",
+        "Nginx"
+      ],
+      "url": "https://github.com/zalamanga/recondesk",
+      "sourceRef": "9ebdb3cdaf8f71b579aa81531f0eeb0bede56d69",
+      "screenshots": [
+        {
+          "src": "assets/images/project-catalog/recondesk-preview.png",
+          "alt": "ReconDesk reconciliation run showing synthetic internal and partner transactions and investigation states",
+          "label": "Application screenshot",
+          "width": 1440,
+          "height": 1791
+        }
+      ],
+      "note": "Local training workspace with synthetic transactions. Approval records an investigation decision and does not move money."
     }
   ]
 }
