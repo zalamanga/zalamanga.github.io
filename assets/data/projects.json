@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-30",
+  "updatedAt": "2026-10-31",
   "projects": [
     {
       "repo": "opsdesk-helpdesk",
@@ -2317,6 +2317,142 @@
         }
       ],
       "note": "Next.js static export with separate Go API, worker and demo receiver. Synthetic local events; finite retries can end in dead letter. Receiver deduplication records one local effect."
+    },
+    {
+      "repo": "rolloutdesk",
+      "title": "RolloutDesk",
+      "description": "A Rust REST API and operator interface for feature releases, with stable percentage cohorts, draft/published comparisons, immutable revisions, rollback and version conflicts.",
+      "category": "backend",
+      "kind": "Application demo",
+      "stack": [
+        "Rust",
+        "axum",
+        "React",
+        "TypeScript",
+        "PostgreSQL 17",
+        "Docker",
+        "Nginx"
+      ],
+      "url": "https://github.com/zalamanga/rolloutdesk",
+      "sourceRef": "6784c70d335649074720d4874a91f846c8635e59",
+      "screenshots": [
+        {
+          "src": "assets/images/project-catalog/rolloutdesk-preview.png",
+          "alt": "RolloutDesk feature registry showing separate staging and production configurations and actual publication revisions",
+          "label": "Application screenshot",
+          "width": 1440,
+          "height": 1183
+        }
+      ],
+      "note": "Local lab with fixed synthetic demo flags. No hosted SDK or exposure analytics; cohort decisions do not grant account permissions."
+    },
+    {
+      "repo": "reserveflow-api",
+      "title": "ReserveFlow API",
+      "description": "A Go REST API for limited-stock reservations, with last-unit row locking, expiring holds, stable idempotent response replay and atomic stock/audit changes.",
+      "stack": [
+        "Go",
+        "net/http",
+        "pgx",
+        "PostgreSQL 17",
+        "Docker",
+        "OpenAPI"
+      ],
+      "note": "Two synthetic tenants. Expiry is derived during reads; this local inventory service has no payment integration or reservation cleanup worker.",
+      "category": "backend",
+      "kind": "REST API",
+      "url": "https://github.com/zalamanga/reserveflow-api",
+      "sourceRef": "e3547e69851165fa7b20154502aa05ad8d3481cd",
+      "screenshots": [
+        {
+          "src": "assets/images/project-catalog/reserveflow-api-preview.png",
+          "alt": "ReserveFlow API actual OpenAPI contract rendered with Swagger UI, showing documented routes rather than live API responses",
+          "label": "OpenAPI documentation",
+          "width": 1440,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "repo": "ingestflow-api",
+      "title": "IngestFlow API",
+      "description": "A Python REST API and separate CSV import worker, with durable jobs, fenced leases, crash recovery, cancellation and all-or-nothing inventory writes.",
+      "stack": [
+        "Python",
+        "FastAPI",
+        "Psycopg",
+        "PostgreSQL 17",
+        "Docker",
+        "OpenAPI"
+      ],
+      "note": "Bounded synthetic CSV uploads stored in PostgreSQL. The image displays the API contract; actual worker and database checks are recorded in the repository.",
+      "category": "backend",
+      "kind": "REST API",
+      "url": "https://github.com/zalamanga/ingestflow-api",
+      "sourceRef": "cafab805745bccba559d764ec58c7e2967720fb7",
+      "screenshots": [
+        {
+          "src": "assets/images/project-catalog/ingestflow-api-preview.png",
+          "alt": "IngestFlow API actual OpenAPI contract rendered with Swagger UI, showing documented routes rather than live API responses",
+          "label": "OpenAPI documentation",
+          "width": 1440,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "repo": "searchdesk-api",
+      "title": "SearchDesk API",
+      "description": "A JavaScript REST API for tenant-isolated document search, using PostgreSQL full-text ranking, signed cursors, conditional GET and version-checked edits.",
+      "stack": [
+        "JavaScript",
+        "Node.js",
+        "Fastify",
+        "PostgreSQL 17",
+        "Docker",
+        "OpenAPI"
+      ],
+      "note": "Local lexical search with soft deletion and transactional audit. No external search service or semantic search; pagination is not a snapshot during concurrent edits.",
+      "category": "backend",
+      "kind": "REST API",
+      "url": "https://github.com/zalamanga/searchdesk-api",
+      "sourceRef": "ab5ef7463cae65e9aeab7ccc67029636f186643a",
+      "screenshots": [
+        {
+          "src": "assets/images/project-catalog/searchdesk-api-preview.png",
+          "alt": "SearchDesk API actual OpenAPI contract rendered with Swagger UI, showing documented routes rather than live API responses",
+          "label": "OpenAPI documentation",
+          "width": 1440,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "repo": "accesspolicy-api",
+      "title": "AccessPolicy API",
+      "description": "A PHP REST API for organization roles, with transactional token revocation, persistent membership versions and protection against concurrent removal of the last owner.",
+      "stack": [
+        "PHP",
+        "Laravel",
+        "Sanctum",
+        "PostgreSQL 17",
+        "Docker",
+        "OpenAPI"
+      ],
+      "note": "Four synthetic identities, current database permissions and one-hour bearer tokens. A local membership service with no email delivery or external identity provider.",
+      "category": "backend",
+      "kind": "REST API",
+      "url": "https://github.com/zalamanga/accesspolicy-api",
+      "sourceRef": "dc6a6f54cc1744d2b4203474e2942a83f52f8cf0",
+      "screenshots": [
+        {
+          "src": "assets/images/project-catalog/accesspolicy-api-preview.png",
+          "alt": "AccessPolicy API actual OpenAPI contract rendered with Swagger UI, showing documented routes rather than live API responses",
+          "label": "OpenAPI documentation",
+          "width": 1440,
+          "height": 1100
+        }
+      ]
     }
   ]
 }
