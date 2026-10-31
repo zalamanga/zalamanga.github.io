@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-31",
+  "updatedAt": "2026-11-01",
   "projects": [
     {
       "repo": "opsdesk-helpdesk",
@@ -2536,6 +2536,32 @@
         }
       ],
       "note": "User images are processed in the browser; language models are served with the app. The screenshot shows genuine OCR output from a synthetic test document. Live app linked from the repository README."
+    },
+    {
+      "repo": "repairdesk-odoo",
+      "title": "RepairDesk Service Center",
+      "description": "An Odoo Community service center for device intake, diagnosis and estimates, recorded customer consent, native spare-parts repairs, independent quality checks and handover.",
+      "category": "web",
+      "kind": "Application demo",
+      "stack": [
+        "Python",
+        "Odoo Community 19",
+        "PostgreSQL 17",
+        "XML/QWeb",
+        "Docker"
+      ],
+      "url": "https://github.com/zalamanga/repairdesk-odoo",
+      "sourceRef": "3dfbfac453e36a1311892c730377e1031127b77b",
+      "screenshots": [
+        {
+          "src": "assets/images/project-catalog/repairdesk-odoo-preview.png",
+          "alt": "RepairDesk service ticket board with synthetic customer-device tickets, service stages and assigned technicians",
+          "label": "Application screenshot",
+          "width": 1440,
+          "height": 960
+        }
+      ],
+      "note": "Synthetic training records. Consent is recorded by staff; spare-parts stock uses native Odoo Repair and Inventory. Device identity is recorded on the service ticket."
     }
   ]
 }
