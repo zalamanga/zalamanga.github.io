@@ -2482,6 +2482,34 @@
         }
       ],
       "note": "Historical UCI data from 2010-2011. The web dashboard is live; customer/cohort measures retain full-period scope. Power BI files provide aggregate CSV imports, M queries and DAX measures."
+    },
+    {
+      "repo": "jenkins-release-lab",
+      "title": "Jenkins Release Lab",
+      "description": "A Jenkins pipeline for a pinned Go API, with PostgreSQL tests, blue/green deployments, health gates, exact-image rollback and automatic recovery after a failed HTTP post-check.",
+      "category": "backend",
+      "kind": "CI/CD lab",
+      "stack": [
+        "Jenkins",
+        "Declarative Pipeline",
+        "Python",
+        "Docker",
+        "Go",
+        "PostgreSQL 17",
+        "Nginx"
+      ],
+      "url": "https://github.com/zalamanga/jenkins-release-lab",
+      "sourceRef": "6a7d5a02b68f115a25cecdddaa778a1d78339aa8",
+      "screenshots": [
+        {
+          "src": "assets/images/project-catalog/jenkins-release-lab-preview.png",
+          "alt": "Actual Jenkins job history for ReserveFlow releases, including successful deployments, a rejected unhealthy candidate and rollback",
+          "label": "Jenkins screenshot",
+          "width": 1440,
+          "height": 1277
+        }
+      ],
+      "note": "Local lab using synthetic inventory. The screenshot shows actual Jenkins builds, including intentional failure checks. Release labels identify deployments of the same pinned ReserveFlow application."
     }
   ]
 }
