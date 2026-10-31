@@ -2510,6 +2510,32 @@
         }
       ],
       "note": "Local lab using synthetic inventory. The screenshot shows actual Jenkins builds, including intentional failure checks. Release labels identify deployments of the same pinned ReserveFlow application."
+    },
+    {
+      "repo": "baca-gambar-ocr",
+      "title": "BacaGambar OCR",
+      "description": "Read Indonesian and English text from PNG, JPEG and WebP images in the browser. Rotate the source, edit the actual OCR output, copy it or download a plain text file.",
+      "category": "web",
+      "kind": "Browser OCR tool",
+      "stack": [
+        "JavaScript",
+        "Tesseract.js",
+        "WebAssembly",
+        "Vite",
+        "HTML/CSS"
+      ],
+      "url": "https://github.com/zalamanga/baca-gambar-ocr",
+      "sourceRef": "e8622adfaa444a9eff35c910c425e6a1e5acc842",
+      "screenshots": [
+        {
+          "src": "assets/images/project-catalog/baca-gambar-ocr-preview.png",
+          "alt": "Actual BacaGambar interface recognizing a synthetic Indonesian receipt, with its source preview and editable OCR text",
+          "label": "Application screenshot",
+          "width": 1440,
+          "height": 1047
+        }
+      ],
+      "note": "User images are processed in the browser; language models are served with the app. The screenshot shows genuine OCR output from a synthetic test document. Live app linked from the repository README."
     }
   ]
 }
