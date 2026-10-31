@@ -2453,6 +2453,35 @@
           "height": 1100
         }
       ]
+    },
+    {
+      "repo": "retail-insights",
+      "title": "Retail Insights",
+      "description": "A reproducible analysis of 541,909 historical retail rows, covering merchandise sales and credits, repeat purchase, customer groups, observed cohorts and data-quality reconciliation.",
+      "category": "data",
+      "kind": "Data analysis case study",
+      "stack": [
+        "Python",
+        "pandas",
+        "DuckDB",
+        "SQL",
+        "JavaScript",
+        "Power BI import kit",
+        "Power Query M",
+        "DAX"
+      ],
+      "url": "https://github.com/zalamanga/retail-insights",
+      "sourceRef": "a02e16b0f7f87b0a6c2637a90a38bb3b94b1fc4b",
+      "screenshots": [
+        {
+          "src": "assets/images/project-catalog/retail-insights-preview.png",
+          "alt": "Retail Insights actual dashboard showing complete-month historical GBP sales, recorded credits, customer countries and product leaders",
+          "label": "Application screenshot",
+          "width": 1440,
+          "height": 2124
+        }
+      ],
+      "note": "Historical UCI data from 2010-2011. The web dashboard is live; customer/cohort measures retain full-period scope. Power BI files provide aggregate CSV imports, M queries and DAX measures."
     }
   ]
 }
