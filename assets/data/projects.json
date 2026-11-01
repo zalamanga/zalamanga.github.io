@@ -2562,6 +2562,32 @@
         }
       ],
       "note": "Synthetic training records. Consent is recorded by staff; spare-parts stock uses native Odoo Repair and Inventory. Device identity is recorded on the service ticket."
+    },
+    {
+      "repo": "restorelab",
+      "title": "RestoreLab",
+      "description": "A local PostgreSQL recovery lab using physical backups, archived WAL and a named restore point, with an isolated recovery cluster and content checks after a synthetic deletion.",
+      "category": "backend",
+      "kind": "Recovery lab",
+      "stack": [
+        "Python",
+        "PostgreSQL 17",
+        "Docker",
+        "JavaScript",
+        "HTML/CSS"
+      ],
+      "url": "https://github.com/zalamanga/restorelab",
+      "sourceRef": "4f172379fe11d2da41f8f25a069ca9c8cf3f71c7",
+      "screenshots": [
+        {
+          "src": "assets/images/project-catalog/restorelab-preview.png",
+          "alt": "RestoreLab technical evidence showing recovery checks, restore-point details and snapshot comparison from a verified synthetic PostgreSQL run",
+          "label": "Application screenshot",
+          "width": 1376,
+          "height": 881
+        }
+      ],
+      "note": "Synthetic orders. Runs native physical backup verification and WAL replay into a separate recovery cluster; the damaged source remains available for comparison. Local lab for one operator."
     }
   ]
 }
