@@ -2643,6 +2643,32 @@
         }
       ],
       "note": "Synthetic training workspace. Writes require a connection. Board roles, fixed request keys and version checks keep retries consistent; durable events support reconnect recovery."
+    },
+    {
+      "repo": "wallet-ledger",
+      "title": "WalletLedger",
+      "description": "A synthetic IDR wallet simulator with atomic transfers, paired debit and credit journal entries, fixed request keys, reversals and reconciliation.",
+      "category": "web",
+      "kind": "Wallet and ledger simulator",
+      "stack": [
+        "Go",
+        "React",
+        "TypeScript",
+        "PostgreSQL 17",
+        "Docker"
+      ],
+      "url": "https://github.com/zalamanga/wallet-ledger",
+      "sourceRef": "25080ab61c861d6051be34e06f79c560e7503216",
+      "screenshots": [
+        {
+          "src": "assets/images/project-catalog/wallet-ledger-preview.png",
+          "alt": "WalletLedger transaction register showing a synthetic IDR balance and transaction history",
+          "label": "Application screenshot",
+          "width": 1680,
+          "height": 1050
+        }
+      ],
+      "note": "Synthetic training balances in integer rupiah. Transactions and fixed request keys keep transfers consistent; reconciliation compares wallet balances with their journal. Writes require a connection."
     }
   ]
 }
