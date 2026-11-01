@@ -2588,6 +2588,33 @@
         }
       ],
       "note": "Synthetic orders. Runs native physical backup verification and WAL replay into a separate recovery cluster; the damaged source remains available for comparison. Local lab for one operator."
+    },
+    {
+      "repo": "retailops",
+      "title": "RetailOps",
+      "description": "A multi-branch retail POS and back-office application with transactional stock, offline sales commands, server-side checks and double-entry accounting.",
+      "category": "web",
+      "kind": "POS and back office",
+      "stack": [
+        "C#",
+        ".NET 10",
+        "React",
+        "TypeScript",
+        "PostgreSQL 18",
+        "Docker"
+      ],
+      "url": "https://github.com/zalamanga/retailops",
+      "sourceRef": "e9fe01106b8c8b6781a1545b223d94b44d66493b",
+      "screenshots": [
+        {
+          "src": "assets/images/project-catalog/retailops-preview.png",
+          "alt": "RetailOps point-of-sale screen showing the synthetic training workspace",
+          "label": "Application screenshot",
+          "width": 1440,
+          "height": 1250
+        }
+      ],
+      "note": "Synthetic cash transactions. Offline commands are rechecked by the server before posting stock and balanced debit-credit journals. Pending local sales are not confirmed server receipts."
     }
   ]
 }
