@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-01",
+  "updatedAt": "2026-11-02",
   "projects": [
     {
       "repo": "opsdesk-helpdesk",
@@ -2615,6 +2615,34 @@
         }
       ],
       "note": "Synthetic cash transactions. Offline commands are rechecked by the server before posting stock and balanced debit-credit journals. Pending local sales are not confirmed server receipts."
+    },
+    {
+      "repo": "collabboard",
+      "title": "CollabBoard",
+      "description": "A team task board with ordered columns and cards, comments, board roles, version checks and WebSocket updates recovered from durable events.",
+      "category": "web",
+      "kind": "Team collaboration",
+      "stack": [
+        "Python",
+        "FastAPI",
+        "React",
+        "TypeScript",
+        "PostgreSQL 17",
+        "WebSocket",
+        "Docker"
+      ],
+      "url": "https://github.com/zalamanga/collabboard",
+      "sourceRef": "b77e530f4359dfa64ab9f0e6418eeb4f13096420",
+      "screenshots": [
+        {
+          "src": "assets/images/project-catalog/collabboard-preview.png",
+          "alt": "CollabBoard task board showing ordered columns and synthetic training cards",
+          "label": "Application screenshot",
+          "width": 1680,
+          "height": 1471
+        }
+      ],
+      "note": "Synthetic training workspace. Writes require a connection. Board roles, fixed request keys and version checks keep retries consistent; durable events support reconnect recovery."
     }
   ]
 }
